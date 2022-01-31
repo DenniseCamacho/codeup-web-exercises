@@ -20,7 +20,6 @@ console.log(currentSpeed);
 // you needed to add number or else it would've added it like 3 + 5 = 35 instead (like a string?) instead of 8;
 
 
-
  var distanceLeft = Number(prompt("How many miles are you from your destination?"));
 
  var timeAtCurrentSpeed = (distanceLeft/currentSpeed) * 60;
