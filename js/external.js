@@ -25,9 +25,22 @@ console.log("Hello from external JavaScript");
 // var hoursWorked = Number(prompt("How many hours have you worked?"));
 // alert(("$") + (payRate) * (hoursWorked) + (" is how much you earned working for ") + (companyWorkingFor) + (". Must be nice."));
 
-var classNotFull = confirm("")
-var noScheduleConflict = false;
-var canEnroll = (classNotFull && noScheduleConflict);
+var classNotFull = confirm("Is the class you are enrolling in full?");
+console.log(classNotFull);
+var noScheduleConflict = confirm("Does this class conflict with any of your current classes?");
+console.log(noScheduleConflict);
+var canEnroll = (!classNotFull && !noScheduleConflict);
 alert ("It is " + canEnroll + " that you can enroll in this class");
+
+var productOffer;
+var premiumMember = confirm("Are you a premium member?")
+console.log(premiumMember)
+productOffer = Number(prompt("How many items are you buying?"));
+console.log(productOffer);
+if (productOffer >= 2 || premiumMember) {
+    alert("The offer has been applied!");
+} else {
+    alert("Sorry, not enough items.");
+}
 
 
