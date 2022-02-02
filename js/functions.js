@@ -9,7 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-
+    return "Hello " + name + "!";
 }
 
 /**
@@ -20,12 +20,27 @@ function sayHello(name) {
  * console.log 'helloMessage' to check your work
  */
 
+// function sayHello(name2) {
+//     return "Hello " + name2 + "!";
+// }
+// var helloMessage = sayHello("Dennise");
+//
+// console.log(helloMessage);
+
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+// var myName = "Dennise";
+// function sayHello() {
+//     return myName;
+// }
+// console.log(sayHello());
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -48,6 +63,8 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+
+
 
 /**
  * TODO:
