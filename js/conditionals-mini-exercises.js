@@ -15,7 +15,6 @@ if (theCar === "locked") {
  **/
 
 //instructors answer:
-
 // var caIslocked = true;
 // if (caIslocked) {
 // 	alert("Will not open")
@@ -24,16 +23,16 @@ if (theCar === "locked") {
 // }
 //
 // (carIsLocked) ? alert("will not open") : alert("will open");
-
 // 2. Write a function that takes in a string and returns a message based on the string length:
 
-// function certainLength(theLength){
-// 	return theLength.length(1);
-// }
-// if (certainLength() === 1) {
-// 	alert("Its that length!")
-// } else {
-// 	alert("It's not that length!")
+
+
+// var ReturnsTheStringLength;
+// function blockOfCode(MSGLength) {
+// 	if (ReturnsTheStringLength === 0) {
+//
+// 	}
+//
 // }
 
 
@@ -89,12 +88,13 @@ if (theCar === "locked") {
 // var num = 5;
 // var message = (num < 10) ? "Num less than 10" : "Num more than 10";
 //
-var coffee = "cleanfilter";
-switch (coffee) {
-	case "cleanfilter":
-		console.log("clean the filter!");
-		break;
-	case "filtercleaned"
-		console.log("no cleaning needed!")
-		break;
-}
+
+// var coffee = "dirtyfilter";
+// switch (coffee) {
+// 	case "dirtyfilter":
+// 		console.log("clean the filter!");
+// 		break;
+// 	case "filtercleaned":
+// 		console.log("no cleaning needed!");
+// 		break;
+// }

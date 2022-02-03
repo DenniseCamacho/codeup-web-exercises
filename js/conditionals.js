@@ -21,6 +21,18 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+//Dennise's answer:
+// var analyzeColor= "cyand"
+// if (analyzeColor === "blue") {
+// 	console.log("blue is the color of the sky");
+// } else if (analyzeColor === "red") {
+// 	console.log("strawberries are red");
+// } else if (analyzeColor === "cyan") {
+// 	console.log("I don't know anything about cyan.")
+// } else {
+// 	console.log("Please name an actual color, or a different color.")
+// }
+	// --- ^^^later try to convert to switch case.
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -29,16 +41,44 @@
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
 
+// var analyzeColor= randomColor
+// if (analyzeColor === "blue") {
+// 	console.log("blue is the color of the sky");
+// } else if (analyzeColor === "red") {
+// 	console.log("strawberries are red");
+// } else if (analyzeColor === "cyan") {
+// 	console.log("I don't know anything about cyan.")
+// } else {
+// 	console.log("That is an interesting color.")
+// }
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+//Dennises answer:
+// var analyzeColor = prompt("What is your favorite color?")
+// switch (analyzeColor){
+// 	case "red":
+// 		console.log("Red? Like a tomato.");
+// 		break;
+// 	case "blue":
+// 		console.log("Blue? like the sky!");
+// 		break;
+// 	case "cyan":
+// 		console.log("I don't know anything about cyan.");
+// 		break;
+// 	default:
+// 		console.log("That is an interesting color.")
+// }
+
 
 /**
  * TODO:
@@ -47,6 +87,15 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
+//Dennises answer:
+// var analyzeColor = prompt("Name a color, any color.")
+// if (analyzeColor === "red") {
+// 	alert("It was " + analyzeColor + " wasn\'t it?")
+// } else {
+// 	alert("Please\? \:\(")
+// }
+
+//--sidestudy// try to make it so that it prompts the user again?
 /* ########################################################################## */
 
 /**
@@ -68,6 +117,24 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+//Dennise's Answer: d(^^ b)
+// var originalPrice = prompt("How much are you paying?");
+// var luckyNumber = 4;
+// var discountedPrice1 = originalPrice * .10;
+// var discountedPrice2 = originalPrice * .25;
+// var discountedPrice3 = originalPrice * .35;
+// var discountedPrice4 = originalPrice * .50;
+// if (luckyNumber === 1) {
+// 	alert(originalPrice - discountedPrice1)
+// 	} else if (luckyNumber === 2) {
+// 	console.log(originalPrice - discountedPrice2)
+// 	} else if (luckyNumber === 3) {
+// 	console.log(originalPrice - discountedPrice3)
+// 	} else if (luckyNumber === 4) {
+// 	console.log(originalPrice - discountedPrice4)
+// 	} else if (luckyNumber === 5) {
+// 	alert("Congratlations! You don't have to pay anything! Enjoy.")
+// 	}
 
 /**
  * TODO:
@@ -79,6 +146,29 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+//
+// //Dennises answer:
+//I keep looking at this to want to clean it up, it's bugging me. That's why my pace is so slow, also trying to understand at the same time.
+// //I added Number().toFixed(2) to keep it looking clean on the outside but it looks messy in here idk.
+//
+// var totallBill = prompt("What is your total bill?")
+// alert("Your total is $" + totallBill + ". Your lucky number is " + luckyNumber + ".")
+//
+// if (luckyNumber === 1) {
+// 	var discountedPrice = Number(totallBill * .10).toFixed(2);
+// 	alert("Your new total after discount is $" + Number(totallBill - discountedPrice).toFixed(2) + ".")
+// } else if (luckyNumber === 2) {
+// 	var discountedPrice = Number(totallBill * .25).toFixed(2);
+// 	alert("Your new total after discount is $" + Number(totallBill - discountedPrice).toFixed(2) + ".")
+// } else if (luckyNumber === 3) {
+// 	var discountedPrice = Number(totallBill * .35).toFixed(2);
+// 	alert("Your new total after discount is $" + Number(totallBill - discountedPrice).toFixed(2) + ".")
+// } else if (luckyNumber === 4) {
+// 	var discountedPrice = Number(totallBill * .50).toFixed(2);
+// 	alert("Your new total after discount is $" + Number(totallBill - discountedPrice).toFixed(2) + ".")
+// } else if (luckyNumber === 5) {
+// 	alert("Congratlations! You don't have to pay anything! Enjoy.")
+// }
 
 /**
  * TODO:
@@ -98,3 +188,20 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+//
+//
+var answer1 = confirm("Would you like to enter a number?")
+if (answer1) {
+	var answer2 = prompt("Great! Please enter a number.")
+} else {
+	alert("Well, ok I guess. \:\(")
+}
+if (answer2 % 0) {
+	alert(answer2 + "is even!")
+}
+
+// alert("That number is odd.");
+// alert("That number is even.");
+// alert("Adding" + "insertvarhere" + "to 100 would be" + "insertvarhere")
+
+
