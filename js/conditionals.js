@@ -32,7 +32,26 @@
 // } else {
 // 	console.log("Please name an actual color, or a different color.")
 // }
-	// --- ^^^later try to convert to switch case.
+// --- ^^^later try to convert to switch case.
+//
+//***Instructor:
+
+// function analyzeColor(color) {
+//
+// 	if (color === "blue") {
+// 		return "blue is the color of the sky";
+// 	} else if (color === "red") {
+// 		return "Strawberries are red";
+// 	} else if (color == "purple") {
+// 		return "Purple Rain is the best";
+// 	} else {
+// 		return "Not sure about the color " + color;
+// 	}
+// }
+// console.log(analyzeColor("red"));
+// console.log(analyzeColor("blue"));
+// console.log(analyzeColor("yellow"));
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -59,6 +78,24 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // 	console.log("That is an interesting color.")
 // }
 
+//Instructor:
+//
+// function analyzeColor(color) {
+//
+// 	if (color === "blue") {
+// 		return "blue is the color of the sky";
+// 	} else if (color === "red") {
+// 		return "Strawberries are red";
+// 	} else if (color == "purple") {
+// 		return "Purple Rain is the best";
+// 	} else {
+// 		return "Not sure about the color " + color;
+// 	}
+// }
+//
+// console.log(randomColor);
+// console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
@@ -78,7 +115,24 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // 	default:
 // 		console.log("That is an interesting color.")
 // }
-
+//if you use return you don't need "break;"
+//Instructor/student:
+//
+// function analyzeColor(color) {
+// 	switch (color) {
+// 		case "blue":
+// 				return "blue is the color of the sky";
+// 		case "red":
+// 			return "Tomatoes are red";
+// 		case "purple":
+// 			return "purple is my favorite color";
+// 		default:
+// 			return "Not sure about the color " + color;
+// 	}
+// }
+//to make it so that it doesnt matter is the answer is R or r,
+// add (color.toLowerCase()); or case "blue" case "Blue" but it //would take longer.
+//or if the answer has spaces .trim() or tolowerCase().trim()
 
 /**
  * TODO:
@@ -97,6 +151,13 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 //--sidestudy// try to make it so that it prompts the user again?
 /* ########################################################################## */
+//Instructor:
+//
+// var userInput = prompt("Please enter a color");
+// alert(analyzeColor(userInput));
+
+//to make it so that it doesnt matter is the answer is R or r,
+// add (color.toLowerCase());
 
 /**
  * TODO:
@@ -135,6 +196,46 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // 	} else if (luckyNumber === 5) {
 // 	alert("Congratlations! You don't have to pay anything! Enjoy.")
 // 	}
+//Instructor:
+//
+// function calculateTotal(luckyNum, totalAmountDollars) {
+// 	var amountOwed;
+// 	if (luckyNum === 0) {
+// 		amountOwed = totalAmountDollars;
+// 	} else if (luckyNum === 1) {
+// 		amountOwed = totalAmountDollars - (totalAmountDollars * .1);
+// 	} else if (luckyNum === 2) {
+// 		amountOwed = totalAmountDollars - (totalAmountDollars * .25)
+// 	} else if (luckyNum === 3) {
+// 		amountOwed = totalAmountDollars - (totalAmountDollars * .35)
+// 	} else if (luckyNum === 4) {
+// 		amountOwed = totalAmountDollars - (totalAmountDollars * .5)
+// 	} else if (luckyNum === 5) {
+// 		return 0;
+// 	}
+// }
+//
+//
+// function calculateTotal(luckyNum, totalAmountDollars) {
+//
+// 	switch (luckyNum) {
+// 		case 0:
+// 			return totalAmountDollars;
+// 		case 1:
+// 			return totalAmountDollars - (totalAmountDollars * .1);
+// 		case 2:
+// 			return totalAmountDollars - (totalAmountDollars * .25);
+// 		case 3:
+// 			return totalAmountDollars - (totalAmountDollars * .35);
+// 		case 4:
+// 			return totalAmountDollars - (totalAmountDollars * .5);
+// 		case 5:
+// 			return 0;
+// 	}
+// }
+// console.log(calculateTotal(0, 100), 100);
+// console.log(calculateTotal(4, 100), 50);
+// console.log(calculateTotal(5, 100), 0);
 
 /**
  * TODO:
@@ -145,7 +246,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
 //
 // //Dennises answer:
 //I keep looking at this to want to clean it up, it's bugging me. That's why my pace is so slow, also trying to understand at the same time.
@@ -169,6 +270,15 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // } else if (luckyNumber === 5) {
 // 	alert("Congratlations! You don't have to pay anything! Enjoy.")
 // }
+//
+//
+//Instructor:
+//
+// var totalBillDollars = prompt("Please enter your total bill in dollars");
+// var finalBillDollars  = calculateTotal(luckyNumber, totalBillDollars);
+// var billMessage = "Your total bill is "
+// alert(");
+// alert(billMessage)
 
 /**
  * TODO:
@@ -190,18 +300,72 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 //
 //
-var answer1 = confirm("Would you like to enter a number?")
-if (answer1) {
-	var answer2 = prompt("Great! Please enter a number.")
-} else {
-	alert("Well, ok I guess. \:\(")
-}
-if (answer2 % 0) {
-	alert(answer2 + "is even!")
-}
-
+// var answer1 = confirm("Would you like to enter a number?")
+//
+// if (answer1) {
+// 		var answer2 = prompt("Great! Please enter a number.")
+// 	} else {
+// 		alert("Well, ok I guess. \:\(")
+// 	}
+// if(answer2 % 2 === 0) {
+// 		alert("That number is even.");
+// 	var answerEven = answer2 += 100;
+// 	alert("Your answer added to 100 is " + answerEven)
+// 	} else if (answer2 % 2 === 1){
+// 		alert("That number is odd.");
+// 	var answerOdd = ;
+// 	alert("Your answer added to 100 is " + answerOdd)
+// 	} else {
+// 	alert("Either the input was not a number or you have written out the number. " +
+// 		"Please do not write out the number (i.e three), only input the numerical value" +
+// 		" (i.e. 3).")
+//}
 // alert("That number is odd.");
 // alert("That number is even.");
 // alert("Adding" + "insertvarhere" + "to 100 would be" + "insertvarhere")
+//
+//
+//
+//Instructor:
+//
+/** Test Run
 
+var willEnterNumber = confirm('Do you want to enter a number?');
+
+if (willEnterNumber) {
+	// do the number things...
+
+	// get the user input and store in a variable called numInput
+	var numInput = Number(prompt('Please enter a number'));
+
+	// validate the user input (number)
+
+	// if valid number
+
+	if (typeof numInput === 'number') {
+		// alert even/odd message...
+		if (numInput / 2 === 0 ) {
+			alert('Number is even');
+		} else {
+			alert('Number is odd');
+		}
+
+		// alert num + 100 message
+		alert(numInput + 100);
+
+		// alert negative/positive message
+
+		if (numInput > 0) {
+			alert('Number is positive');
+		} else {
+			alert('Number is negative');
+		}
+	} else {
+		// else alert incorrect data type
+		alert('Incorrect data type!');
+
+	}
+
+}
+ **/
 
