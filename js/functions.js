@@ -13,7 +13,10 @@
 //     return "Hello " + name + "!";
 // }
 
-
+// 02/03/2022 function sayHello(name) {
+// 	return "Hello " + name + "!";
+// }
+// console.log(sayHello("codeup"));
 
 /**
  * TODO:
@@ -30,6 +33,12 @@
 //
 // console.log(helloMessage);
 
+//02/03/2022
+// function sayHello(yourname) {
+// 	return yourname = "Dennise";
+// }
+// var helloMessage = sayHello();
+// console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -42,7 +51,12 @@
 //     return myName;
 // }
 // console.log(sayHello());
-
+// 02/03/2022
+// 	var myName = "Dennise";
+// 	function sayHello(name) {
+// 		return myName;
+// 	}
+// console.log(sayHello("will this say Dennise"));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -66,7 +80,6 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-//
 // function isTwo(number) {
 //     return number === 2;
 // }
@@ -78,6 +91,15 @@ var random = Math.floor((Math.random() * 3) + 1);
 //     return random;
 // }
 // console.log(random)
+
+// 02/03/2022 --
+// function isTwo(number) {
+// 	return number === 2;
+// }
+// console.log(isTwo(1), false);
+// console.log(isTwo(2), true);
+// console.log(isTwo(3), false);
+// console.log(isTwo("two"), false)
 
 
 
@@ -92,7 +114,6 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-
 // function calculateTip(totalBill, tipPer) {
 //     return totalBill * tipPer;
 // }
@@ -100,6 +121,14 @@ var random = Math.floor((Math.random() * 3) + 1);
 // console.log(calculateTip(20,.20));
 // console.log(calculateTip(25.50, 0.25));
 // console.log(calculateTip(33.42, 0.15));
+
+// 02/03/2022
+// function calculateTip(number1, number2) {
+// 	return number1 * number2;
+// }
+// console.log(calculateTip(0.20, 20), 4);
+// console.log(calculateTip(0.25, 25.50), 6.375);
+// console.log(calculateTip(0.15, 33.42), 5.013);
 
 /**
  * TODO:
@@ -129,7 +158,15 @@ var random = Math.floor((Math.random() * 3) + 1);
 // var tipPercentage = Number(prompt("How much would you like to tip? (in decimal form)"));
 // var tipTotal = calculateTip(tipPercentage, billTotal);
 //  alert("Your total tip would be $" + tipTotal.toFixed(2));
-
+//
+//
+// 02/03/2022 - Dennises answer
+// var number1Global = prompt("How much was your bill?");
+// var number2Global = prompt("What percentage would you like to tip?");
+// function calculateTip() {
+// 	return number1Global * number2Global;
+// }
+// console.log(calculateTip(), 4);
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -144,7 +181,6 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-
 //**instructor:
 // function applyDiscount(price, discount) {
 //     var dollarsOffPrice = price * discount;
@@ -158,6 +194,14 @@ var random = Math.floor((Math.random() * 3) + 1);
 // }
 //
 // console.log(Number(applyDiscount(50, 10));
+
+// 02/03/2022 Dennise
+// function applyDiscount(DiscPricePerc, originalPrice) {
+// 	var newPrice = DiscPricePerc * originalPrice;
+// 	return originalPrice - newPrice;
+// }
+//
+// console.log(applyDiscount(.20, 100), 80);
 
 
 
