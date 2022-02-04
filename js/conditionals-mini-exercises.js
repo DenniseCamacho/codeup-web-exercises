@@ -4,7 +4,6 @@
 
 // 1. Create conditional logic to represent the following scenario...
 // If the car is locked, alert 'will open', otherwise, alert 'will not open
-
 /**
  var theCar = "locked";
 if (theCar === "locked") {
@@ -13,6 +12,13 @@ if (theCar === "locked") {
 	alert("will open");
 }
  **/
+// 02/02/2022 Dennise's Answer -
+// var carLocked = confirm("Is the car locked?");
+// if (carLocked) {
+// 	alert("will not open");
+// } else {
+// 	alert("will open")
+// }
 
 //instructors answer:
 // var caIslocked = true;
@@ -23,18 +29,44 @@ if (theCar === "locked") {
 // }
 //
 // (carIsLocked) ? alert("will not open") : alert("will open");
+
 // 2. Write a function that takes in a string and returns a message based on the string length:
 
-
-
-// var ReturnsTheStringLength;
-// function blockOfCode(MSGLength) {
-// 	if (ReturnsTheStringLength === 0) {
-//
-// 	}
-//
+///02/03/2022 Dennise's answer :D i misunderstood though. and then it got into a long
+// cycle of complicating and playing around with code that took hours so i stayed with this answer >_<;; :
+// function messageLength(lengthOfWord) {
+// 	var theMSG = lengthOfWord.length;
+// 	return "Your entered text is " + theMSG + " characters long."
 // }
+// console.log(messageLength("testing"), 7);
+// console.log(messageLength("love"), 4);
+// console.log(messageLength("Jesus died for sinners like me :D"), 33);
+// console.log(messageLength("He makes it well with my soul."), 30);
 
+// if the string is no characters, return "Empty string"
+// if the string is one character long, return "One character long"
+// if the string is two characters long, return "Two characters long"
+// Otherwise, return, "That is a long string!"
+
+// 02FEB2022 @ 11:09PM I need to sleep. >_< but this was fun to make. --->>
+// function messageLength(lengthOfWord) {
+// 	if (lengthOfWord.length === 0) {
+// 		alert("Empty String");
+// 	} else if (lengthOfWord.length === 1) {
+// 		alert("One character long");
+// 	} else if (lengthOfWord.length === 2) {
+// 		alert("Two characters long");
+// 	} else {
+// 		alert("That is a long string");
+// 	}
+// }
+// console.log(messageLength(""), "Empty String");
+// console.log(messageLength("o"), "One character long");
+// console.log(messageLength("hi"), "Two characters long");
+// console.log(messageLength("love"), "That is a long string");
+// console.log(messageLength("Jesus died for sinners like me :D"), "That is a long string");
+// console.log(messageLength("He makes it well with my soul."), "That is a long string");
+// << --- 02FEB2022 @ 11:09PM I need to sleep. >_< but this was fun to make.
 
 //**instructor :
 // var strLengthMessage;
@@ -66,10 +98,6 @@ if (theCar === "locked") {
 // alert(strLengthMessage);
 
 
-// if the string is no characters, return "Empty string"
-// if the string is one character long, return "One character long"
-// if the string is two characters long, return "Two characters long"
-// Otherwise, return, "That is a long string!"
 
 // 3. Refactor the Following Code into a Ternary Operator:
 
