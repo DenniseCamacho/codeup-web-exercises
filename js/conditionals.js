@@ -21,6 +21,22 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+//Dennise's answer 03FEB2022 @ 11:19PM -->
+// 	function analyzeColor(color) {
+// 		color = color.toLowerCase();
+// 		if (color === "blue") {
+// 			alert("blue is the color of the sky");
+// 		} else if (color === "red") {
+// 			alert("strawberries are red");
+// 		} else if (color === "pink") {
+// 			alert("pink is an interesting color");
+// 		} else {
+// 			alert("Oh, that\'s a cool color I guess.")
+// 		}
+// 	}
+// 	console.log(analyzeColor("blue"), "blue is the color of the sky");
+// 	console.log(analyzeColor("yellow"), "Oh, that\'s a cool color I guess.");
+
 //Dennise's answer:
 // var analyzeColor= "cyand"
 // if (analyzeColor === "blue") {
