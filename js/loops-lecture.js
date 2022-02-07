@@ -29,6 +29,7 @@
 // 	lives--;
 // }
 // console.log("game over");
+
 // var counter = 1;
 // var number = 5;
 // while (counter <=5){
