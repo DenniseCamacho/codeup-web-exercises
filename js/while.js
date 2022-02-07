@@ -18,20 +18,20 @@
 // refer to loops-lecture.js
 
 //-- Do While Loop
-var allCones = Math.floor(Math.random() * 50) + 50;
-
-// statement, loop, conditional
-
-do {
-	var conesBeingBought = Math.floor(Math.random() * 5) + 1;
-	if (conesBeingBought > allCones) {
-		console.log("Cannot sell you " + conesBeingBought + " I only have " + allCones)
-	} else {
-		console.log(conesBeingBought + " cones sold...");
-		allCones = allCones - conesBeingBought;
-	}
-} while (allCones > 0);
-console.log("I have sold all my cones!")
+// var allCones = Math.floor(Math.random() * 50) + 50;
+//
+// // statement, loop, conditional
+//
+// do {
+// 	var conesBeingBought = Math.floor(Math.random() * 5) + 1;
+// 	if (conesBeingBought > allCones) {
+// 		console.log("Cannot sell you " + conesBeingBought + " I only have " + allCones)
+// 	} else {
+// 		console.log(conesBeingBought + " cones sold...");
+// 		allCones = allCones - conesBeingBought;
+// 	}
+// } while (allCones > 0);
+// console.log("I have sold all my cones!")
 
 // var allCones = Math.floor(Math.random()*50) + 50;
 // var howManyConesWantingtoBuy = Math.floor(Math.random() * 5) + 1;

@@ -45,3 +45,34 @@
 // 	number = number * 2;
 // }
 //-----------------------------------------------------------------------------;
+
+
+//declare var count = 100
+//checked while (count >=0) {
+//incremented count++;
+// }
+
+// for (var count = 100; count >= 0; count = count -1 ){
+// 	console.log(count);
+// }
+//is the same as;
+// variable called i for iterator
+// for (var i =100; i >=0; i--){
+// 	console.log(i);
+// }
+// is the same as;
+// for(var i = 0; i <=100; i++){
+// 	console.log(i);
+// }
+//^^^loses flexibility
+
+// var i = 0
+// while (i < 100){
+// 	console.log(i);
+// 	i++;
+// }
+//
+// for (i = 0 ; i < 100; i++){
+// 	console.log(i);
+// }
+// console.log("after the lopp ends,i is " + i);
