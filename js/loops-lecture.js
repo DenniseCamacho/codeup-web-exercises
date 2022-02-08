@@ -6,6 +6,11 @@
 // 	/**the code block ends**/}
 // console.log("Aw, no more pizza :("); /** when it's finally false**/
 
+// while(slices <= 5){
+// 	console.log(slices);
+// 	slices = slices -1;
+// }
+
 //getting rid of slices = would be an infinite loop making it force quit...
 
 // ================================================
