@@ -70,3 +70,58 @@
 // 	//							index + 1 or else it would start at 0
 // 	console.log("item number " + (index + 1) + " costs $" + price);
 // })
+
+var groceryList = ["bread", "eggs", "butter", "milk"];
+
+//push("item"), pop, shift, unshift("item")
+//push , pushes it to the end,
+// pop gets rid of the last one
+//unshift("insertwordinarrayhere");
+//shift(); move item to first item and shifts the other items back
+
+// var indexOfButter = groceryList.indexOf("butter");
+// console.log("the butter is at index " + indexOfButter);
+//
+// groceryList[indexOfButter];
+// groceryList[indexOfButter] = "butter";
+// console.log(groceryList);
+// var firstHalfOfList = groceryList.slice(0, 2); //0 - up to, but not including 2
+// console.log(firstHalfOfList);
+// console.log(groceryList);
+// var secondHalfOfList = groceryList.slice(2); // if you skip second number it starts at first number and goes until the end.
+// console.log(secondHalfOfList);
+// firstHalfOfList.push("peanut butter");
+// console.log(firstHalfOfList);
+// groceryList = firstHalfOfList.concat(secondHalfOfList);
+// console.log(groceryList);
+//
+
+// reverse ......reverses....
+// groceryList.reverse();
+// console.log(groceryList);
+//sort is case-sensitive, alphabetical order
+// groceryList.sort();
+// console.log(groceryList);
+
+var hamletQuote = "To be or not to be, that is the question";
+var hamletQuoteArray = hamletQuote.split(' ');
+//to get rid of the comma ,
+var noCommasHamletQuote = hamletQuote.replace(",","").toLowerCase();//deletes the comma store the output in a variable.
+console.log(noCommasHamletQuote); //deletes the comma
+//reverse the order
+hamletQuoteArray.reverse();
+console.log(hamletQuoteArray);
+
+//
+var hamletQuoteBackwards = hamletQuoteArray.join(" ");
+console.log(hamletQuoteBackwards);
+// comma between every word
+var hamletQuoteWordList = hamletQuoteArray.join(",");
+console.log(hamletQuoteWordList);
+//bring it back to what it was
+var bringBacktheOriginal = hamletQuoteWordList.replaceAll(","," ");
+var theOriginalArray = bringBacktheOriginal.split(" ");
+theOriginalArray.reverse();
+var theOriginalQuote = theOriginalArray.join(" ");
+console.log(theOriginalQuote);
+
