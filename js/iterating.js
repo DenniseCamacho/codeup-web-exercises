@@ -8,6 +8,9 @@
 	 */
 	// var names = ["Spike", "Rain", "Coco", "Chiquita"];
 
+		//-----ins:
+	var names = ["name1", "name2", "name3", "name4"];
+
 	/**
 	 * TODO:
 	 * Create a log statement that will log the number of elements in the names
@@ -16,6 +19,9 @@
 	 // for (var i = 0; i < names.length; i++) {
 		//  console.log(i);
 	 // }
+
+	//------- ins:
+	// console.log(names.length);
 	/**
 	 * TODO:
 	 * Create log statements that will print each of the names individually by
@@ -24,6 +30,11 @@
 	// for (var i = 0; i < names.length; i++) {
 	// 	console.log(i + " is " + names[i]);
 	// }
+	// ins: -----
+	// console.log(names[0]);
+	// console.log(names[1]);
+	// console.log(names[2]);
+	// console.log(names[3]);
 	/**
 	 * TODO:
 	 * Write some code that uses a for loop to log every item in the names
@@ -31,6 +42,10 @@
 	 */
 	// for (var i = 0; i < names.length; i++) {
 	// 	console.log([i]);
+	// }
+	///ins-------
+	// for (var i = 0; i < names.length; i++) {
+	// 	console.log(names[i]);
 	// }
 	/**
 	 * TODO:
@@ -52,16 +67,28 @@
 	 *  > second([1, 2, 3, 4, 5]) // returns 2
 	 *  > last([1, 2, 3, 4, 5]) // return 5
 	 */
-	var nums = ["1", "2", "3", "4", "5"];
-
-	// for (var i = 0;  i < nums.length; i++) {
-	// 	console.log("index " + (i + 1) + " = " + nums[i])
+	// var nums = ["1", "2", "3", "4", "5"];
+	//
+	// // for (var i = 0;  i < nums.length; i++) {
+	// // 	console.log("index " + (i + 1) + " = " + nums[i])
+	// // }
+	// 	for (var i = 0;  i < nums.length; i++) {
+	// 		console.log("index " + (i + 1) + " = " + nums[i]);
+	// 	}
+	// 	console.log(nums[0] + " is first");
+	// 	console.log(nums[4] + " is last");
+	// 	console.log(nums[1] + " is second");
+	//ins------
+	// function first(array){
+	// 	console.log(array[0]);
 	// }
-		for (var i = 0;  i < nums.length; i++) {
-			console.log("index " + (i + 1) + " = " + nums[i]);
-		}
+	// function second(array){
+	// 	console.log(array[1]);
+	// }
+	// function last(array){
+	// 	console.log(array[array.length-1]);
+	// }
+	//
+	// console.log(first());
 
-		console.log(nums[1] " is first");
-		console.log(nums[5] " is last");
-		console.log(nums[2] " is second");
 })();
