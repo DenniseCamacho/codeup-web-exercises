@@ -23,12 +23,12 @@
         mirror([1,3,4]) // returns false
         mirror(123) // returns false
  */
-
     function mirror(aString){
-		var splitAstring = aString.split("");
-		var reverseAstring = splitAstring.reverse();
-		var joinAstring = reverseAstring.join("");
-        if (typeof aString === "string"){
+
+        if (typeof aString === "string" || typeof aString === "number"){
+			var splitAstring = aString.toString().split("");
+			var reverseAstring = splitAstring.reverse();
+			var joinAstring = reverseAstring.join("");
 			 return joinAstring;
         } else {
 			return false;
@@ -36,6 +36,10 @@
     }
     console.log(mirror("cat"));
     console.log(mirror(123));
+	console.log(mirror(null));
+	console.log(mirror([1,2,3]));
+
+
 </script>
 </body>
 </html>
