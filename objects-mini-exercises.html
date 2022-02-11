@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>objects</title>
+
+</head>
+<body>
+<script>
+// 	// Create a file called objects-mini-exercises.html and include script tags to complete the following mini exercises:
+// 	// 	-- Mini Exercise 1
+// 	// Create a few beverage objects and assign values to each object for the following properties:
+// 	// 	- brandName
+// 	// 	- type
+// 	// 	- volumeInLiters
+// 	// 	- priceInCents
+// 	// 	- expirationDate
+// 	// 	- datesOfPreviousSips (use an array of strings)
+// 	// - isOpen
+// 	// Define your objects using both literal syntax to create all properties and values at once and also try defining empty objects and assign property values in separate statements using the dot notation.
+//
+//     //add [] to dateOfPreviousSips
+//     // // var sips = ["01/01/2022", "01/10/2022", "01/20/2022"]  // joses example
+//     // var bevarages = {
+// 	// 	brandName: "Zevia",
+//     //     type: "soda",
+//     //     volumeInLiters: 50, // was .50 - work with whole integers, not decimals
+//     //     priceInCents: 0.45,
+//     //     expirationDate: "01/01/2025",
+//     //     datesOfPreviousSips: ["01/01/2022"] // was datesOfPreviousSips: 01"/"01"/"2022 before change
+//     //     isOpen: "closed"
+//     // }
+// 	// // // bevarages.datesOfPreviousSips.push("took a sip on Feb13th") // Deons example
+//     // //
+// 	// // var bevarages2 = {
+// 	// // 	brandName: "Diet Coke",
+// 	// // 	type: "soda",
+// 	// // 	volumeInLiters: .5,
+// 	// // 	priceInCents: 0.45,
+// 	// // 	expirationDate: 01"/"01"/"2025,
+// 	// // 	datesOfPreviousSips: 01"/"01"/"2022,
+// 	// // 	isOpen: "closed"
+// 	// // }
+// 	// // var bevarages3 = {
+// 	// // 	brandName: "Coke Zero",
+// 	// // 	type: "soda",
+// 	// // 	volumeInLiters: .5,
+// 	// // 	priceInCents: 0.45,
+// 	// // 	expirationDate: 01"/"01"/"2025,
+// 	// // 	datesOfPreviousSips: 01"/"01"/"2022,
+// 	// // 	isOpen: "closed"
+// 	// // }
+//
+//     //it could be outside too.
+//     // var vitals = {
+// 	// 	averageTempDeggF: 101,
+//     //     averageRestingHeartRate: 80,
+//     //     isHungry: true
+//     // };
+//     // var pet3 = {
+// 	// 	name: "Coco",
+//     //     age: 4,
+//     //     species: "Doberman-mix",
+//     //     hasOffSpring: false,
+//     //     valueInDollars: "free",
+//     //     altNames: [
+// 	// 		"Coco-puff",
+//     //         "Coquito",
+//     //         "Coconut",
+//     //         "coquito lindo"
+//     //     ],
+//     //     vitals: {//or nested
+// 	// 		averageTempDeggF: 101,
+// 	// 		averageRestingHeartRate: 80,
+// 	// 		isHungry: true //or nested
+//     //     }
+//     // }
+//     //
+// 	// // // // console.log();
+// 	// // // pet3.vitals.averageRestingHeartRate
+//     // // // pet3.altNames.[2]
+//     // // console.log(pet3.altNames[0]);
+//     // // //how do you change cocos age to 7?
+//     // // pet3.age = 7;
+//     // // console.log(pet3.age)
+// //oject within an object , how far can you nest things? the limit is 64 but can be 250?
+//
+//     var pets = [
+// 		{
+// 			givenName: "Coco",
+//             isDog: true
+//         },
+// 		{
+// 			givenName: "Puff",
+// 			isDog: false
+// 		},
+// 		{
+// 			givenName: "Reeses",
+// 			isDog: false
+// 		}
+//
+//     ];
+// 	// // //how could you get each element out of the array?
+//     // // console.log(pets[0].givenName); //a loop that consoles each object and turns it to an array.
+//     // // //a for loop
+//     // for (var i = 0; i < pets.length; i += 1) {
+// 	// 	console.log(pets[i].givenName);
+//     // }
+//
+// //     //forEach loop
+// // pets.forEach(function(pet) {
+// // 	console.log(pet.givenName);
+// // });
+// // }
+
+//     // //you can use a loop to change values.
+//     // //change every pets name to coco
+//     // pets.forEach(function (pet) {
+// 	// 	pet.givenName = "Coco";
+//     // });
+// 	// console.log(pets);
+
+// -- Mini Exercise 2
+// var users = [
+// 	{
+// 		givenName: ‘Sam’,
+// age: 21
+// },
+// {
+// 	givenName: ‘Cathy’,
+// 	age: 34
+// },
+// {
+// 	givenName: ‘Karen’,
+// 	age: 43
+// }
+
+// -- Mini Exercise 2
+// var users = [
+// 	{
+// 		givenName: 'Sam',
+// 		age: 21
+// 	},
+// 	{
+// 		givenName: 'Cathy',
+// 		age: 34
+// 	},
+// 	{
+// 		givenName: 'Karen',
+// 		age: 43
+// 	}
+// ];
+// 1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
+// 2. Change the names of all users to “John Doe”
+//   3. Increase the current age of all users by 1
+// Can you accomplish each step using iteration? (edited)
+
+// Extra tasks for Mini Exercise 2
+// log the total of all the ages
+// log the average age of all users
+// log all the user information in the following format...
+
+/*
+    user: Sam | age: 21
+    user: Cathy | age: 34
+    user: Karen | age: 43
+ */
+
+// log the name of the longest given name of a user
+
+// ];
+// 1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
+// 2. Change the names of all users to “John Doe”
+//   3. Increase the current age of all users by 1
+// Can you accomplish each step using iteration?
+
+//log the total of all the ages
+//log the average of all ages of users
+//log all the user information in the following format...
+// var names = {
+// 	user: Sam | age: 21,
+//     user: Cathy | age: 34,
+//     user: Karen | age: 43,
+// }
+
+/*
+user: Sam | age 21
+user: Cathy | age 34
+user: Karen | age 43
+ */
+//log the name of the longest given user
+//a method, a function that's attached to an object
+var user = {
+	givenName: "Justin",
+    age: 25,
+    sayHello: function() {
+		console.log("Howdy!");
+    },
+    logAge: function () {}
+}
+//encapsulation java....objects that deal with everythin
+
+
+</script>
+</body>
+</html>
