@@ -11,12 +11,12 @@
 	 *  > console.log(person.firstName) // "Rick"
 	 *  > console.log(person.lastName) // "Sanchez"
 	 */
-	var person = {
-		firstName: "Dennise",
-		lastName: "Camacho"
-	}
-	console.log(person.firstName);
-	console.log(person.lastName);
+	// var person = {
+	// 	firstName: "Dennise",
+	// 	lastName: "Camacho"
+	// };
+	// console.log(person.firstName);
+	// console.log(person.lastName);
 
 
 	/**
@@ -28,7 +28,11 @@
 	 * Example
 	 * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
 	 */
-console.log(person.)
+// 	person.sayHello = function () {
+// 		return "Hello from " + person.firstName + " " + person.lastName;
+// 	}
+//
+// console.log(person.sayHello());
 
 	/** TODO:
 	 * HEB has an offer for the shoppers that buy products amounting to
@@ -44,11 +48,37 @@ console.log(person.)
 	 * and console.log the relevant messages for each person
 	 */
 
+	var hebShoppers = {
+		firstNames: ["Ryan", "Cameron", "George"]
+
+	}
+	function discountsThe(oPrice) {
+		var discount = oPrice * .12;
+		if (oPrice > 200) {
+			return oPrice -= disount;
+		} else {
+			return "You are not eligible for the discount.";
+		}
+	}
+	//if, and else -- sidenote
+
 	// var shoppers = [
 	//     {name: 'Cameron', amount: 180},
 	//     {name: 'Ryan', amount: 250},
 	//     {name: 'George', amount: 320}
 	// ];
+
+	// var shoppers = [
+	// 		{name: "Ryan", amount: 180}
+	// 		{name: "Cameron", amount: 250}
+	// 		{name: "George", amount: 320}
+	// 	];
+	// shoppers.forEach(function (shopper) {
+	// 	var discount = shopper.amount
+	// 	if (shopper.amount < 200) {
+	// 		console.log("sorry" + shopper.name + "but you have only spent $" + shopper.amount + " and are not able to redeem this discount")
+	// 	}
+	// }
 
 	/** TODO:
 	 * Create an array of objects that represent books and store it in a
@@ -62,14 +92,14 @@ console.log(person.)
 	 * > console.log(books[0].author.firstName) // "Douglas"
 	 * > console.log(books[0].author.lastName) // "Adams"
 	 */
-	var books = {
-		title: ["The Bridge", "The Cornerstone", "The Foundation", "Love is Kind", "Love is Patient"]
-		author: {
-			firstName: ,
-			lastName: ,
-		};
-
-	}
+	// var books = {
+	// 	title: ["The Bridge", "The Cornerstone", "The Foundation", "Love is Kind", "Love is Patient"]
+	// 	author: {
+	// 		firstName: ,
+	// 		lastName: ,
+	// 	};
+	//
+	// }
 
 	/**
 	 * TODO:
