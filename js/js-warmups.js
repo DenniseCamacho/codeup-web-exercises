@@ -129,3 +129,51 @@
 // 	return
 // }
 
+//
+// ================================= WARM UP
+// Write a function, createUserMsg, that takes in a user object like the following...
+// {
+// 	username: ‘jbomb’,
+// 	email: ‘john@email.com’,
+// 	isAdmin: true
+// }
+// ...and returns a string output that displays in the console like this...
+// ‘User jbomb is an admin and can be reached at john@email.com’
+// If jbomb were not an admin, the message should display...
+// ‘User jbomb is not an admin and can be reached at john@email.com’
+
+//my answer  vvvvvv
+// var users = [
+// 	{username: "jbomb",
+// 	email: "john@email.com",
+// 	isAdmin: true}
+// ]
+//
+// function createUserMsg (enterusername) {
+// 	for (var i = 0; i < users.length; i++) {
+// 		enterusername === users[i].username && users[i].isAdmin === true ? console.log("User " + users[i].username + " is an admin and can be reached at " + users[i].email) : console.log("User " + users[i].username + " is not an admin");
+// 	}
+// }
+// console.log(createUserMsg("jbomb"));
+
+// instructors answer vvvvv
+var user = {
+	username: "jbomb",
+	email: "john@email.com",
+	isAdmin: true
+};
+
+// // function createUserMsg(user) {
+// // 	//1.
+// // 	// if (user.isAdmin) {
+// // 	// 	return "User " + user.username + " is an admin and can be reached at " + user.email;
+// // 	// } else {
+// // 	// 	return "User " + user.username + " is not an admin and can be reached at " + user.email;
+// // 	// }
+// //
+// // 	//or...
+// // //2.
+// // 	return "User " + user.username + " is " + ((user.isAdmin) ? "" : "not ") + "an admin and can be reached at " + user.email;
+// // }
+//
+// console.log(createUserMsg(user));

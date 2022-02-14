@@ -154,8 +154,9 @@
 
 	//it takes in, accepts the author + title
 	//it returns the properties.
-	function createBook(title, author) {
-
+	//feb142022 answer in progress...
+// 	function createBook(title, author) {
+//
 // 		for (var i = 0; i < books.length; i++){
 // 			var title1 = books[i].title;
 // 			var author1 = books[i].author.firstName + " " + books[i].author.lastName;
@@ -169,6 +170,7 @@
 // 		}
 // }
 // 	console.log(createBook("War Room", "Alex Kendrick"));
+	//feb 142022 answer in progress ^^^;
 
 // 	for (var i = 0; i < books.length; i++);
 // var authorsFullname = books[i].author.firstName + " " + books[i].author.lastName;
