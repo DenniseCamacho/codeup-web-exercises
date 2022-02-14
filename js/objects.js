@@ -48,18 +48,24 @@
 	 * and console.log the relevant messages for each person
 	 */
 
-	var hebShoppers = {
-		firstNames: ["Ryan", "Cameron", "George"]
-
-	}
-	function discountsThe(oPrice) {
-		var discount = oPrice * .12;
-		if (oPrice > 200) {
-			return oPrice -= disount;
+	var hebShoppers = [
+		{name: "Cameron", amount: 180},
+		{name: "Ryan", amount: 250},
+		{name: "George", amount: 320}
+	];
+	function discountsThe() {
+		var discount = hebShoppers.amount * .12;
+		if (hebShoppers.amount >= 200) {
+			 console.log(hebShoppers.name + " you have spent $" + hebShoppers.amount + ". Congratulations! You have qualified for a discount.");
+			var newAmount = hebShoppers.amount - discount;
+			console.log(hebShoppers.name + ", your new amount after discount is " + newAmount);
 		} else {
 			return "You are not eligible for the discount.";
 		}
 	}
+console.log(hebShoppers.name);
+
+
 	//if, and else -- sidenote
 
 	// var shoppers = [
