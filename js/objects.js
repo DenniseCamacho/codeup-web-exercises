@@ -53,20 +53,16 @@
 		{name: "Ryan", amount: 250},
 		{name: "George", amount: 320}
 	];
-	function discountsThe() {
-		var discount = hebShoppers.amount * .12;
-		if (hebShoppers.amount >= 200) {
-			 console.log(hebShoppers.name + " you have spent $" + hebShoppers.amount + ". Congratulations! You have qualified for a discount.");
-			var newAmount = hebShoppers.amount - discount;
-			console.log(hebShoppers.name + ", your new amount after discount is " + newAmount);
+	for (var i = 0; i < hebShoppers.length; i++) {
+		if (hebShoppers[i].amount < 200) {
+			console.log("sss");
 		} else {
-			return "You are not eligible for the discount.";
+			console.log(hebShoppers[i].name + "you");
 		}
 	}
-console.log(hebShoppers.name);
 
 
-	//if, and else -- sidenote
+		//if, and else -- sidenote
 
 	// var shoppers = [
 	//     {name: 'Cameron', amount: 180},
