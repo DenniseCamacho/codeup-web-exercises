@@ -88,22 +88,22 @@
 		{title: "War Room",
 		author:{
 			firstName: "Alex",
-			lastName: "Kendrick",
+			lastName: "Kendrick"
 		}},
 		{title: "Fervent",
 			author:{
 				firstName: "Priscilla",
-				lastName: "Shirer",
+				lastName: "Shirer"
 			}},
 		{title: "Sermon on the Mount",
 			author:{
 				firstName: "Jen",
-				lastName: "Wilkin",
+				lastName: "Wilkin"
 			}},
 		{title: "The Purpose Driven Life: What on Earth Am I Here For?",
 			author: {
 				firstName: "Rick",
-				lastName: "Warren",
+				lastName: "Warren"
 			}}
 	];
 	// console.log(books[0].title);
@@ -155,19 +155,20 @@
 	//it takes in, accepts the author + title
 	//it returns the properties.
 	function createBook(title, author) {
-		title = books.title;
-		author = books.author.firstName + " " + books.author.lastName;
-		for (var i = 0; i < books.length; i++){
-			if (title) {
-				console.log("Book #" + (i + 1));
-				console.log("Title: " + books[i].title);
-				console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
-	} else if (author) {
 
-			}
-		}
-}
-	console.log(createBook("Fervent","Priscilla Shirer"));
+// 		for (var i = 0; i < books.length; i++){
+// 			var title1 = books[i].title;
+// 			var author1 = books[i].author.firstName + " " + books[i].author.lastName;
+// 			if (title1 || author1) {
+// 				console.log("Book #" + (i + 1));
+// 				console.log("Title: " + title1);
+// 				console.log("Author: " + author1);
+// 	} else {
+// 	return "I do not know that book."
+// 			}
+// 		}
+// }
+// 	console.log(createBook("War Room", "Alex Kendrick"));
 
 // 	for (var i = 0; i < books.length; i++);
 // var authorsFullname = books[i].author.firstName + " " + books[i].author.lastName;
