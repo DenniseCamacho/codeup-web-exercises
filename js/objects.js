@@ -48,22 +48,22 @@
 	 * and console.log the relevant messages for each person
 	 */
 
-	var hebShoppers = [
-		{name: "Cameron", amount: 180},
-		{name: "Ryan", amount: 250},
-		{name: "George", amount: 320}
-	];
-	for (var i = 0; i < hebShoppers.length; i++) {
-		if (hebShoppers[i].amount < 200) {
-			console.log("Sorry " + hebShoppers[i].name + ", you are not eligible for a discount. Your total is $" + hebShoppers[i].amount + ".");
-		} else {
-			var discounted = hebShoppers[i].amount * .12;
-			var newPrice = hebShoppers[i].amount - discounted;
-			console.log("Congratulations " + hebShoppers[i].name + ", you are eligible for a discount!");
-			console.log("Your total before discount is $" + hebShoppers[i].amount)
-			console.log("Your discounted total is now $" + newPrice.toFixed(2))
-		}
-	}
+	// var hebShoppers = [
+	// 	{name: "Cameron", amount: 180},
+	// 	{name: "Ryan", amount: 250},
+	// 	{name: "George", amount: 320}
+	// ];
+	// for (var i = 0; i < hebShoppers.length; i++) {
+	// 	if (hebShoppers[i].amount < 200) {
+	// 		console.log("Sorry " + hebShoppers[i].name + ", you are not eligible for a discount. Your total is $" + hebShoppers[i].amount + ".");
+	// 	} else {
+	// 		var discounted = hebShoppers[i].amount * .12;
+	// 		var newPrice = hebShoppers[i].amount - discounted;
+	// 		console.log("Congratulations " + hebShoppers[i].name + ", you are eligible for a discount!");
+	// 		console.log("Your total before discount is $" + hebShoppers[i].amount)
+	// 		console.log("Your discounted total is now $" + newPrice.toFixed(2))
+	// 	}
+	// }
 
 	/** TODO:
 	 * Create an array of objects that represent books and store it in a
@@ -90,7 +90,7 @@
 			firstName: "Alex",
 			lastName: "Kendrick",
 		}},
-		{title: "FERVENT",
+		{title: "Fervent",
 			author:{
 				firstName: "Priscilla",
 				lastName: "Shirer",
@@ -106,9 +106,9 @@
 				lastName: "Warren",
 			}}
 	];
-	console.log(books[0].title);
-	console.log(books[0].author.firstName);
-	console.log(books[0].author.lastName);
+	// console.log(books[0].title);
+	// console.log(books[0].author.firstName);
+	// console.log(books[0].author.lastName);
 	// ^____^
 
 	/**
@@ -135,11 +135,11 @@
 	 *      ---
 	 *      ...
 	 */
-for (i = 0; i < books.length; i++) {
-	console.log("Book #" + (i + 1));
-	console.log("Title: " + books[i].title);
-	console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
-}
+// for (var i = 0; i < books.length; i++) {
+// 	console.log("Book #" + (i + 1));
+// 	console.log("Title: " + books[i].title);
+// 	console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+// }
 
 	/**
 	 * Bonus:
@@ -151,7 +151,29 @@ for (i = 0; i < books.length; i++) {
 	 *   outputs the information described above. Refactor your loop to use your
 	 *   `showBookInfo` function.
 	 */
-function createBook() {
 
-	}
+	//it takes in, accepts the author + title
+	//it returns the properties.
+	function createBook(title, author) {
+		title = books.title;
+		author = books.author.firstName + " " + books.author.lastName;
+		for (var i = 0; i < books.length; i++){
+			if (title) {
+				console.log("Book #" + (i + 1));
+				console.log("Title: " + books[i].title);
+				console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+	} else if (author) {
+
+			}
+		}
+}
+	console.log(createBook("Fervent","Priscilla Shirer"));
+
+// 	for (var i = 0; i < books.length; i++);
+// var authorsFullname = books[i].author.firstName + " " + books[i].author.lastName;
+// var	bookProperties = books[i].title;
+// authorsFullname ? console.log (authorsFullname + " " + bookProperties) : " I don't know anything by that author.";
+// 	}
+
 })();
+
