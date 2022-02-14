@@ -65,27 +65,6 @@
 		}
 	}
 
-
-		//if, and else -- sidenote
-
-	// var shoppers = [
-	//     {name: 'Cameron', amount: 180},
-	//     {name: 'Ryan', amount: 250},
-	//     {name: 'George', amount: 320}
-	// ];
-
-	// var shoppers = [
-	// 		{name: "Ryan", amount: 180}
-	// 		{name: "Cameron", amount: 250}
-	// 		{name: "George", amount: 320}
-	// 	];
-	// shoppers.forEach(function (shopper) {
-	// 	var discount = shopper.amount
-	// 	if (shopper.amount < 200) {
-	// 		console.log("sorry" + shopper.name + "but you have only spent $" + shopper.amount + " and are not able to redeem this discount")
-	// 	}
-	// }
-
 	/** TODO:
 	 * Create an array of objects that represent books and store it in a
 	 * variable named `books`. Each object should have a title and an author
@@ -98,14 +77,39 @@
 	 * > console.log(books[0].author.firstName) // "Douglas"
 	 * > console.log(books[0].author.lastName) // "Adams"
 	 */
-	// var books = {
-	// 	title: ["The Bridge", "The Cornerstone", "The Foundation", "Love is Kind", "Love is Patient"]
-	// 	author: {
-	// 		firstName: ,
-	// 		lastName: ,
-	// 	};
-	//
-	// }
+	var books = [
+		{
+			title: "The Chosen",
+			author: {
+				firstName: "Dallas",
+				lastName: "Jenkins"
+			}
+		},
+		{title: "War Room",
+		author:{
+			firstName: "Alex",
+			lastName: "Kendrick",
+		}},
+		{title: "FERVENT",
+			author:{
+				firstName: "Priscilla",
+				lastName: "Shirer",
+			}},
+		{title: "Sermon on the Mount",
+			author:{
+				firstName: "Jen",
+				lastName: "Wilkin",
+			}},
+		{title: "The Purpose Driven Life: What on Earth Am I Here For?",
+			author: {
+				firstName: "Rick",
+				lastName: "Warren",
+			}}
+	];
+	console.log(books[0].title);
+	console.log(books[0].author.firstName);
+	console.log(books[0].author.lastName);
+	// ^____^
 
 	/**
 	 * TODO:
