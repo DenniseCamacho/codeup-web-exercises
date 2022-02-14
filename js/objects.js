@@ -55,9 +55,13 @@
 	];
 	for (var i = 0; i < hebShoppers.length; i++) {
 		if (hebShoppers[i].amount < 200) {
-			console.log("sss");
+			console.log("Sorry " + hebShoppers[i].name + ", you are not eligible for a discount. Your total is $" + hebShoppers[i].amount + ".");
 		} else {
-			console.log(hebShoppers[i].name + "you");
+			var discounted = hebShoppers[i].amount * .12;
+			var newPrice = hebShoppers[i].amount - discounted;
+			console.log("Congratulations " + hebShoppers[i].name + ", you are eligible for a discount!");
+			console.log("Your total before discount is $" + hebShoppers[i].amount)
+			console.log("Your discounted total is now $" + newPrice.toFixed(2))
 		}
 	}
 
