@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forms lecture</title>
+</head>
+
+<body>
+	<!--		<input type="text">-->
+	<!--	dont use method="get" for sensitive data-->
+	<fieldset>
+		<legend>Personal Information</legend>
+	<form method="get" action="https://request-inspector.glitch.me">
+		<label for="username">Username:</label>
+		<input type="text" name="username" id="username">
+		<br>
+		<br>
+		<label for="streetAddress">Street Address:</label>
+		<input type="text" name="streetAdress" id="streetAddress">
+		<br>
+		<br>
+		<label for="city">City:</label>
+		<input type="text" name="city" id="city">
+		<br>
+		<br>
+		<input type="submit">
+	</form></legend>
+	</fieldset>
+		
+		<!--			you have to give your radio a name and value why marveldc and Marvel? name is the label, the value is
+		 the data. You have to have a value to put information.-->
+		<h4>Marvel or DC?</h4>
+		<label>Marvel:</label>
+		<input type="radio" name="marvelOrdc" value="Marvel">
+		<br>
+		<label>DC:</label>
+		<input type="radio" name="marvelOrdc" value="DC">
+		<br>
+		<br>
+		<input type="submit">
+		<!--			if you want multiple selections, use checkbox-->
+		<br>
+		<br>
+		<h4>Choose your extras:</h4>
+		<input type="checkbox" name="extras" value="Provolone"><label>Provolone</label><br>
+		<input type="checkbox" name="extras" value="Cheddar"><label>Cheddar</label><br>
+		<input type="checkbox" name="extras" value="American Cheese"><label>American Cheese</label><br>
+		<input type="checkbox" name="extras" value="Swiss"><label>Swiss Cheese</label><br>
+		<input type="checkbox" name="extras" value="Pepper Jack"><label>Pepper Jack</label><br>
+		<input type="checkbox" name="extras" value="Jalapenos"><label>Sliced Jalapenos</label><br>
+		<input type="checkbox" name="extras" value="Mushrooms"><label>Sauteed Mushrooms</label><br>
+		<input type="checkbox" name="extras" value="Onions"><label>Grilled Onions</label><br>
+		<input type="checkbox" name="extras" value="Bacon"><label>Extra Bacon</label><br>
+		<input type="checkbox" name="extras" value="Guacamole"><label>Guacamole</label>
+		<br>
+		<br>
+		<h4>Choose your destination:</h4>
+		<!--			add multiple in the end to select multiple things on the drop down, but its no longer a drop down.-->
+		<select name="destination">
+			<option value=""></option>
+			<option value="Hawaii">Hawaii</option>
+			<option value="Yucatan">Yucatan</option>
+			<option value="Greece">Greece</option>
+			<option value="Florida">Florida</option>
+			<option value="California">California</option>
+		</select>
+		<br>
+		<br>
+		<h4>Please Leave Your Comments:</h4>
+		<textarea name="comments" id="comments" cols="48" rows="10"></textarea>
+		<br>
+		<br>
+		<!--				<input type="date" name="date"><br>-->
+		<!--			&lt;!&ndash; date can take min and max attributes &ndash;&gt;-->
+		<!--				<input type="color" name="pickColor"><br>-->
+		<!--				<input type="range" name="evaluation"><br>-->
+		<!--			&lt;!&ndash; range can take min, max, and step attributes &ndash;&gt;-->
+		<!--				<input type="number" name="number"><br>-->
+		<!--			&lt;!&ndash; number can take min, max, and step attributes &ndash;&gt;-->
+		<!--			&lt;!&ndash; email, tel, and url inputs are predominantly mobile-oriented &ndash;&gt;-->
+		<!--				<input type="submit">-->
+		<!--				<input type="reset">-->
+	</form>
+</body>
+</html>
