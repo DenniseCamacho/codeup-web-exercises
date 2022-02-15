@@ -3,33 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Register With Us</title>
+	<style>
+		body{color: gray;}
+		fieldset {border: 5px solid lavender; bor}
+		h1, h4 {background-color: lavender;}
+		fieldset {background-color: whitesmoke;}
+		label {background-color: lavender;}
+		textarea {background-color: lavender;
+		border: none;}
+		input {color:gray;
+			border: none;
+			background-color: lavender;}
+		select {border: none; background-color: lavender}
+		td {background-color: lavender;}
+	</style>
 </head>
 	<form method="POST" action="https://request-inspector.glitch.me/">
 	<fieldset>
 		<legend><h1>Register With Us</h1></legend>
 		<label for="emailAddress">Email:</label>
-		<input type="text" name="email" id="emailAddress">
+		<input type="text" name="email" id="emailAddress" placeholder="email@email.com">
+		<br>
+		<br>
+<!--		input type="password" for passwords.-->
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password" placeholder="password">
 		<br>
 		<br>
 		<label for="bio">Bio:</label><br>
-		<textarea name="biography" id="bio" cols="auto" rows="5"></textarea>
+		<textarea name="biography" id="bio" cols="auto" rows="5" placeholder="A little bit about myself..."></textarea>
 		<table>
-			<th><h4>How did you hear about us?</h4></th>
 			<tr>
+				<h4>How did you hear about us?</h4>
 				<td><label>Billboard</label></td>
-				<td><input type="radio" name="billboard" value="Billboard_input"></td><br>
+				<td><input type="radio" name="ReferredAD" value="Billboard_input"></td><br>
 			</tr>
 			<tr>
 				<td><label>Radio Advertisement</label></td>
-				<td><input type="radio" name="radioAd" value="radioAd_input"></td>
+				<td><input type="radio" name="ReferredAD" value="radioAd_input"></td>
 			</tr>
 			<tr>
 				<td><label>Internet Advertisement</label></td>
-				<td><input type="radio" name="internetAd" value="internetAd_input"></td><br>
+				<td><input type="radio" name="ReferredAD" value="internetAd_input"></td><br>
 			</tr>
 			<tr>
 				<td><label>Other</label></td>
-				<td><input type="radio" name="otherAd" value="otherAd_input"></td>
+				<td><input type="radio" name="ReferredAD" value="otherAd_input"></td>
 			</tr>
 		</table>
 		<br>
@@ -44,7 +63,7 @@
 		</select>
 		<br>
 		<br>
-		<input type="submit">
+		<input type="submit" value="Submit">
 		<input type="reset">
 		<br>
 	</fieldset>
