@@ -1,19 +1,45 @@
-body {
-    background-color: darkseagreen;
-    color:whitesmoke;
-}
+/*stick with classes.
+starting with the general rule,
+going down to specific rules.
+use class if more than one.
+give ID to specifically just one item -- DO NOT USE IT AS A CLASS, even if it's working.
+h1 - element selector, general rule
+.anyname - class selector, for multiple
+#anyname - id selector, for SPECIFIC things, only use to address one rule
+https://www.w3schools.com/cssref/css_selectors.asp
+*/
 
-h1 {
-    font-family: cursive;
-    color: purple;
-}
+/*body {*/
+/*    background-color: darkseagreen;*/
+/*    color:whitesmoke;*/
+/*    text-align: center;*/
+/*}*/
+/*a {*/
+/*    color: darkseagreen;*/
+/*    background-color: honeydew;*/
+/*}*/
+/*nav {*/
+/*    background-color: honeydew;*/
+/*}*/
+/*main {*/
+/*    background-color: honeydew;*/
+/*    color: darkseagreen;*/
+/*    font-family: Arial;*/
+/*}*/
+/*hr {*/
+/*    border-style: solid;*/
+/*    border-width: 1px;*/
+/*    border-color: honeydew;*/
+/*}*/
 
-a {
-    color: aliceblue;
-    text-blink: true;
-}
+/*.fancy-header {*/
+/*    font-family: cursive;*/
+/*    color: darkseagreen;*/
+/*    background-color: honeydew;*/
 
-a:hover {
-    color: darkolivegreen;
-    background-color: yellowgreen;
-}
+/*}*/
+
+/*a:hover {*/
+/*    color: honeydew;*/
+/*    background-color: darkseagreen;*/
+/*}*/
