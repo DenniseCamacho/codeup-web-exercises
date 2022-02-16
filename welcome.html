@@ -9,7 +9,7 @@
 			background-color: #e2e2e4;
 			background-image: url("/images/coffeekeyboard.jpg");
 			background-repeat: no-repeat;
-			background-position: right;
+			background-position: left;
 			background-attachment: fixed;
 			background-size: 200px;
 			text-align: center;
@@ -24,18 +24,30 @@
 			/*font-size: 15px;*/
 			font: 15px Montserrat;
 			font-weight: lighter;
+			width: 60%;
+			margin: auto;
 		}
 		hr {
 			width: 400px;
 		}
 		
-		table {
+		table th {
 			text-align: center;
 			font-family: Serif;
+			background-color: #d7c1a9;
+		}
+		table td {
+			background-color: #dfdada;
+		}
+		.centerTheTable{
+			margin: auto;
 		}
 		li {
+			text-align: center;
 			list-style-position: inside;
 			color: slategray;
+			border-top: solid whitesmoke;
+			background-color: #dfdada;
 		}
 		ul li {
 			list-style-position: inside;
@@ -104,7 +116,7 @@
 				</div>
 			</div>
 			<h2>Our Product</h2>
-			<table>
+			<table class="centerTheTable">
 				<tr>
 					<th>Plan</th>
 					<th>Price</th>
@@ -128,6 +140,8 @@
 			</table><br>
 			<em>All products come with out quality guarantee&trade;</em>.<br>
 			<br><a href="#top">Go to the top of the page.</a>
+			<br>
+			<br>
 		</main>
 </body>
 </html>
