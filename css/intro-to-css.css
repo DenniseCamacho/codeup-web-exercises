@@ -1,0 +1,19 @@
+body {
+    background-color: darkseagreen;
+    color:whitesmoke;
+}
+
+h1 {
+    font-family: cursive;
+    color: purple;
+}
+
+a {
+    color: aliceblue;
+    text-blink: true;
+}
+
+a:hover {
+    color: darkolivegreen;
+    background-color: yellowgreen;
+}
