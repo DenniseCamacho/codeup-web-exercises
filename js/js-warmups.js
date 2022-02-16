@@ -178,18 +178,61 @@
 //
 // console.log(createUserMsg(user));
 
-// perimeter = l + w + h
+// perimeter = (l + w) x 2
 //area = l x w
 //You are given the length and width of a 4=sided polygon. The polygon can either be a rectangle or a square.
 //if it is a square. return its area. If it is a rectangle. return its perimeter
 
-function areaOrPerimeter(l, w){
-	if (l === w){
-	return l * w;
+// function areaOrPerimeter(l, w){
+// 	if (l === w){
+// 	return l * w;
+// 	} else {
+// 	return (l + w) * 2;
+// 	}
+// }
+// console.log(areaOrPerimeter(6, 10), 32);
+// console.log(areaOrPerimeter(3, 3), 9);
+
+// Area or Perimeter
+//Write a function that takes two parameters, the length and width of a
+//square or a rectangle. If it's a square return the area
+//If it's a rectangle, return the perimeter
+//bonus: if the input is not a number or numeric string, return false
+
+// function areaOrPerimeter2(l2, w2){
+// 	if (l2 == w2){
+// 		return l2 * w2;
+// 	} else if (l2 !== w2) {
+// 		return (l2 + w2) * 2;
+// 	} else return false;
+// }
+//^loose equality)
+// function areaOrPerimeter2 (length, width) {
+// 	if (length == width){
+// 		return length * width;
+// 	}
+// 	return (length + width) * 2
+// }
+
+
+//eliminate everything first, then catchall.
+function areaOrPerimeter2 (length, width) {
+	if (parseFloat(isNaN(length))) ||
+	parseFloat(isNaN(width))
+	{
+		return false;
+	} else if (){
+
 	} else {
-	return (l + w) * 2;
+
 	}
 }
-console.log(areaOrPerimeter(6, 10), 32);
-console.log(areaOrPerimeter(3, 3), 9);
+
+//NaN !== NaN is true
+//the order of your else ifs matters.
+console.log(areaOrPerimeter2(6, 10), 32);
+console.log(areaOrPerimeter2(3, 3), 9);
+console.log(areaOrPerimeter2("3",3), 9);
+console.log(areaOrPerimeter2(NaN, NaN));
+console.log(areaOrPerimeter2(false, true))
 
