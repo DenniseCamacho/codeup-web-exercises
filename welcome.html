@@ -3,22 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Welcome HTML Exercise</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<style>
+		html {
+			background-color: #e2e2e4;
+			background-image: url("/images/coffeekeyboard.jpg");
+			background-repeat: no-repeat;
+			background-position: right;
+			background-attachment: fixed;
+			background-size: 200px;
+			text-align: center;
+		}
+		header {
+			text-align: center;
+			text-decoration: underline;
+		}
 		body {
 			/*font-family: sans-serif;*/
 			/*font-weight: lighter;*/
 			/*font-size: 15px;*/
-			font: 15px sans-serif;
+			font: 15px Montserrat;
 			font-weight: lighter;
 		}
+		hr {
+			width: 400px;
+		}
+		
 		table {
 			text-align: center;
 			font-family: Serif;
 		}
-		
+		li {
+			list-style-position: inside;
+			color: slategray;
+		}
 		ul li {
-			list-style: hiragana;
-			color: red;
+			list-style-position: inside;
+			list-style-type: hiragana;
+			color: slategray;
+		}
+		img {
+			max-width: 30%;
+			height: auto;
+		}
+		a:link, a:visited {
+			color: slategrey;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #d7c1a9;
 		}
 	</style>
 </head>
@@ -26,6 +59,7 @@
 <script src="js/welcome-js.js"></script>
 	<header><h1>Welcome to Veridian Dynamics!</h1></header>
 		<main>
+			<a href="#">Test link</a>
 			At Veridian Dynamics, <strong>we</strong> solve <em>your</em> problems with
 			<strong><em>technology</em></strong>.
 			<hr>
