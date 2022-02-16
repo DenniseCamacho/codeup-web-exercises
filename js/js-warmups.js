@@ -156,12 +156,12 @@
 // }
 // console.log(createUserMsg("jbomb"));
 
-// instructors answer vvvvv
-var user = {
-	username: "jbomb",
-	email: "john@email.com",
-	isAdmin: true
-};
+// // instructors answer vvvvv
+// var user = {
+// 	username: "jbomb",
+// 	email: "john@email.com",
+// 	isAdmin: true
+// };
 
 // // function createUserMsg(user) {
 // // 	//1.
@@ -177,3 +177,19 @@ var user = {
 // // }
 //
 // console.log(createUserMsg(user));
+
+// perimeter = l + w + h
+//area = l x w
+//You are given the length and width of a 4=sided polygon. The polygon can either be a rectangle or a square.
+//if it is a square. return its area. If it is a rectangle. return its perimeter
+
+function areaOrPerimeter(l, w){
+	if (l === w){
+	return l * w;
+	} else {
+	return (l + w) * 2;
+	}
+}
+console.log(areaOrPerimeter(6, 10), 32);
+console.log(areaOrPerimeter(3, 3), 9);
+
