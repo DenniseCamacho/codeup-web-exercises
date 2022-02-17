@@ -4,14 +4,37 @@
 	<meta charset="UTF-8">
 	<title>Title</title>
 	<script>
-		function solution(number, othernum){
-			for (var num = 0; num < 10; num++){
-				var a = num * 3;
-				var b = num * 5;
-				number = a + b;
-			}
+		// function multiplesOf3(){
+		// 	var multiplesOf3 = "";
+		// 	var i = 0
+		// 	do{
+		// 		i = i + 1;
+		// 		multiplesOf3 = i * 3;
+		// 	}
+		// 	while (i > 0 && i < 10);
+		// }
+		// function multiplesOf5(){
+		// 	var multiplesOf5 = "";
+		// 	var i = 0
+		// 	do{
+		// 		i = i + 1;
+		// 		multiplesOf5 = i * 5;
+		// 	}
+		// 	while (i > 0 && i < 10);
+		// }
+		// var resultsOf = multiplesOf3() + multiplesOf5();
+		// console.log(resultsOf);
+		
+		// //Define a function names multiply that takes in an input and multiplies 50 to it
+		// if the input is numeric.
+		// If the input is not numeric, then return false.
+		function multiply(input){
+			if (isNaN(input) !== false) {
+				console.log("this is a number!!");
+			} else return "this is a number";
 		}
-		console.log(solution(3))
+		console.log(multiply(3));
+		console.log(multiply("3"));
 	</script>
 </head>
 <body>
