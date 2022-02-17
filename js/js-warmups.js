@@ -239,6 +239,7 @@
 // write a function, sumTheStrings that takes two numeric strings as input
 // and returns the sum as a string. It returns false if the inputs are not numeric strings.
 
+
 function sumTheStrings(num1, num2){
 	if (isNaN(num1) !== false || isNaN(num2) !== false) {
 		return false;
@@ -246,12 +247,29 @@ function sumTheStrings(num1, num2){
 		return false;
 	} else if (typeof num1 === "boolean" || typeof num2 === "boolean") {
 		return false;
+	} else if (num1 === "" || num2 === "") {
+		return false;
 	} else {
-		return num1.toString() + num2.toString();
+		// return num1.toString() + num2.toString();
+		return parseFloat(num1) + parseFloat((num2));
 	}
 }
 
+//to make an empty string = 0
+//if (num1 === "" || num2 === "") {
+//num1 = "0"
+//num2 = "0"
+//}
+// isNaN(parseFloat(parameterName))
+
+
+
 console.log(sumTheStrings(2,10));
+console.log(sumTheStrings(" ",10));
+console.log(sumTheStrings("",10));
+console.log(sumTheStrings(2.30,10.30));
+console.log(sumTheStrings(4.3,"4.3"));
+console.log(sumTheStrings("1.5",1.5));
 console.log(sumTheStrings("2","103"));
 console.log(sumTheStrings("2",120));
 console.log(sumTheStrings(true,false));
@@ -259,6 +277,3 @@ console.log(sumTheStrings(false,false));
 console.log(sumTheStrings(true,true));
 console.log(sumTheStrings(null,0));
 console.log(sumTheStrings(NaN, 0));
-
-
-
