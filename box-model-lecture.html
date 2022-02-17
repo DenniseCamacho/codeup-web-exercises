@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--adjacent siblings means the margins collapse.
+like
+<p>
+15px
+<p>
+
+not
+<p>
+15px
+15px
+<p>
+
+they collapse.
+
+make things easier for other developers to find by giving things span/id.
+-->
+<head>
+	<meta charset="UTF-8">
+	<title>box model lecture</title>
+	<style>
+		p{
+			text-indent: 50px;
+			width 500px;
+			border-radius: 50px;
+			border: solid palevioletred;
+		}
+		span#VOL {
+			font-weight: bold;
+			background-color: gold;
+		}
+		span#LAB {
+			background-color: palevioletred;
+		}
+		#theMainSection {
+			width: 360px;
+			border: 1px solid black;
+			border-radius: 10px;
+			margin: auto;
+			
+		}
+		#theMainHeader {
+			text-align: center;
+		}
+		#theMainSection:hover {
+			box-shadow: 10px 10px 20px slategrey;
+			/*box-shadow: -12px 12px 50px slateblue;*/
+			/*opacity: 0.5;*/
+		}
+		.secondHeading {
+			text-align: center;
+		}
+		p:first-of-type {
+			border: 5px dashed red;
+		}
+		p:last-of-type {
+			border: 5px solid pink;
+			text-indent: 50px;
+		}
+	</style>
+</head>
+<body>
+	<header id="theMainHeader"><h1>CSS Box Model</h1></header>
+<main id="theMainSection">
+	<h2 class="secondHeading">Some ipsum to style</h2>
+	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+		aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+		Nemo enim ipsam voluptatem quia <span id="VOL">voluptas</span> sit aspernatur aut odit aut fugit, sed quia
+		consequuntur
+			magni
+		                                           dolores eos qui ratione voluptatem sequi nesciunt.</p>
+	<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+		numquam eius modi tempora incidunt ut <span id="LAB">labore</span> et dolore magnam aliquam quaerat voluptatem.
+		Ut
+		enim
+				ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+	
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequuntur culpa cupiditate delectus
+		       excepturi, fugit illum inventore, ipsam maiores, quae quibusdam quidem velit veniam vero voluptas
+			voluptatem voluptatibus? Ad, cumque?</p>
+	</section>
+</main>
+
+</body>
+</html>
