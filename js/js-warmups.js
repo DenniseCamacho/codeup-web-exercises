@@ -216,23 +216,49 @@
 
 
 //eliminate everything first, then catchall.
-function areaOrPerimeter2 (length, width) {
-	if (parseFloat(isNaN(length))) ||
-	parseFloat(isNaN(width))
-	{
+// function areaOrPerimeter2 (length, width) {
+// 	if (parseFloat(isNaN(length))) || parseFloat(isNaN(width)) {
+// 		return false;
+// 	} else if (){
+//
+// 	} else {
+//
+// 	}
+// }
+//
+// //NaN !== NaN is true
+// //the order of your else ifs matters.
+// console.log(areaOrPerimeter2(6, 10), 32);
+// console.log(areaOrPerimeter2(3, 3), 9);
+// console.log(areaOrPerimeter2("3",3), 9);
+// console.log(areaOrPerimeter2(NaN, NaN));
+// console.log(areaOrPerimeter2(false, true))
+///^^^^^^ redo this....
+
+// 17 FEB 2020 WARMUP.
+// write a function, sumTheStrings that takes two numeric strings as input
+// and returns the sum as a string. It returns false if the inputs are not numeric strings.
+
+function sumTheStrings(num1, num2){
+	if (isNaN(num1) !== false || isNaN(num2) !== false) {
 		return false;
-	} else if (){
-
+	} else if (typeof num1 === "object" || typeof num2 === "object") {
+		return false;
+	} else if (typeof num1 === "boolean" || typeof num2 === "boolean") {
+		return false;
 	} else {
-
+		return num1.toString() + num2.toString();
 	}
 }
 
-//NaN !== NaN is true
-//the order of your else ifs matters.
-console.log(areaOrPerimeter2(6, 10), 32);
-console.log(areaOrPerimeter2(3, 3), 9);
-console.log(areaOrPerimeter2("3",3), 9);
-console.log(areaOrPerimeter2(NaN, NaN));
-console.log(areaOrPerimeter2(false, true))
+console.log(sumTheStrings(2,10));
+console.log(sumTheStrings("2","103"));
+console.log(sumTheStrings("2",120));
+console.log(sumTheStrings(true,false));
+console.log(sumTheStrings(false,false));
+console.log(sumTheStrings(true,true));
+console.log(sumTheStrings(null,0));
+console.log(sumTheStrings(NaN, 0));
+
+
 
