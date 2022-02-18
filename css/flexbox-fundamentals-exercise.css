@@ -28,24 +28,34 @@ h2, h3 {
 .border {border: 2px solid black;}
 
 .card {
+
     width: 400px;
     height: 800px;
     background: white;
     padding: 1em;
     margin: 0 auto;
     /* enter needed declarations here */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
 section {
+display: flex;
     /* enter needed declarations here */
 }
 
 section:nth-of-type(1) {
+    justify-content: space-between;
+    align-items: center;
     height: 3em;
     background: lightgreen;
     /* enter needed declarations here */
 }
 section:nth-of-type(1) div:last-child {
+    /*had issues with this one, practice it more.*/
+    align-self: flex-start;
     /* enter needed declarations here */
 }
 
@@ -56,10 +66,12 @@ section:nth-of-type(1) div:last-child {
 }
 
 .purple-box:nth-of-type(1) {
+    flex-grow: 1;
     /* enter needed declarations here */
 }
 
 .purple-box:nth-of-type(2) {
+    flex-grow: 1;
     /* enter needed declarations here */
 }
 
@@ -70,12 +82,14 @@ section:nth-of-type(1) div:last-child {
 }
 
 section:nth-of-type(3) {
+    justify-content: flex-end;
+
     /* enter needed declarations here */
 }
 
 section:nth-of-type(3) h3 {
+    flex-grow: 1;
     /* enter needed declarations here */
-
 }
 
 .orange-circle {
@@ -91,6 +105,9 @@ section:nth-of-type(3) h3 {
     width: 5em;
     background: brown;
     /* enter needed declarations here */
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
 }
 
 .large-brown-box:nth-of-type(2) {
@@ -108,17 +125,23 @@ section:nth-of-type(5) {
 }
 
 section:nth-of-type(6) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     background: coral;
     height: 14em;
     /* enter needed declarations here */
 }
 
 .grey-box {
+
     background: grey;
     width: 3em;
     height: 3em;
 }
 
 .grey-box:nth-of-type(odd) {
+    flex-direction: column;
+    justify-content: space-around;
     height: 4em;
 }
