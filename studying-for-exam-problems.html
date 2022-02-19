@@ -38,19 +38,22 @@
 		else return false;
 	}
 	// I needed to check if the array had numbers to return the sum, so I'm struggling to make a function that returns the sum while looking through the index........ returning the sum of the array
-	function addTheArray(array){
-		if(isNaN(parseFloat(array))){
+	function addTheArray(array) {
+		if (isNaN(parseFloat(array))) {
 			return array.join("");
+		} else {
+			return "I need to add these >:(";
+			// sum = 0;
+			// for (var i = 0; i < array.length; i++) {
+			// 	sum += array[i];
+			// 	console.log(sum);
+			/**stuck on what to use here, further understanding of forEach needed, I think.**/
 		}
-		else {
-			for (var i = 0; i < array.length; i++) {
-				return "I need to add these"
-			}
-		}
+	// }
 }
-
-console.log(addTheArray(array1));
-// the final function that takes the array, scans the array, and returns the length, a boolean value of true, if it has strings, and the combined result, /**trying to figure out how to return the sum and not the concatenated numbers.**/
+//
+// console.log(addTheArray(array1));
+// the final function that takes the array, scans the array, and returns the length, a boolean value of true (if it has strings), and the combined result. /**trying to figure out how to return the sum and not concatenate the numbers in arrays with numbers.**/
 	function analyzeArray(array){
 		 for (var i = 0; i < array.length; i++){
 			 return {
