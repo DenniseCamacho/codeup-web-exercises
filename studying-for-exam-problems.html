@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<script>
+	// ================================= JS Challenge
+	
+	// Create a function, analyzeArray, that takes in a an array and returns an object with information about the passed array. The function should return an object with properties containing information about the array, including the lengthOfArray, containsAllStrings, and the combineResult of adding all elements together.
+	// analyzeArray([1, 2, 3]) returns...
+	// {
+	// 	lengthOfArray: 3,
+	// 			containsAllStrings: false,
+	// 		combineResult: 6
+	// }
+	// analyzeArray([‘a’, ‘b’, ‘c’]) returns...
+	// {
+	// 	lengthOfArray: 3,
+	// 			containsAllStrings: true,
+	// 		combineResult: ‘abc’
+	// }
+	// analyzeArray([‘bob’, 100, null]) returns...
+	// {
+	// 	lengthOfArray: 3,
+	// 			containsAllStrings: true,
+	// 		combineResult: ‘bob123nul
+	
+	//trying to make a function that can tell if an input is a string
+	var array1 = [1, 2, 3]
+	var array2 = ["a","b","c"]
+	var array3 = ["bob", 100, null]
+	var array5 = ["dennise", null, NaN]
+	
+	function isItString(array){
+		if (typeof array === "string") return true;
+		else return false;
+	}
+function addTheArray(array){
+		if (isNaN(parseFloat(array))){
+			return array.reduce(Math.sum);
+			} else return array;
+}
+
+	function analyzeArray(array){
+		 for (var i = 0; i < array.length; i++){
+			 return {
+				 lengthOfArray: array.length,
+				 containsAllStrings: array.every(isItString),
+				 combineResult: addTheArray()
+			 }
+		 }
+	}
+	
+	
+	console.log(analyzeArray(array1));
+	console.log(analyzeArray(array2));
+	console.log(analyzeArray(array3));
+	console.log(analyzeArray(array5));
+</script>
+<body>
+
+</body>
+</html>
