@@ -30,8 +30,9 @@
 	var array1 = [1, 2, 3]
 	var array2 = ["a","b","c"]
 	var array3 = ["bob", 100, null]
-	var array5 = ["dennise", null, NaN]
-	
+	var arrayTest = [5, 5, 5]
+	var dreadTestingThisOne = ["5", 5, "5"] /**Just adding parseFloat in the function addTheArray avoids
+	 concatenation**/
 //i needed to check if the array contained all strings, so I made a function
 	function isItString(array){
 		if (typeof array === "string") return true;
@@ -42,18 +43,23 @@
 		if (isNaN(parseFloat(array))) {
 			return array.join("");
 		} else {
-			return "I need to add these >:(";
+			sum = 0;
+			for (var i = 0; i < array.length; i++) {
+				sum += parseFloat(array[i]);
+			} return parseFloat(sum);
+			}
 			// sum = 0;
 			// for (var i = 0; i < array.length; i++) {
 			// 	sum += array[i];
-			// 	console.log(sum);
-			/**stuck on what to use here, further understanding of forEach needed, I think.**/
-		}
-	// }
+			// 	console.log(sum); ---- this was confusing me.
+			/**stuck on what to use here**/// in the end, putting the console.log inside the forloop was confusing me,
+		// but it was giving me the desired answer once I took out the console.log.
 }
-//
-// console.log(addTheArray(array1));
-// the final function that takes the array, scans the array, and returns the length, a boolean value of true (if it has strings), and the combined result. /**trying to figure out how to return the sum and not concatenate the numbers in arrays with numbers.**/
+// the final function that takes the array, scans the array,
+	// and returns the length, a boolean value of true (if it has strings), and the combined result.
+	// /**trying to figure out how to return the sum and not concatenate the numbers in arrays with numbers.
+	// Ended up creating another function that filtered out what was not
+	// numeric and returned the sum of the array that was numeric.**/
 	function analyzeArray(array){
 		 for (var i = 0; i < array.length; i++){
 			 return {
@@ -69,9 +75,9 @@
 	console.log(analyzeArray(array1));
 	console.log(analyzeArray(array2));
 	console.log(analyzeArray(array3));
-	console.log(analyzeArray(array5));
+	console.log(analyzeArray(arrayTest));
+	console.log(analyzeArray(dreadTestingThisOne));
 </script>
 <body>
-
 </body>
 </html>
