@@ -5,6 +5,55 @@
 	<title>Title</title>
 </head>
 <script>
+	"use strict";
+	
+	//20 Feb 2022 - Attempting to redo problem.
+	var array1 = [1, 2, 3];
+	var array2 = ["a","b","c"];
+	var array3 = ["bob", 100, null];
+	var arrayTest = [5, 5, 5];
+	var stringCombo = ["5", 5, "5", 10];
+	//returns an object with information
+	//information about the array, including the lengthOfArray(.length), containsAllStrings(true or false),
+	// and the combineResult of adding all elements together(the sum of, or the array together).
+	
+	function joiningArrays(anyArray){
+		if (anyArray.includes(null)) return anyArray.join("") + "null";
+		/**https://www.w3schools.com/jsref/jsref_includes_array.asp**/
+		else if (parseFloat(anyArray)) {
+			var sum = 0;
+			for (var i = 0; i < anyArray.length; i++) {
+				sum += parseFloat(anyArray[i]);
+				return parseFloat(sum);
+			}
+		} else return anyArray.join("");
+	}
+	
+	console.log(joiningArrays(array1))
+	// function checksIfAllStrings(anyArray){
+	// 	if (anyArray) return;
+	// 	else var sum = 0; return sum += anyArray;
+	// }
+
+	
+	function analyzeArray(anyArray){
+		for (var i = 0; i < anyArray.length; i++){
+			return anyArray = {
+				lengthOfArray: anyArray.length,
+				containsAllStrings: "checksIfAllStrings(anyArray)",
+				combineResult: joiningArrays(anyArray)
+			}
+		}
+	}
+	console.log("-----------V testing functionsV")
+	console.log(analyzeArray(array1));
+	console.log(analyzeArray(array2));
+	console.log(analyzeArray(array3));
+	console.log(analyzeArray(arrayTest));
+	console.log(analyzeArray(stringCombo));
+	
+	
+	
 	// ================================= JS Challenge
 	
 	// Create a function, analyzeArray, that takes in a an array and returns an object with information about the passed array. The function should return an object with properties containing information about the array, including the lengthOfArray, containsAllStrings, and the combineResult of adding all elements together.
@@ -26,57 +75,57 @@
 	// 			containsAllStrings: true,
 	// 		combineResult: ‘bob123nul
 	
-	//trying to make a function that can tell if an input is a string
-	var array1 = [1, 2, 3]
-	var array2 = ["a","b","c"]
-	var array3 = ["bob", 100, null]
-	var arrayTest = [5, 5, 5]
-	var dreadTestingThisOne = ["5", 5, "5"] /**Just adding parseFloat in the function addTheArray avoids
-	 concatenation**/
-//i needed to check if the array contained all strings, so I made a function
-	function isItString(array){
-		if (typeof array === "string") return true;
-		else return false;
-	}
-	// I needed to check if the array had numbers to return the sum, so I'm struggling to make a function that returns the sum while looking through the index........ returning the sum of the array
-	function addTheArray(array) {
-		if (isNaN(parseFloat(array))) {
-			return array.join("");
-		} else {
-			sum = 0;
-			for (var i = 0; i < array.length; i++) {
-				sum += parseFloat(array[i]);
-			} return parseFloat(sum);
-			}
-			// sum = 0;
-			// for (var i = 0; i < array.length; i++) {
-			// 	sum += array[i];
-			// 	console.log(sum); ---- this was confusing me.
-			/**stuck on what to use here**/// in the end, putting the console.log inside the forloop was confusing me,
-		// but it was giving me the desired answer once I took out the console.log.
-}
-// the final function that takes the array, scans the array,
-	// and returns the length, a boolean value of true (if it has strings), and the combined result.
-	// /**trying to figure out how to return the sum and not concatenate the numbers in arrays with numbers.
-	// Ended up creating another function that filtered out what was not
-	// numeric and returned the sum of the array that was numeric.**/
-	function analyzeArray(array){
-		 for (var i = 0; i < array.length; i++){
-			 return {
-				 lengthOfArray: array.length,
-				 containsAllStrings: array.every(isItString),
-				 combineResult: addTheArray(array)
-				 // array.join("").toString()
-			 }
-		 }
-	}
-	
-	
-	console.log(analyzeArray(array1));
-	console.log(analyzeArray(array2));
-	console.log(analyzeArray(array3));
-	console.log(analyzeArray(arrayTest));
-	console.log(analyzeArray(dreadTestingThisOne));
+// 	//trying to make a function that can tell if an input is a string
+// 	var array1 = [1, 2, 3]
+// 	var array2 = ["a","b","c"]
+// 	var array3 = ["bob", 100, null]
+// 	var arrayTest = [5, 5, 5]
+// 	var dreadTestingThisOne = ["5", 5, "5"] /**Just adding parseFloat in the function addTheArray avoids
+// 	 concatenation**/
+// //i needed to check if the array contained all strings, so I made a function
+// 	function isItString(array){
+// 		if (typeof array === "string") return true;
+// 		else return false;
+// 	}
+// 	// I needed to check if the array had numbers to return the sum, so I'm struggling to make a function that returns the sum while looking through the index........ returning the sum of the array
+// 	function addTheArray(array) {
+// 		if (isNaN(parseFloat(array))) {
+// 			return array.join("");
+// 		} else {
+// 			var sum = 0;
+// 			for (var i = 0; i < array.length; i++) {
+// 				 sum += parseFloat(array[i]);
+// 			} return parseFloat(sum);
+// 			}
+// 			// sum = 0;
+// 			// for (var i = 0; i < array.length; i++) {
+// 			// 	sum += array[i];
+// 			// 	console.log(sum); ---- this was confusing me.
+// 			/**stuck on what to use here**/// in the end, putting the console.log inside the forloop was confusing me,
+// 		// but it was giving me the desired answer once I took out the console.log.
+// }
+// // the final function that takes the array, scans the array,
+// 	// and returns the length, a boolean value of true (if it has strings), and the combined result.
+// 	// /**trying to figure out how to return the sum and not concatenate the numbers in arrays with numbers.
+// 	// Ended up creating another function that filtered out what was not
+// 	// numeric and returned the sum of the array that was numeric.**/
+// 	function analyzeArray(array){
+// 		 for (var i = 0; i < array.length; i++){
+// 			 return {
+// 				 lengthOfArray: array.length,
+// 				 containsAllStrings: array.every(isItString),
+// 				 combineResult: addTheArray(array)
+// 				 // array.join("").toString()
+// 			 }
+// 		 }
+// 	}
+//
+//
+// 	console.log(analyzeArray(array1));
+// 	console.log(analyzeArray(array2));
+// 	console.log(analyzeArray(array3));
+// 	console.log(analyzeArray(arrayTest));
+// 	console.log(analyzeArray(dreadTestingThisOne));
 </script>
 <body>
 </body>

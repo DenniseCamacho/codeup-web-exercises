@@ -3,7 +3,7 @@
 //01just said";
 
 // function functionName01(inputName01) {
-// 	return "I have no idead what you just said";
+// 	return "I have no idea what you just said";
 // }
 // console.log(functionName01("hi"));
 
