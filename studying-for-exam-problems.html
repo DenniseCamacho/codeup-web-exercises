@@ -34,7 +34,8 @@
 			}
 		}
 	function checkForAllStrings(anyArray){
-	
+		if (typeof anyArray !== "string") return false;
+		else return true;
 	}
 	function analyzeArray(anyArray){
 		
@@ -43,7 +44,7 @@
 			return anyArray = {
 				analyzeArray,
 				lengthOfArray: anyArray.length,
-				containsAllStrings: "checksIfAllStrings(anyArray)",
+				containsAllStrings: anyArray.every(checkForAllStrings),
 				combineResult: joiningArrays(anyArray)
 			}
 		}
