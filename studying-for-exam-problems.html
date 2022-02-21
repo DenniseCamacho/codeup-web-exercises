@@ -13,32 +13,35 @@
 	var array3 = ["bob", 100, null];
 	var arrayTest = [5, 5, 5];
 	var stringCombo = ["5", 5, "5", 10];
+	var testing = [null, "65", 82]
 	//returns an object with information
 	//information about the array, including the lengthOfArray(.length), containsAllStrings(true or false),
 	// and the combineResult of adding all elements together(the sum of, or the array together).
-	
-	function joiningArrays(anyArray){
-		if (anyArray.includes(null)) return anyArray.join("") + "null";
+
+	function joiningArrays(anyArray) {
+		if (anyArray.includes(null)) return anyArray.join("") + null;
 		/**https://www.w3schools.com/jsref/jsref_includes_array.asp**/
-		else if (parseFloat(anyArray)) {
+		else if (isNaN(parseFloat(anyArray))) return anyArray.join("");
+		else {
 			var sum = 0;
 			for (var i = 0; i < anyArray.length; i++) {
-				sum += parseFloat(anyArray[i]);
-				return parseFloat(sum);
+				 sum += parseFloat(anyArray[i]);
+			} return parseFloat(sum);
+			// for (var i = 0; i < anyArray.length; i++) {
+			// 	var sum = 0;
+			// 	sum += parseFloat(anyArray);
+			// 	return parseFloat(sum);
 			}
-		} else return anyArray.join("");
+		}
+	function checkForAllStrings(anyArray){
+	
 	}
-	
-	console.log(joiningArrays(array1))
-	// function checksIfAllStrings(anyArray){
-	// 	if (anyArray) return;
-	// 	else var sum = 0; return sum += anyArray;
-	// }
-
-	
 	function analyzeArray(anyArray){
+		
 		for (var i = 0; i < anyArray.length; i++){
+			var analyzeArray = "(" + anyArray + ") returns...";
 			return anyArray = {
+				analyzeArray,
 				lengthOfArray: anyArray.length,
 				containsAllStrings: "checksIfAllStrings(anyArray)",
 				combineResult: joiningArrays(anyArray)
@@ -51,12 +54,13 @@
 	console.log(analyzeArray(array3));
 	console.log(analyzeArray(arrayTest));
 	console.log(analyzeArray(stringCombo));
+	console.log(analyzeArray(testing));
 	
 	
 	
 	// ================================= JS Challenge
 	
-	// Create a function, analyzeArray, that takes in a an array and returns an object with information about the passed array. The function should return an object with properties containing information about the array, including the lengthOfArray, containsAllStrings, and the combineResult of adding all elements together.
+	// Create a function, analyzeArray, that takes in an array and returns an object with information about the passed array. The function should return an object with properties containing information about the array, including the lengthOfArray, containsAllStrings, and the combineResult of adding all elements together.
 	// analyzeArray([1, 2, 3]) returns...
 	// {
 	// 	lengthOfArray: 3,
