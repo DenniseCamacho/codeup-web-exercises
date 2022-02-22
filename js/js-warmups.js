@@ -358,3 +358,61 @@
 // 		}
 // 	}
 // }
+
+// var firstNames = ['CJ', 'Max', 'Claude', 'Meowmeow'];
+// var lastNames = ['Cat', 'Feline', 'Kitten', 'Calico'];
+// function createNames(firstNames, lastNames){
+// 	if (firstNames) {
+// 		for (var i = 0; i < firstNames.length; i++) {
+// 			return firstNames[i];
+//
+// 		}
+// 	} else if (lastNames) {
+// 			for (var i = 0; i < lastNames.length; i++){
+// 				lastNames[i]
+// 			}
+// 		}
+// 	};
+
+
+//if the arrays were different lengths, base it off the longer array.
+// var length = arr1.length; // you could do this and add it in i < arr1.length part.
+function createNames(arr1, arr2){
+	var output = [];
+	for(var i = 0; i < arr1.length; i += 1){
+		output.push({
+			firstName: arr1[0],
+			lastName: arr2[0]
+		});
+	}
+	return output;
+}
+// Create a function, createNames, that takes in an array of first names and an array of last names. The function should return an array of name objects with firstName and lastName properties with the input array values. Assume both input arrays are not empty, the same length and only contain string elements.
+//
+// var firstNames = ['CJ', 'Max', 'Claude', 'Meowmeow'];
+// var lastNames = ['Cat', 'Feline', 'Kitten', 'Calico'];
+//
+// createNames(firstNames, lastNames) // returns...
+//
+// 	[
+// 	{
+// 		firstName: 'CJ',
+// 		lastName: 'Cat'
+// 	},
+// 		{
+// 			firstName: 'Max',
+// 			lastName: 'Feline'
+// 		},
+// 		{
+// 			firstName: 'Claude',
+// 			lastName: 'Kitten'
+// 		},
+// 		{
+// 			firstName: 'Meowmeow',
+// 			lastName: 'Calico'
+// 		}
+// 	]
+//
+// HINT: a solution may involve using a for loop to iterate over the length of one array to push each name object onto an array of name objects that will be returned from the function.
+
+
