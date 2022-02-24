@@ -377,16 +377,16 @@
 
 //if the arrays were different lengths, base it off the longer array.
 // var length = arr1.length; // you could do this and add it in i < arr1.length part.
-function createNames(arr1, arr2){
-	var output = [];
-	for(var i = 0; i < arr1.length; i += 1){
-		output.push({
-			firstName: arr1[0],
-			lastName: arr2[0]
-		});
-	}
-	return output;
-}
+// function createNames(arr1, arr2){
+// 	var output = [];
+// 	for(var i = 0; i < arr1.length; i += 1){
+// 		output.push({
+// 			firstName: arr1[0],
+// 			lastName: arr2[0]
+// 		});
+// 	}
+// 	return output;
+// }
 // Create a function, createNames, that takes in an array of first names and an array of last names. The function should return an array of name objects with firstName and lastName properties with the input array values. Assume both input arrays are not empty, the same length and only contain string elements.
 //
 // var firstNames = ['CJ', 'Max', 'Claude', 'Meowmeow'];
@@ -415,4 +415,24 @@ function createNames(arr1, arr2){
 //
 // HINT: a solution may involve using a for loop to iterate over the length of one array to push each name object onto an array of name objects that will be returned from the function.
 
+// returns the remainder of the smaller value by the larger value
+// division by 0 returns nan
+
+// function remainers(smallv, largev) {
+// 	if (smallv === 0 || largev === 0) return NaN;
+// 	else return smallv % largev;
+// }
+// console.log(remainers(6,3));
+// console.log(remainers(0,3))
+
+//to loop through a strng, turn it into an array
+
+function printerError(string){
+	var totalOverM = 0;
+	for (var i in string) {
+		if (string[i] > "m") {
+			totalOverM++
+		}
+	} return "" + totalOverM + "/" + string.length;
+}
 

@@ -1,0 +1,30 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul li {
+    list-style: none;
+    padding-bottom: 1em;
+}
+img {
+    width: 100%;
+}
+nav {
+    text-align: center;
+    width: 100%;
+}
+li a{
+    display: inline-block;
+    background-color: #4D499E
+
+}
+ul {
+    padding: 0;
+}
+
+
+@media  (min-width: 700px) {
+
+
+}
