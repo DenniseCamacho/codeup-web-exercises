@@ -19,16 +19,16 @@
 //
 // //08FEB2022
 // //1.write a function that takes in a number and returns that number plus itself;
-function addMe(number){
-	if (number !== parseFloat(number)) return "this is not a number";
-	else return parseFloat(number) + parseFloat(number);
-}
-console.log(addMe(2));
-console.log(addMe("a"));
-console.log(addMe("2"));
-console.log(addMe(null));
-console.log(addMe(NaN));
-console.log(addMe(0));
+// function addMe(number){
+// 	if (number !== parseFloat(number)) return "this is not a number";
+// 	else return parseFloat(number) + parseFloat(number);
+// }
+// console.log(addMe(2));
+// console.log(addMe("a"));
+// console.log(addMe("2"));
+// console.log(addMe(null));
+// console.log(addMe(NaN));
+// console.log(addMe(0));
 
 //
 // // function fName(aNum) {
@@ -38,6 +38,19 @@ console.log(addMe(0));
 //
 //
 // //2.now write a function that takes in two numbers doubles each number, and then returns the sum of both numbers doubled;
+
+function doubles(firstNumber, secondNumber){
+	if (parseFloat(firstNumber) && parseFloat(secondNumber)) return firstNumber * 2 + secondNumber * 2;
+	else return false;
+}
+
+console.log(doubles(5,10));
+console.log(doubles("5",10));
+console.log(doubles(5,"10"));
+console.log(doubles(null, 0));
+console.log(doubles("five",10));
+console.log(doubles(0,NaN));
+
 //
 // // function doubletheNums(num1, num2) {
 // // 	var num1d = num1 * 2;
