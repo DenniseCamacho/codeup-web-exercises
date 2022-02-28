@@ -22,8 +22,8 @@ var beverages = {
 	type: ["Soda", "Soda"],
 	volumeInLiters: ["2L", "2l"],
 	priceInCents: [25],
-	expirationDate:[5/15/2022],
-	datesOfPreviousSips:[2/27/2022],
+	expirationDate:["5/15/2022"],
+	datesOfPreviousSips:["2/27/2022"],
 	isOpen: [true]
 }
 // 	// Define your objects using both literal syntax to create all properties and values at once and also try defining empty objects and assign property values in separate statements using the dot notation.
@@ -145,21 +145,31 @@ var beverages = {
 // }
 
 // -- Mini Exercise 2
-// var users = [
-// 	{
-// 		givenName: 'Sam',
-// 		age: 21
-// 	},
-// 	{
-// 		givenName: 'Cathy',
-// 		age: 34
-// 	},
-// 	{
-// 		givenName: 'Karen',
-// 		age: 43
-// 	}
-// ];
+var users = [
+	{
+		givenName: 'Sam',
+		age: 21
+	},
+	{
+		givenName: 'Cathy',
+		age: 34
+	},
+	{
+		givenName: 'Karen',
+		age: 43
+	}
+];
 // 1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
+function justTheNames(i){
+	for (var i = 0; i < users.length; i++){
+		console.log(users[i].givenName);
+	}
+}
+justTheNames();
+// var names = [users[0].givenName, users[1].givenName, users[2].givenName];
+// console.log(names.join(" "));
+
+
 // 2. Change the names of all users to “John Doe”
 //   3. Increase the current age of all users by 1
 // Can you accomplish each step using iteration? (edited)
@@ -201,13 +211,13 @@ user: Karen | age 43
 //a method, a function that's attached to an object
 var user = {
 	givenName: "Justin",
-    age: 25,
-    sayHello: function() {
+	age: 25,
+	sayHello: function () {
 		console.log("Howdy!");
-    },
-    logAge: function () {}
+	},
+	logAge: function () {
+	}
 }
-//encapsulation java....objects that deal with everythin
 
 
 </script>
