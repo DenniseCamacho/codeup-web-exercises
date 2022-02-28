@@ -82,9 +82,25 @@
 //
 //
 // //3.write a function that takes in a number and squares it (that is, returns that number multiplied by itself;
+// function squared(numberSquared){
+// 	if (isNaN(numberSquared) || !parseFloat(numberSquared) || numberSquared === numberSquared.toString()) return "that is not a number.";
+// 	return parseFloat(numberSquared) * parseFloat(numberSquared);
+// }
+
+// how would you write one that only accepts numerical strings?
 function squared(numberSquared){
-	return parseFl
+	if (isNaN(parseFloat(numberSquared)) || typeof numberSquared !== "string") return "I only accept numbers in strings.";
+	return numberSquared + " is a number in a string";
 }
+
+console.log("Testing ---v")
+console.log(squared(25));
+console.log(squared("2"));
+console.log(squared("two"));
+console.log(squared(0 ));
+console.log(squared(NaN));
+console.log(squared(null));
+console.log(squared(""));
 
 
 
