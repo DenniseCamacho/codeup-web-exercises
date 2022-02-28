@@ -38,32 +38,32 @@
 //
 //
 // //2.now write a function that takes in two numbers doubles each number, and then returns the sum of both numbers doubled;
+//
+// function doubles(firstNumber, secondNumber){
+// 	if (parseFloat(firstNumber) && parseFloat(secondNumber)) return firstNumber * 2 + secondNumber * 2;
+// 	else return false;
+// }
+//
+// console.log(doubles(5,10));
+// console.log(doubles("5",10));
+// console.log(doubles(5,"10"));
+// console.log(doubles(null, 0));
+// console.log(doubles("five",10));
+// console.log(doubles(0,NaN));
+// console.log(doubles(0,""), false);
 
-function doubles(firstNumber, secondNumber){
-	if (parseFloat(firstNumber) && parseFloat(secondNumber)) return firstNumber * 2 + secondNumber * 2;
-	else return false;
-}
 
-console.log(doubles(5,10));
-console.log(doubles("5",10));
-console.log(doubles(5,"10"));
-console.log(doubles(null, 0));
-console.log(doubles("five",10));
-console.log(doubles(0,NaN));
-console.log(doubles(0,""), false);
-
-
-// how do you make it so that it rejects numerical strings and numbers lower than 0?
-function noStringNumbers(onlyNumber){
-	if (typeof onlyNumber !== "number" || onlyNumber <= parseFloat(0)) return false;
-	else if (parseFloat(onlyNumber)) return onlyNumber;
-}
-console.log(noStringNumbers(5));
-console.log(noStringNumbers("5"));
-console.log(noStringNumbers(NaN), false);
-console.log(noStringNumbers("five"));
-console.log(noStringNumbers(0), false);
-console.log(noStringNumbers(-2), false);
+// // how do you make it so that it rejects numerical strings and numbers lower than 0?
+// function noStringNumbers(onlyNumber){
+// 	if (typeof onlyNumber !== "number" || onlyNumber <= parseFloat(0) || isNaN(onlyNumber)) return false;
+// 	else if (parseFloat(onlyNumber)) return onlyNumber;
+// }
+// console.log(noStringNumbers(5));
+// console.log(noStringNumbers("5"));
+// console.log(noStringNumbers(NaN), false);
+// console.log(noStringNumbers("five"));
+// console.log(noStringNumbers(0), false);
+// console.log(noStringNumbers(-2), false);
 
 
 
@@ -82,7 +82,28 @@ console.log(noStringNumbers(-2), false);
 //
 //
 // //3.write a function that takes in a number and squares it (that is, returns that number multiplied by itself;
-//
+function squared(numberSquared){
+	return parseFl
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // function squared2(aNum) {
 // // 	return aNum * aNum;
 // // }
