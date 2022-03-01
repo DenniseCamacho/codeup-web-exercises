@@ -88,21 +88,21 @@
 // }
 
 // how would you write one that only accepts numerical strings?
-function squared(numberSquared){
-	if (isNaN(parseFloat(numberSquared)) || typeof numberSquared !== "string") return "I only accept numbers in strings.";
-	return numberSquared + " is a number in a string";
-}
-
-console.log("Testing ---v")
-console.log(squared(25));
-console.log(squared("2"));
-console.log(squared("two"));
-console.log(squared(0 ));
-console.log(squared(NaN));
-console.log(squared(null));
-console.log(squared(""));
-
-
+// function squared(numberSquared){
+// 	if (isNaN(parseFloat(numberSquared)) || typeof numberSquared !== "string") return "I only accept numbers in strings.";
+// 	return numberSquared + " is a number in a string";
+// }
+//
+// console.log("Testing ---v")
+// console.log(squared(25));
+// console.log(squared("2"));
+// console.log(squared("two"));
+// console.log(squared(0 ));
+// console.log(squared(NaN));
+// console.log(squared(null));
+// console.log(squared(""));
+//
+//
 
 
 
@@ -513,3 +513,59 @@ console.log(squared(""));
 // // 	} return "" + totalOverM + "/" + string.length;
 // // }
 //
+
+
+//
+
+//s.includes() // evaluates true or false
+//did not understand question, planning to work on others later hopefully
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function isLockNessMonster(s){
+
+}
+
+
+
+// "Your girlscout cookies are ready to ship. Your total comes to tree fiddy"
+// 9:09
+// "Your girlscout cookies are ready to ship. Your total comes to tree fiddy"
+// 9:10
+// "Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."
+// 9:10
+// "Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."
+// 9:10
+// "The cost of the ferry across Loch Ness is 3.50"
+// 9:10
+// "The leading batter this year is hitting three fifty"
+// 9:11
+// ^^^ Strings to pass into the isLochNessMonster function
