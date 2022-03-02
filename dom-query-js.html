@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
 </head>
+<style>
+	ul:last-of-type {
+		list-style: none;
+	}
+	button {
+		width: 5em;
+		margin-bottom: 1em;
+	}
+</style>
 <body>
 
 <h1 id="main-header">Hello World!</h1>
@@ -25,10 +34,46 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<ul>
+	<li><button>JSisC</button></li>
+	<li><button>1</button></li>
+	<li><button>2</button></li>
+	<li><button>3</button></li>
+	<p></p>
+</ul>
+
 <script>
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
+	    // Attach click event listeners to each of the buttons
+	    // and have the handlers perform the modifications that
+	    // were automatically taking place. For example, the first button
+	    // should set inner html of mainHeader to "JavaScript is Cool".
+		// var buttonOne = document.querySelector("button");
+	    var buttonList = document.querySelectorAll("button");
+		function showAlert() {
+			if (buttonList[0]) {
+				document.querySelector("h1").innerText = "JavaScript is Cool";
+			} else if (buttonList[1] || buttonList[2] || buttonList[3]) {
+				document.querySelector("h1").innerText = "Hello World!";
+			}
+		}
+		// buttonOne.addEventListener("click", showAlert);
+		
+		
+		buttonList[0].addEventListener("click", showAlert);
+	    buttonList[1].addEventListener("click", showAlert);
+		
+		
+		
+		// var buttonTwo = document.querySelectorAll("revertBack");
+		// function goBack(){
+		// 	document.querySelector("h1").innerText = "Hello World!";
+		// }
+		// buttonTwo.addEventListener("click", goBack);
+		//
+		//
+			    // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
