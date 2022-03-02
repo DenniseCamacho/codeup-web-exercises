@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom events</title>
+</head>
+<style>
+ul {
+	list-style: none;
+}
+div.purple-box{
+	background-color: mediumpurple;
+	border: .5em solid rebeccapurple;
+	padding: 10vh;
+	width: 20vh;
+	height: 20vh;
+	margin-left: 2em;
+}
+button {
+	width: 41vh;
+	margin-bottom: .5em;
+	background-color: rebeccapurple;
+	border: 1em solid mediumpurple;
+	color: mediumpurple;
+}
+</style>
+
+<body>
+<section>
+	<div class="purple-box"><p></p></div>
+	
+	<ul>
+		<li><button>1</button></li>
+		<li><button>2</button></li>
+		<li><button>3</button></li>
+		<p></p>
+	</ul>
+	
+</section>
+
+<script>
+	
+	/**
+	/**1. GR**/var firstButton = document.querySelector("button"); //will only get first button 1.
+	/**2. WTEH***/function showAlert(){
+		document.querySelector("p").innerHTML = "I'm a purple box.";
+	}
+	/**3. RTEH**/firstButton.addEventListener("click", showAlert);
+	
+	// var button = document.querySelector("button");
+	// // function changeButtonNumbers(){
+	// //
+	// // }
+	// button.addEventListener("click", function changeNumbers(){
+	//
+	// });
+	//
+	// var purpleSquare = document.querySelector("div");
+	// //querySelector only selects one. querySelectorALL
+	// // function doThisWhenSquareIsClicked(){
+	// // 	alert("I'm a purple square.");
+	// // }
+	// function doThisWhenSquareIsClicked(){
+	// 	document.write("I'm a purple square.");
+	// }
+	// purpleSquare.addEventListener("click", doThisWhenSquareIsClicked);
+	//
+	//
+	
+
+	//get access to the button
+// var button = document.querySelector("button");
+// //write event handler/listener/callback
+// function doThisWhenClicked(){
+// 	(" ");
+// }
+// //takes two parameters (what to listen for, when function is triggered)
+// button.addEventListener("click", doThisWhenClicked);
+//
+// var secondButton = document.getElementsByTagName("button");
+// secondButton.onclick = doThisWhenClicked();
+	
+	// get access to the button in the DOM
+	// var button = document.querySelector("button");
+	// Write the event handler
+	// aka event listener, callback
+	// function doThisWhenTheButtonIsClicked(){
+	// 	alert("You clicked me!");
+	// }
+	// Finally we register the handler
+	// button.addEventListener('click', doThisWhenTheButtonIsClicked);
+	
+	// var secondButton = document.getElementsByTagName("button")[1];
+	//
+	// secondButton.onclick = doThisWhenTheButtonIsClicked;
+	
+	// var allTheButtons = document.getElementsByTagName("button");
+	// for (var i = 0; i < allTheButtons.length; i++) {
+	// 	allTheButtons[i].addEventListener('click', doThisWhenTheButtonIsClicked);
+	// }
+	//
+	// function showColor(eventObject){
+	// 	var theColor = getComputedStyle(eventObject.target).backgroundColor;
+	// 	document.getElementById("copycat").style.backgroundColor = theColor;
+	// }
+	//
+	// var allTheSquares = document.getElementsByClassName('square');
+	// for (var i = 0; i < allTheSquares.length; i++){
+	// 	allTheSquares[i].addEventListener('mouseover', showColor);
+	// }
+	
+	
+
+</script>
+
+
+</body>
+</html>
