@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom lecture</title>
+	<style>
+	/*	.hotpink {*/
+	/*		color: hotpink;*/
+	/*	}*/
+	/*!*!*	look at js*!*!*/
+	/*!*!*	you can repeat classes not IDs*!*!*/
+		#colorSubmission {
+			width: 40%;
+			margin-top: .5em;
+			color: #e6e6e6;
+			background-color: black;
+			
+		}
+	
+	</style>
+</head>
+<body>
+<p id="like">I like</p>
+<p id="dontLike">I don't like</p>
+<p id="marvel">Marvel</p>
+<p id="dc">DC</p>
+
+<form name="changeColor">
+	<label for="colorPreference">Enter Your Color Preference:</label>
+	<input type="text" name="colorPreference" id="colorPreference"><br>
+	<input type="button" id="colorSubmission" value="Submit">
+</form>
+
+<hr>
+<p id="hulk" data-state="hulk" data-strength="super" data-intelligence="low">The Hulk</p>
+
+<script>
+	"use strict";
+	// //document object model
+	// //to manipulate an element, get its reference.-v object that represents the element
+	// var accessTheDom = document.getElementById("like");
+	// //
+	// var showMe = accessTheDom.innerText;//.innerText - whatever\'s between the tags.
+	// //
+	// alert(showMe.split("").reverse().join(""));
+	// //
+	// var like = document.getElementById("like");
+	// var dontLike = document.getElementById("dontLike");
+	// var marvel = document.getElementById("marvel");
+	// var dc = document.getElementById("dc");               /**you could chain**/
+	//
+	// dc.innerText = dc.innerText + " animated universe";
+	// dc.innerText += " rocks!";
+	// //
+	//
+	// marvel.setAttribute("class", "hotpink"); /**css**/
+	// // dc.setAttribute("class", "hotpink");
+	// // // document.getElementById("like").setAttribute("class", "hotpink"); /**chain example**/
+	// var hotPinks = document.getElementsByClassName("hotpink"); /** array like... node list...**/
+	// // hotPinks[0].style.color = "hotpink";
+	// //        //  ^practice style method
+	// for (var i = 0; i < hotPinks.length; i++){
+	// 	hotPinks[i].style.color = "hotpink";
+	// }
+	// //forms ... you can give selector strings to...
+	//using form input (or any user input) to change elements on the page
+	
+	//get a reference to the button
+	var submitButton = document.querySelector("#colorSubmission");
+	//create a function that is invoked when the button is clicked
+	submitButton.onclick = function (){
+		//get reference to the form input element
+		var colorInput = document.getElementById("colorPreference");
+		// get a reference to the actual for input
+		var userInput = colorInput.value;
+		// alert(userInput);
+		//get a reference to all the paragraphs on the page
+		var paragraphs = document.getElementsByTagName("p");
+		//loop through all the list of paragraphs
+		for (var i = 0; i < paragraphs.length; i++){
+			//for each paragraph, change the color to match user input
+			paragraphs[i].style.color = userInput;
+		}
+	}
+	
+	//using data-attributes
+	
+	//Get a reference to the hulk paragraph
+	var theHulk = document.getElementById("hulk");
+	
+	//get a reference to the data attribute, old way method
+	var hulkState = theHulk.getAttribute("data-state");
+	//output the value of the data-state attribute to the page
+	theHulk.innerText += " is in " + hulkState + " state";
+	
+	//new way
+	var hulkStrength = theHulk.dataset.strength;
+	
+	// theHulk.innerText += ". His strength is " + hulkStrength + ".";
+	
+	var hulkIntelligence = theHulk.dataset.intelligence;
+	// theHulk.innerText += " His intelligence is " + hulkIntelligence + ".";
+	
+	// get a reference to the transform hulk button
+	var transformHulk = document.getElementById("transformHulk");
+	transformHulk.onclick = function(){
+		var hulk = document.getElementById("hulk");
+		var hulkState = hulk.dataset.state;
+		if (hulkState === 'hulk'){
+			hulk.dataset.state = "Bruce Banner";
+		} else {
+			hulk.dataset.state = "hulk";
+		}
+		hulk.innerText = "The Hulk is in " + hulk.dataset.state + " state";
+	}
+	
+	
+
+</script>
+</body>
+</html>
