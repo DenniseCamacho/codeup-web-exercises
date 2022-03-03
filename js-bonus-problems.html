@@ -4,11 +4,65 @@
 	<meta charset="UTF-8">
 	<title>Bonus Problems</title>
 </head>
+<style>
+	.sectionB {
+		display: flex;
+		justify-content: space-evenly;
+		border-top: solid;
+		padding-top: 1em;
+	}
+	.sectionB2 {
+		display: flex;
+		justify-content: space-around;
+		border-bottom: solid;
+		padding: 1em;
+	}
+	.redB, .blueB, .yellowB, .orangeB, .greenB, .purpleB {
+		width: 5em;
+		height: 5em;
+		border-radius: 50%;
+		box-shadow: .1em .1em gray;
+	}
+	
+	.redB {
+		background-color: red;
+	}
+	.blueB {
+		background-color: blue;
+	}
+	.yellowB {
+		background-color: yellow;
+	}
+	
+	.orangeB {
+		background-color: orange;
+	}
+	.greenB {
+		background-color: green;
+	}
+	.purpleB {
+		background-color: rebeccapurple;
+		
+	}
+</style>
+
 <body>
+
+<section class="sectionB">
+<div class="redB"><span class="redB">test</span></div>
+<div class="blueB"><span></span></div>
+<div class="yellowB"><span></span></div>
+</section>
+
+<section class="sectionB2">
+	<div class="orangeB"><span></span></div>
+	<div class="greenB"><span></span></div>
+	<div class="purpleB"><span></span></div>
+</section>
 
 
 <script>
-
+document.getElementsByClassName("redB").innerText = "I am red";
 </script>
 </body>
 </html>
