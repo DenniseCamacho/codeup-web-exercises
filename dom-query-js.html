@@ -14,11 +14,12 @@
 	ul:last-of-type {
 		/*display: flex;*/
 		list-style: none;
-		background-color: #dfdada;
+		background-color: #f8b1b3;
+		padding: 1em 1em;
+		
 	}
 	button {
 		width: 10em;
-		margin: auto;
 		margin-bottom: 1em;
 	}
 </style>
@@ -50,7 +51,7 @@
 <section>
 <ul>
 	<li><button>Did you know?</button></li>
-	<li><button>1</button></li>
+	<li><button>Default Header</button></li>
 	<li><button>2</button></li>
 	<li><button>3</button></li>
 	<p></p>
@@ -67,20 +68,16 @@
 	 
 	 
 	 
-	 
-	 
-	 
-	 
-	 
-	 
 		var buttonOne = document.getElementsByTagName("button")[0];
 	    var buttonList = document.querySelectorAll("button");
+		function overWrite(){
+			document.querySelector("h1").innerText = "Hello World!";
+		}
 		function showAlert() {
-			if (buttonList ==! buttonOne) {
-				document.querySelectorAll("h1").innerText = "Hello World!";
-			} else {
 				document.querySelector("h1").innerText = "JavaScript is Cool";
-			}
+		}
+		function changeColor(){
+			document.getElementsByTagName("button").onclick =
 		}
 				// document.querySelector("h1").innerText = "JavaScript is Cool";
 				// document.querySelector("h1").innerText = "Hello World!";
@@ -89,7 +86,7 @@
 		
 		
 		buttonList[0].addEventListener("click", showAlert);
-	    buttonList[1].addEventListener("click", showAlert);
+	    buttonList[1].addEventListener("click", overWrite);
 		
 		
 		
