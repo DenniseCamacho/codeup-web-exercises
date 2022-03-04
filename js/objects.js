@@ -11,6 +11,7 @@
 	 *  > console.log(person.firstName) // "Rick"
 	 *  > console.log(person.lastName) // "Sanchez"
 	 */
+
 	// var person = {
 	// 	firstName: "Dennise",
 	// 	lastName: "Camacho"
@@ -48,11 +49,47 @@
 	 * and console.log the relevant messages for each person
 	 */
 
-	// var hebShoppers = [
-	// 	{name: "Cameron", amount: 180},
-	// 	{name: "Ryan", amount: 250},
-	// 	{name: "George", amount: 320}
-	// ];
+// 	var hebShoppers = [
+// 		{name: "Cameron", amount: 180},
+// 		{name: "Ryan", amount: 250},
+// 		{name: "George", amount: 320}
+// 	];
+//
+// var shoppers = hebShoppers.value;
+// console.log(shoppers);
+
+	var coffees = [
+		{id: 1, name: 'Light City', roast: 'light'},
+		{id: 2, name: 'Half City', roast: 'light'},
+		{id: 3, name: 'Cinnamon', roast: 'light'},
+		{id: 4, name: 'City', roast: 'medium'},
+		{id: 5, name: 'American', roast: 'medium'},
+		{id: 6, name: 'Breakfast', roast: 'medium'},
+		{id: 7, name: 'High', roast: 'dark'},
+		{id: 8, name: 'Continental', roast: 'dark'},
+		{id: 9, name: 'New Orleans', roast: 'dark'},
+		{id: 10, name: 'European', roast: 'dark'},
+		{id: 11, name: 'Espresso', roast: 'dark'},
+		{id: 12, name: 'Viennese', roast: 'dark'},
+		{id: 13, name: 'Italian', roast: 'dark'},
+		{id: 14, name: 'French', roast: 'dark'},
+	];
+
+	function addCoffee(userInput){
+		userInput.push({id:userInput, name: userInput, roast: userInput,});
+	}
+
+
+
+	// var coffeeNames = Object.keys(coffees);
+	// console.log(coffeeNames);
+
+	//make an object into an array
+	//add to the array
+	//turn it back into an object.
+
+
+
 	// for (var i = 0; i < hebShoppers.length; i++) {
 	// 	if (hebShoppers[i].amount < 200) {
 	// 		console.log("Sorry " + hebShoppers[i].name + ", you are not eligible for a discount. Your total is $" + hebShoppers[i].amount + ".");
