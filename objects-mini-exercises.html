@@ -34,10 +34,11 @@ var beverages = [
 		expirationDate: "5/15/2022",
 		datesOfPreviousSips: "2/27/2022",
 		isOpen: true},
-]
+];
+
+beverageName = Object.entries(beverages);
 console.log(beverages);
-console.log(beverages[0]);
-console.log(beverages.toString());
+console.log(beverages[0].brandName.split("").reverse().join(""));
 // 	// Define your objects using both literal syntax to create all properties and values at once and also try defining empty objects and assign property values in separate statements using the dot notation.
 //
 //     //add [] to dateOfPreviousSips
