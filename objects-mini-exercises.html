@@ -33,13 +33,25 @@ var beverages = [
 		priceInCents: 25,
 		expirationDate: "5/15/2022",
 		datesOfPreviousSips: "2/27/2022",
-		isOpen: true},
+		isOpen: true}
 ];
 
 beverageName = Object.entries(beverages);
 console.log(beverages);
 console.log(beverages[0].brandName.split("").reverse().join(""));
-// 	// Define your objects using both literal syntax to create all properties and values at once and also try defining empty objects and assign property values in separate statements using the dot notation.
+console.log("Define your objects using both literal syntax to create" +
+		" all properties and values at once and also try defining empty objects and " +
+		"assign property values in separate statements using the dot notation.");
+function idk(){
+	for (var i = 0; i < beverageName.length; i++) {
+	// Object.entries(beverages);
+	var allString = JSON.stringify(Object.entries(beverages));
+	return allString;
+	}
+}
+console.log(idk());
+
+
 //
 //     //add [] to dateOfPreviousSips
 //     // // var sips = ["01/01/2022", "01/10/2022", "01/20/2022"]  // joses example
@@ -173,12 +185,20 @@ var users = [
 	}
 ];
 // 1. Log the names of all users in a single console log separated by spaces. // output = “Sam Cathy Karen”
-function justTheNames(i){
-	for (var i = 0; i < users.length; i++){
-		console.log(users[i].givenName);
-	}
-}
-justTheNames();
+
+
+
+
+
+
+
+
+// function justTheNames(i){
+// 	for (var i = 0; i < users.length; i++){
+// 		console.log(users[i].givenName);
+// 	}
+// }
+// justTheNames();
 // var names = [users[0].givenName, users[1].givenName, users[2].givenName];
 // console.log(names.join(" "));
 
