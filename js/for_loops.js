@@ -71,6 +71,15 @@
 //:::::::::::::::::::::______________
 
 //4. Create a for loop that uses console.log to create the output shown below.
+function concatenation() {
+	for(var i = 0; i < 10; i++) {
+		var number =
+	}
+	return i;
+}
+console.log(concatenation());
+
+
 // 1
 // 22
 // 333
