@@ -1,4 +1,6 @@
-// "use strict";
+"use strict";
+
+
 // //01write a function that takes an input and returns the string "I have no idea what you
 // //01just said";
 //
@@ -29,7 +31,6 @@
 // console.log(addMe(null));
 // console.log(addMe(NaN));
 // console.log(addMe(0));
-
 //
 // // function fName(aNum) {
 // // 	return aNum + aNum;
@@ -103,23 +104,6 @@
 // console.log(squared(""));
 //
 //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // // function squared2(aNum) {
 // // 	return aNum * aNum;
 // // }
@@ -141,6 +125,9 @@
 // // // }
 // // // console.log(strLength("love"));
 //
+//
+//
+//
 // //instructor:
 // // function stringLength(string){
 // // 	return string.length;
@@ -151,7 +138,7 @@
 // // 	return str1.length + str2.length;
 // // }
 // // console.log(twoSTRSL("love","love"))
-//
+
 // //instructor:
 // // function sumOfStringLengths(string1, string2){
 // // 	return string1.length + string2.length;
@@ -533,13 +520,29 @@ function spinWords(string){
 
 console.log(spinWords("rock"));
 
+// Groups of characters decided to make a battle. Help them to figure out what group is more powerful. Create a function that will accept 2 variables and return the one who's stronger.
+//
+//
+// function battle(x, y) {
+// 	if (x.toString() > y.toString()) return x.toString();
+// 	else if (y.toString() > x.toString()) return y.toString();
+// 	else if (y.toString() !== x.toString() || x.toString() !== y.toString()) return "Tie!";
+// }
+function battle(x, y){
+	if (parseInt("x") > parseInt("y")) return x;
+	else if (parseInt("y") > parseInt("x")) return y.toString().reve;
+	else if (parseInt("y") === parseInt("x")) return 'Tie!';
+	else return
+}
+console.log(battle("One", "Two", "Two"));
+console.log(battle("One", "Neo", "One"));
+console.log(battle("One", "neO", "Tie!"));
+console.log(battle("Foo", "BAR", "Tie!"));
+console.log(battle("Four", "Five", "Four"));
 
-
-
-
-
-
-
+// function greaterOne(oneNumber, otherNumber){
+// 	if (oneNumber > otherNumber) return oneNumber;
+// };
 
 
 

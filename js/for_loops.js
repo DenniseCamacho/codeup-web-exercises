@@ -77,6 +77,7 @@ function concatenation() {
 	}
 	return i;
 }
+
 console.log(concatenation());
 
 
