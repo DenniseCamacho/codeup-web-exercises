@@ -529,9 +529,10 @@ console.log(spinWords("rock"));
 // 	else if (y.toString() !== x.toString() || x.toString() !== y.toString()) return "Tie!";
 // }
 function battle(x, y){
-	if (x.valueOf() === y.valueOf() || x.split("").reverse().join("") === y.split("").reverse().join("")) return "Tie!"
+	if (x.toLowerCase() == y.toLowerCase().split("").reverse().join("")) return "Tie!";
+
 	else if (x.valueOf() > y.valueOf() || x.split("").reverse().join("") > y.split("").reverse().join("")) return x;
-	else if (y.valueOf() > x.valueOf() || y.split("").reverse().join("") > x.split("").reverse().join("")) return y + "tie";
+	else if (y.valueOf() > x.valueOf() || y.split("").reverse().join("") > x.split("").reverse().join("")) return y;
 }
 
 
