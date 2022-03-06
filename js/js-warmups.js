@@ -529,11 +529,17 @@ console.log(spinWords("rock"));
 // 	else if (y.toString() !== x.toString() || x.toString() !== y.toString()) return "Tie!";
 // }
 function battle(x, y){
-	if (parseInt("x") > parseInt("y")) return x;
-	else if (parseInt("y") > parseInt("x")) return y.toString().reve;
-	else if (parseInt("y") === parseInt("x")) return 'Tie!';
-	else return
+	if (x.valueOf() > y.valueOf()) return x;
+	else if (y.valueOf() < x.valueOf()) return y;
+	else if (x.valueOf() == y.valueOf()) return 'Tie!';
 }
+
+
+	// if (parseInt("x") > parseInt("y")) return x;
+	// else if (parseInt("y") > parseInt("x")) return y.toString();
+	// else if (parseInt("y") === parseInt("x")) return "Tie!";
+	// else return "testing"
+console.log('-------')
 console.log(battle("One", "Two", "Two"));
 console.log(battle("One", "Neo", "One"));
 console.log(battle("One", "neO", "Tie!"));
