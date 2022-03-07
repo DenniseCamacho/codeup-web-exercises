@@ -31,11 +31,16 @@
 	$(document).ready(function(){
 		$('li').css('font-size', '20px')
 		$('li, h1, p').css('background-color', 'red')
-		$('h1').on('click', function(){
-			alert('you clicked me! I will now turn blue')
-			$('h1').css("background-color", 'blue')
+		$('h1').on({
+			click: function (){
+				alert('you clicked me! I will now turn blue');
+				$('h1').css("background-color", 'blue');
+			},
+			mouseleave: function (){
+				$('h1').css('background-color', 'white');
+			}
 		});
-	})
+	});
 </script>
 </body>
 </html>
