@@ -529,12 +529,15 @@ console.log(spinWords("rock"));
 // 	else if (y.toString() !== x.toString() || x.toString() !== y.toString()) return "Tie!";
 // }
 function battle(x, y){
-	if (x.toLowerCase() == y.toLowerCase().split("").reverse().join("")) return "Tie!";
-
+	if (x.split().some(checkForLetters) || y.split().some(checkForLetters)) return "Tie!";
+	// if (x.split("").includes(y.split("")) || y.split("").includes(x.split(""))) return "Tie!";
 	else if (x.valueOf() > y.valueOf() || x.split("").reverse().join("") > y.split("").reverse().join("")) return x;
 	else if (y.valueOf() > x.valueOf() || y.split("").reverse().join("") > x.split("").reverse().join("")) return y;
+	else return "Tie!";
 }
-
+function checkForLetters(x, y){
+	return x == y;
+}
 
 	// if (parseInt("x") > parseInt("y")) return x;
 	// else if (parseInt("y") > parseInt("x")) return y.toString();
@@ -552,42 +555,13 @@ console.log(battle("Four", "Five", "Four"));
 // };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function isLockNessMonster(s){
-
+function isLockNessMonster(){
 }
 
-
-
 // "Your girlscout cookies are ready to ship. Your total comes to tree fiddy"
-// 9:09
 // "Your girlscout cookies are ready to ship. Your total comes to tree fiddy"
-// 9:10
 // "Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."
-// 9:10
 // "Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."
-// 9:10
 // "The cost of the ferry across Loch Ness is 3.50"
-// 9:10
 // "The leading batter this year is hitting three fifty"
-// 9:11
 // ^^^ Strings to pass into the isLochNessMonster function
