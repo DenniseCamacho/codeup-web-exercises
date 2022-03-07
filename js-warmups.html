@@ -40,13 +40,19 @@
 	//
 	// 1. Create a function, returnFirstUser, that takes in an array of user objects and returns the first user object.
 	//
-	function returnFirstUser() {
-		for (var i = 0; i < 1; i++) {
-			console.log(users[i]);
-			console.log("-----");
-		}
-	}
-	returnFirstUser();
+	// function returnFirstUser() {
+	// 	for (var i = 0; i < 1; i++) {
+	// 		console.log(users[i]); // this is wrong because it doesn not RETURN the first user, it logs.
+	// 		console.log("-----");
+	// 	}
+	// }
+	// returnFirstUser();
+	// console.log(returnFirstUser());
+	//
+	// // instructor:
+	// // return users[0];
+	
+	
 	// returnFirstUser(users) should return...
 	//
 	// {
@@ -57,22 +63,46 @@
 	//
 	// 2. Create a function, returnTotalUserLogins, that takes in an array of user objects and returns the total count of logins
 	// for all users.
+	//when a functions returns nothing it returns undefined.
 	function returnTotalUserLogins(){
-		
-		for (var i = 0; i < users.length; i++){
-			var sum = 0;
-			// console.log(users[i].numberOfLogins);
-			var sum =+ parseFloat(users[i].numberOfLogins);
+		var total = 0; /**it should be out of the forloop**/
+		for (var i = 0; i < users.length; i += 1){
+			// var total = 0; when i left it in here, it only showed me 10, the last object
+			total += users[i].numberOfLogins;
 		}
-		return console.log(sum);
+		//users.forEach(function(user){
+		// total += user.numberOfLogins;
+		// return total; }); ---foreachloop
 	}
-	returnTotalUserLogins(users);
+	console.log(returnTotalUserLogins(users));
+	
+	// function returnTotalUserLogins(){
+	//
+	// 	for (var i = 0; i < users.length; i++){
+	// 		var sum = 0; /**should be out of the forloop**/
+	// 		// console.log(users[i].numberOfLogins);
+	// 		var sum =+ parseFloat(users[i].numberOfLogins);
+	// 	}
+	// 	return sum;
+	// }
+	
+	// console.log(returnTotalUserLogins(users));
 	//
 	// returnTotalUserLogins(users) should return... 133
 	//
 	// 3. (optional bonus) create a function, returnMostFrequentUser, that takes in an array of user objects and returns the
 	// user object with the highest number of logins.
 	//
+	function returnMostFrequentUser(users) {
+		var mostFrequentUser = user {};
+	users.forEach(function (user) {
+		if (user.numberOfLogins > mostFrequentUser.numberOfLogins) {
+			mostFrequentUser = user;
+		}
+		});
+	return mostFrequentUser;
+	}
+	//review later^^^
 	//
 	// returnMostFrequentUser(users) should return...
 	//
