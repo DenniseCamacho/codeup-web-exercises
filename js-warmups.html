@@ -8,15 +8,81 @@
 <script src="js/js-warmups.js"></script>
 <script>
 	
-	//make the browser ask a question and return the message based on the answer.
-	
-	
-	function amIcoding(answer){
-		var coding = "yes"
-		if (answer !== coding || answer === true) return "I'm not learning ):";
-		else return "I'm learning.";
+	// //make the browser ask a question and return the message based on the answer.
+	//
+	//
+	// function amIcoding(answer){
+	// 	var coding = "yes"
+	// 	if (answer !== coding || answer === true) return "I'm not learning ):";
+	// 	else return "I'm learning.";
+	// }
+	// ================================= JS WARM UP
+	//
+	// Consider the following array of users:
+	//
+			var users = [
+				{
+					username: 'fsmith',
+					email: 'fsmith@email.com',
+					numberOfLogins: 23
+				},
+				{
+					username: 'ksmith',
+					email: 'ksmith@email.com',
+					numberOfLogins: 100
+				},
+				{
+					username: 'lsmith',
+					email: 'lsmith@email.com',
+					numberOfLogins: 10
+				}
+			];
+	//
+	// 1. Create a function, returnFirstUser, that takes in an array of user objects and returns the first user object.
+	//
+	function returnFirstUser() {
+		for (var i = 0; i < 1; i++) {
+			console.log(users[i]);
+			console.log("-----");
+		}
 	}
-	
+	returnFirstUser();
+	// returnFirstUser(users) should return...
+	//
+	// {
+	// 	username: 'fsmith',
+	// 			email: 'fsmith@email.com',
+	// 		numberOfLogins: 23
+	// }
+	//
+	// 2. Create a function, returnTotalUserLogins, that takes in an array of user objects and returns the total count of logins
+	// for all users.
+	function returnTotalUserLogins(){
+		
+		for (var i = 0; i < users.length; i++){
+			var sum = 0;
+			// console.log(users[i].numberOfLogins);
+			var sum =+ parseFloat(users[i].numberOfLogins);
+		}
+		return console.log(sum);
+	}
+	returnTotalUserLogins(users);
+	//
+	// returnTotalUserLogins(users) should return... 133
+	//
+	// 3. (optional bonus) create a function, returnMostFrequentUser, that takes in an array of user objects and returns the
+	// user object with the highest number of logins.
+	//
+	//
+	// returnMostFrequentUser(users) should return...
+	//
+	// {
+	// 	username: 'ksmith',
+	// 			email: 'ksmith@email.com',
+	// 		numberOfLogins: 100
+	// }
+
+
 </script>
 </body>
 </html>
