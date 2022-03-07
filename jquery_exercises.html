@@ -8,25 +8,27 @@
 <h1>JQuery</h1>
 <ul>
 	<li>listitem</li>
+	<li class="codeup">listitem</li>
 	<li>listitem</li>
 	<li>listitem</li>
-	<li>listitem</li>
-	<li>listitem</li>
+	<li class="codeup">listitem</li>
 </ul>
 
 
 <ul>
+	<li class="codeup">listitem2</li>
 	<li>listitem2</li>
 	<li>listitem2</li>
 	<li>listitem2</li>
-	<li>listitem2</li>
-	<li>listitem2</li>
+	<li id="codeup">listitem2</li>
 </ul>
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <!--put it above all script^^^^-->
 <script>
 	"use strict";
-	console.log(jQuery);
+	$(document).ready(function(){
+		$('.codeup').css('border', 'solid 1px red')
+	})
 </script>
 </body>
 </html>
