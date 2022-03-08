@@ -64,17 +64,17 @@
 	// 2. Create a function, returnTotalUserLogins, that takes in an array of user objects and returns the total count of logins
 	// for all users.
 	//when a functions returns nothing it returns undefined.
-	function returnTotalUserLogins(){
-		var total = 0; /**it should be out of the forloop**/
-		for (var i = 0; i < users.length; i += 1){
-			// var total = 0; when i left it in here, it only showed me 10, the last object
-			total += users[i].numberOfLogins;
-		}
-		//users.forEach(function(user){
-		// total += user.numberOfLogins;
-		// return total; }); ---foreachloop
-	}
-	console.log(returnTotalUserLogins(users));
+	// function returnTotalUserLogins(){
+	// 	var total = 0; /**it should be out of the forloop**/
+	// 	for (var i = 0; i < users.length; i += 1){
+	// 		// var total = 0; when i left it in here, it only showed me 10, the last object
+	// 		total += users[i].numberOfLogins;
+	// 	}
+	// 	//users.forEach(function(user){
+	// 	// total += user.numberOfLogins;
+	// 	// return total; }); ---foreachloop
+	// }
+	// console.log(returnTotalUserLogins(users));
 	
 	// function returnTotalUserLogins(){
 	//
@@ -92,16 +92,16 @@
 	//
 	// 3. (optional bonus) create a function, returnMostFrequentUser, that takes in an array of user objects and returns the
 	// user object with the highest number of logins.
-	//
-	function returnMostFrequentUser(users) {
-		var mostFrequentUser = user {};
-	users.forEach(function (user) {
-		if (user.numberOfLogins > mostFrequentUser.numberOfLogins) {
-			mostFrequentUser = user;
-		}
-		});
-	return mostFrequentUser;
-	}
+	// //
+	// function returnMostFrequentUser(users) {
+	// 	var mostFrequentUser = user {};
+	// users.forEach(function (user) {
+	// 	if (user.numberOfLogins > mostFrequentUser.numberOfLogins) {
+	// 		mostFrequentUser = user;
+	// 	}
+	// 	});
+	// return mostFrequentUser;
+	// }
 	//review later^^^
 	//
 	// returnMostFrequentUser(users) should return...
@@ -111,8 +111,96 @@
 	// 			email: 'ksmith@email.com',
 	// 		numberOfLogins: 100
 	// }
-
-
+	
+	// ================================= WARM UP
+	//
+	// Create a function, computeOperations, that takes in an array of operation objects and a starting integer value and returns an integer after all the calculations have completed, using the second integer argument as the first operand. Each operation object will have the following shape:
+	//
+	// var Operations = [
+	// 		{
+	// 		operation: ["subtract", "multiply", "add"],
+	// 		integer: [7, 3, 5, -2, 10]
+	// 		}
+	// ];
+	// // --- is this possible?^
+	//  var operations 1 = {}
+	//
+	//
+	// function computeOperations(operation) {
+	// 	var answer = 0;
+	// 	for (var i = 0; i < operation.length; i += 1){
+	// 	 answer =+ operation[i].integer[i];
+	// 	}
+	// 	return answer;
+	// };
+	// console.log(computeOperations(Operations), "y");
+	// console.log(computeOperations[0].integer[0] + " " + computeOperations[0].operation[2]);
+	
+	
+	// {
+	// 	operation: 'subtract' (or 'multiply' or 'add'),
+	// 	integer: 7 (or any positive or negative integer)
+	// }
+	//
+	// Example 1...
+	//
+	// var operations1 = [
+	//
+	// 	{
+	// 		operation: 'add',
+	// 		integer: 7
+	// 	},
+	// 	{
+	// 		operation: 'add',
+	// 		integer: 3
+	// 	}
+	// ]
+	//
+	//
+	// computeOperations(operations1, 10) // returns 20
+	//
+	//
+	// Example 2...
+	//
+	// var operations2 = [
+	//
+	// 	{
+	// 		operation: 'add',
+	// 		integer: 7
+	// 	},
+	// 	{
+	// 		operation: 'add',
+	// 		integer: 3
+	// 	},
+	// 	{
+	// 		operation: 'multiply',
+	// 		integer: 3
+	// 	},
+	// ]
+	//
+	// computeOperations(operations2, 10) // returns 60
+	//
+	//
+	// Example 3...
+	//
+	// var operations3 = [
+	//
+	// 	{
+	// 		operation: 'subtract',
+	// 		integer: 5
+	// 	},
+	// 	{
+	// 		operation: 'multiply',
+	// 		integer: -2
+	// 	},
+	// 	{
+	// 		operation: 'add',
+	// 		integer: 10
+	// 	},
+	// ]
+	//
+	// computeOperations(operations3, 10) // returns 0
+	//
 </script>
 </body>
 </html>
