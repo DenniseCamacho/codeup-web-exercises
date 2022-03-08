@@ -5,15 +5,17 @@
 	<title>jquery-exercises</title>
 </head>
 <body>
-<h1>JQuery</h1>
+<h1 id="firstH1">JQuery</h1>
 <ul>
-	<li>listitem</li>
+	<li class="firstLi">Only this list item should turn red</li>
 	<li class="codeup">listitem</li>
 	<li>listitem</li>
 	<li>listitem</li>
 	<li class="codeup">listitem</li>
 </ul>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis dolorem, ducimus eveniet incidunt
+<p id="container1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis dolorem, ducimus
+	eveniet
+	incidunt
 	inventore maxime pariatur quis quod quos reiciendis tempore totam unde! Adipisci assumenda ipsam nobis quisquam
 	soluta?Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto cum enim facilis labore laborum optio placeat quas quis tenetur? Accusamus autem est id ipsum quaerat ratione sit voluptas voluptatum.</p>
 
@@ -24,22 +26,58 @@
 	<li>listitem2</li>
 	<li id="codeup">listitem2</li>
 </ul>
+<div class="circle1">
+	test
+</div>
+
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <!--put it above all script^^^^-->
 <script>
 	"use strict";
 	$(document).ready(function(){
-		$('li').css('font-size', '20px')
-		$('li, h1, p').css('background-color', 'red')
-		$('h1').on({
-			click: function (){
-				alert('you clicked me! I will now turn blue');
-				$('h1').css("background-color", 'blue');
-			},
-			mouseleave: function (){
-				$('h1').css('background-color', 'white');
-			}
-		});
+		// $('li').css('font-size', '20px')
+		// $('li, h1, p').css('background-color', 'red')
+		// $('h1').on({
+		// 	click: function (){
+		// 		alert('you clicked me! I will now turn blue');
+		// 		$('h1').css("background-color", 'blue');
+		// 	},
+		// 	hover: function (){
+		// 		$('h1').css('background-color', 'white');
+		// 	}
+		// });
+		function changeH1(){
+			$('#firstH1').css('background-color', 'purple')
+		};
+		function fontSizeChange(){
+		$('#container1').css('font-size', '18px');
+		$('#container1').css('background-color', 'blue');
+			$('#container1').text('I\'m the finished exercise');
+		};
+		function fontSizeChange2(){
+		
+		};
+			$('#container1').css('font-size', '1em');
+			$('#container1').css('background-color', 'red');
+			$('#container1').text('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis dolorem, ducimus eveniet incidunt inventore maxime pariatur quis quod quos reiciendis tempore totam unde! Adipisci assumenda ipsam nobis quisquam soluta?Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto cum enim facilis labore laborum optio placeat quas quis tenetur? Accusamus autem est id ipsum quaerat ratione sit voluptas voluptatum.');
+		
+		function hoverRed(){
+			$('li:first-of-type').css('color', 'red');
+		};
+		function hoverBlack(){
+			$('li:first-of-type').css('color', 'black');
+		};
+		$('li:first-of-type').hover(hoverRed, hoverBlack);
+		$('#firstH1').click(changeH1);
+		$('#container1').click(fontSizeChange2);
+		$('#container1').dblclick(fontSizeChange);
+		
+		function circleSquare(){
+			$('.circle1').css('border-radius', '100px');
+			$('.circle1').css('color:hover', 'red');
+		}
+		$(".circle1").css('background-color', 'pink');
+		$('.circle1').hover(circleSquare);
 	});
 </script>
 </body>
