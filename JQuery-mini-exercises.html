@@ -119,9 +119,9 @@
 			if ($('#pass').val() === $('#verify').val() && $('#pass').val().length > 5) {
 				$('#password-btn').removeClass('invisible');
 			} else {
+				// TODO: refactor function to hide the submit button when the user changes the passwords after matching
 				$('#password-btn').addClass('invisible'); //ans
 			}
-			// TODO: refactor function to hide the submit button when the user changes the passwords after matching
 		});
 
 
