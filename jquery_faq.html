@@ -69,7 +69,35 @@
 	<dd class="invisible">Vehicles, and vehicle combinations, longer than 21 feet (including bumpers) or wider than 8 feet (including mirrors) are prohibited between Avalanche Campground and the Sun Point parking area. You may however, drive to Avalanche if traveling east, and to Sun Point, if traveling west. Vehicles over 10 feet in height may have difficulty driving west from Logan Pass due to rock overhangs. Stock trucks and trailers may access Packers Roost and Siyeh Bend.</dd>
 </dl>
 
-<button class="visibility">Toggle Answers</button>
+<!--Traversing Exercise-->
+<!--1-->
+<section>
+<h3>national park name</h3>
+<ul>
+	<li>facts about the park</li>
+	<li>facts about the park</li>
+	<li>facts about the park</li>
+	<li>These should turn yellow.</li>
+</ul>
+<!--2-->
+<h3>national park name</h3>
+<ul>
+	<li>facts about the park</li>
+	<li>facts about the park</li>
+	<li>facts about the park</li>
+	<li>These should turn yellow.</li>
+</ul>
+<!--3-->
+<h3>national park name</h3>
+<ul>
+	<li>facts about the park</li>
+	<li>facts about the park</li>
+	<li>facts about the park</li>
+	<li>These should turn yellow.</li>
+</ul>
+</section>
+<button class="yellow-bg">Last facts about the park</button>
+<button class="visibility">Toggle Answers</button><br><br>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -84,16 +112,36 @@
 		// function highlights(){
 		// 	$('dt').css('background-color', 'yellow');
 		// };
-		
 		$("dt").click(function (){
 			// $("dt").toggleClass("highlights");
 			// $("").remove the class
 			$("dt").removeClass("highlights");
 			//adding this removes it from having them all highlighted at the same time
 			$(this).addClass("highlights"); //only the specific element clicked
-			
-		});
 		//to make it only one at a time
+		
+		});
+		
+		//Traversing exercise
+		$('.yellow-bg').click(function (){
+			$('li:nth-child(4)').css('background','yellow');
+		});
+		//2
+		$('h3').each(function(index, element){
+		$(element).click(function() {
+			$(element)
+					.first()
+					.css('font-weight', 'bold');
+		});
+		});
+		//
+		// $('li').each(function(index, element) {
+		// 	// console.log(index);
+		// 	if ($(element).text().toLowerCase().startsWith('b')) {
+		// 		$(element).css('color', 'purple');
+		// 	}
+		// 	$(element).css('background', "#" + (("" + index).repeat(3)));
+		// });
 		
 	});
 </script>
