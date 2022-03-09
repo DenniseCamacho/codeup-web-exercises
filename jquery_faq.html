@@ -71,11 +71,20 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 <script>
-	$(document).ready(function() {
+	$(document).ready(function(){
 		//
 		$('.visibility').click(function (){
 			$('dd').toggleClass('invisible');
 		});
+		
+		function highlights(){
+			$('dt').css('background-color', 'yellow');
+		};
+		
+		$('dt').toggle(
+				function(){$('dt').css('color', 'yellow')
+				});
+		
 	});
 </script>
 </body>
