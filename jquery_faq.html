@@ -11,9 +11,13 @@
 			margin-top: 20px;
 			margin-bottom: 10px;
 			font-weight: 900;
+			/*background-color: yellow;*/
 		}
 		.invisible {
 			visibility: hidden;
+		}
+		.highlights {
+			background-color: yellow;
 		}
 	
 	</style>
@@ -74,16 +78,22 @@
 	$(document).ready(function(){
 		//
 		$('.visibility').click(function (){
-			$('dd').toggleClass('invisible');
+			$("dd").toggleClass("invisible");
 		});
 		
-		function highlights(){
-			$('dt').css('background-color', 'yellow');
-		};
+		// function highlights(){
+		// 	$('dt').css('background-color', 'yellow');
+		// };
 		
-		$('dt').toggle(
-				function(){$('dt').css('color', 'yellow')
-				});
+		$("dt").click(function (){
+			// $("dt").toggleClass("highlights");
+			// $("").remove the class
+			$("dt").removeClass("highlights");
+			//adding this removes it from having them all highlighted at the same time
+			$(this).addClass("highlights"); //only the specific element clicked
+			
+		});
+		//to make it only one at a time
 		
 	});
 </script>
