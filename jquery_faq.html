@@ -131,8 +131,12 @@
 		$(element).click(function() {
 			$(element)
 					.first()
+					.next()
+					.children()
+					.first()
 					.css('font-weight', 'bold');
 		});
+		
 		});
 		//
 		// $('li').each(function(index, element) {
