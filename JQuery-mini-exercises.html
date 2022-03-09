@@ -127,12 +127,18 @@
 
 
 // ====  toggleClass()
-
+		
+		$('h1').on('dblclick', function(){
+			$('h1').toggleClass('text-center')
 // toggle awesome-title class on h1 when double clicking it. console log if it has the class
+			console.log($('h1').hasClass('text-center'));
+		})
 
 
 // when clicking Night Mode button, add and remove night-mode class to body element
-	
+	$('#night-mode-btn').click(function (){
+		$('body').toggleClass('.btn-success');
+	})
 	
 	
 	});
