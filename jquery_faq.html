@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
 	<title>jQuery Attributes and CSS Exercise</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -103,12 +103,13 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 <script>
+	
+	
 	$(document).ready(function(){
 		//
 		$('.visibility').click(function (){
 			$("dd").toggleClass("invisible");
 		});
-		
 		// function highlights(){
 		// 	$('dt').css('background-color', 'yellow');
 		// };
@@ -122,19 +123,39 @@
 		
 		});
 		
+		
 		//Traversing exercise
-		$('.yellow-bg').click(function (){
-			$('li:nth-child(4)').css('background','yellow');
-		});
+		// $('.yellow-bg').each(function (index, ul) { // realized the function worked without an .each() method.
+			$('.yellow-bg').click(function () { // I was struggling with this code because I was using .last()
+				$('ul')
+						.children()
+						.next() //eventually came to the realization it was .next(), not .last() method that I needed.
+						.next()
+						.next()
+						.css('background', 'yellow');
+			}); // thinking of how to toggle this function
+		// });
+		
 		//2
+		//since i had to click on every h3 to have this effect, .each came into mind.
 		$('h3').each(function(index, element){
-		$(element).click(function() {
+			//the element is the H3 so for each element
+		$(element).click(function() { // anytime i click on the h3 (element's)
 			$(element)
-					.first()
-					.next()
-					.children()
-					.first()
+					.first()//it looks for the first which bolds the H3
+					.next()//it goes to the next section, which was the ul
+					.children()//it bolded all of ul's children which were all the li's i just wanted the first
+					// // on the list so I went to ul's first
+					// .first()//it selects the first child in the ul //i reread the exercise and realized the whole thing had to be bolded so i commented it out accordingly.
 					.css('font-weight', 'bold');
+		});
+		$('ul').each(function(index, element){//for each list item clicked under ul
+			$(element).click(function() { // anytime i click on the li(element's)
+				$(element)
+						.children()//first child of ul is every list item
+						.first()//first of every child is the first list item.
+						.css('color', 'blue');
+			});
 		});
 		
 		});
