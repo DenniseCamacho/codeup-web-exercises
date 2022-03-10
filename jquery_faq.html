@@ -96,7 +96,7 @@
 	<li>These should turn yellow.</li>
 </ul>
 </section>
-<button class="yellow-bg">Last facts about the park</button>
+<button class="yellow-bg-button">Last facts about the park</button>
 <button class="visibility">Toggle Answers</button><br><br>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -127,7 +127,7 @@
 		//Traversing exercise
 		// $('.yellow-bg').each(function (index, ul) { // realized the function worked without an .each() method.
 		
-			$('.yellow-bg').click(function () {
+			$('.yellow-bg-button').click(function () {
 				// I was struggling with this code because I was using .last()
 				$('ul')
 						.children()
@@ -138,13 +138,27 @@
 			}).dblclick(function(){
 				$('ul')
 						.children()
-						.next() //eventually came to the realization it was .next(), not .last() method that I needed.
+						.next()
 						.next()
 						.next()
 						.css('background-color', 'white');
 			});
 			// thinking of how to toggle this... not sure how with just jquery
 		// });
+		
+		
+		//review
+		// $('.yellow-bg').click(function () {
+		// 	$('section')
+		// 			.children('ul')
+		// 			.each(function (index, element) {
+		// 				$(element)
+		// 						.children()
+		// 						.last()
+		// 						.addClass()
+		// 			});
+		// });
+
 		
 		//2
 		//since i had to click on every h3 to have this effect, .each came into mind.
