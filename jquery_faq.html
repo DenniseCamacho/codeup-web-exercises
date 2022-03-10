@@ -126,14 +126,25 @@
 		
 		//Traversing exercise
 		// $('.yellow-bg').each(function (index, ul) { // realized the function worked without an .each() method.
-			$('.yellow-bg').click(function () { // I was struggling with this code because I was using .last()
+		
+			$('.yellow-bg').click(function () {
+				// I was struggling with this code because I was using .last()
 				$('ul')
 						.children()
 						.next() //eventually came to the realization it was .next(), not .last() method that I needed.
 						.next()
 						.next()
 						.css('background', 'yellow');
-			}); // thinking of how to toggle this function
+			}).dblclick(function(){
+				$('ul')
+						.children()
+						.next() //eventually came to the realization it was .next(), not .last() method that I needed.
+						.next()
+						.next()
+						.css('background-color', 'white');;
+			});
+
+			// thinking of how to toggle this... not sure how
 		// });
 		
 		//2
