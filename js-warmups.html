@@ -320,15 +320,17 @@
 	var nums4 = [2, 2, -5, 2, 2];
 	var nums5 = [2, 2, 2, 2, 2];
 	
-	function addTwos(arrays) {
-		var num = 0;
-		for (var i = 0; i < arrays.length; i++) {
-		if (arrays[i] === 2) {
-			num += arrays[i];
-		}
-		return num;
-		}
-	}
+	function addTwos(item, index, array) {
+		var sum = 0;
+		item.forEach(function (item) {
+			if (item !== 2) {
+				return 0;
+				// item.toString().split(item);
+			} else sum += item;
+		});
+		return sum;
+	};
+
 	console.log(addTwos(nums1)); // returns 2
 	console.log(addTwos(nums2)); // returns 4
 	console.log(addTwos(nums3)); // returns 0
