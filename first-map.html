@@ -40,15 +40,15 @@
 		}, 5000);
 	console.log(MAPBOX_API_TOKEN);
 	
-	var markers = [];
-	function addMarker(longitude, latitude){
-		var marker = new.mapboxgl.Marker()
-		.setLngLat([longitude, latitude]);
-		.addTo(map);
-		
-		markers.push(marker);
-	};
-	
+	// var markers = [];
+	// function addMarker(longitude, latitude){
+	// 	var marker = new.mapboxgl.Marker()
+	// 	.setLngLat([longitude, latitude]);
+	// 	.addTo(map);
+	//
+	// 	markers.push(marker);
+	// };
+	//
 	
 //	================================= Mapbox Mini Exercises
 // 	https://docs.mapbox.com/mapbox-gl-js/api/map/
@@ -60,7 +60,7 @@
 	var map = new mapboxgl.Map({
 		container: 'map', // container ID
 		style: 'mapbox://styles/mapbox/streets-v11', // style URL
-		center: [-98.9370, 29.5615], // starting position [lng, lat]
+		center: [-98.6735189, 29.3038893], // starting position [lng, lat]
 		zoom: 12 // starting zoom
 	});
 	
@@ -89,7 +89,7 @@
 	var map = new mapboxgl.Map({
 		container: 'map', // container ID
 		style: 'mapbox://styles/mapbox/streets-v11', // style URL
-		center: [-97.5431, 35.5230], // starting position [lng, lat]
+		center: [-98.6735189, 29.3038893], // starting position [lng, lat]
 		zoom: 17 // starting zoom
 	});
 	
@@ -97,14 +97,15 @@
 	// create a marker
 	
 	var marker = new mapboxgl.Marker()
-			.setLngLat([-97.5431, 35.5230])
+			.setLngLat([-98.6735189, 29.3038893])
 			.addTo(map);
 	
 	// create a popup
 	var popup = new mapboxgl.Popup()
-			.setHTML('<h1 style="color: red">Whiskey Cake</h1><a href="https://whiskeycake.com/">Website</a>');
+			.setHTML('<h4 class="bg-warning">Tacos La Cabaña<br>12025 W Loop 1604 S, San Antonio, TX 78252<br></h4><a href="https://www.facebook.com/Tacos-La-Caba%C3%B1a-723050221783049/?ref=page_internal">mom&pop taco truck</a>');
 	
 	marker.setPopup(popup);
+	
 	
 	
 </script>
