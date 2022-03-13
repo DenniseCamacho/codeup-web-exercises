@@ -6,58 +6,58 @@
 </head>
 <script>
 	"use strict";
-	
-	//20 Feb 2022 - Attempting to redo problem.
-	var array1 = [1, 2, 3];
-	var array2 = ["a","b","c"];
-	var array3 = ["bob", 100, null];
-	var arrayTest = [5, 5, 5];
-	var stringCombo = ["5", 5, "5", 10];
-	var testing = [null, "65", 82]
-	//returns an object with information
-	//information about the array, including the lengthOfArray(.length), containsAllStrings(true or false),
-	// and the combineResult of adding all elements together(the sum of, or the array together).
-
-	function joiningArrays(anyArray) {
-		if (anyArray.includes(null)) return anyArray.join("") + null;
-		/**https://www.w3schools.com/jsref/jsref_includes_array.asp**/
-		else if (isNaN(parseFloat(anyArray))) return anyArray.join("");
-		else {
-			var sum = 0;
-			for (var i = 0; i < anyArray.length; i++) {
-				 sum += parseFloat(anyArray[i]);
-			} return parseFloat(sum);
-			// for (var i = 0; i < anyArray.length; i++) {
-			// 	var sum = 0;
-			// 	sum += parseFloat(anyArray);
-			// 	return parseFloat(sum);
-			}
-		}
-	function checkForAllStrings(anyArray){
-		if (typeof anyArray !== "string") return false;
-		else return true;
-	}
-	function analyzeArray(anyArray){
-		
-		for (var i = 0; i < anyArray.length; i++){
-			var analyzeArray = "(" + anyArray + ") returns...";
-			return anyArray = {
-				analyzeArray,
-				lengthOfArray: anyArray.length,
-				containsAllStrings: anyArray.every(checkForAllStrings),
-				combineResult: joiningArrays(anyArray)
-			}
-		}
-	}
-	console.log("-----------V testing functionsV")
-	console.log(analyzeArray(array1));
-	console.log(analyzeArray(array2));
-	console.log(analyzeArray(array3));
-	console.log(analyzeArray(arrayTest));
-	console.log(analyzeArray(stringCombo));
-	console.log(analyzeArray(testing));
-	
-	
+	//
+	// //20 Feb 2022 - Attempting to redo problem.
+	// var array1 = [1, 2, 3];
+	// var array2 = ["a","b","c"];
+	// var array3 = ["bob", 100, null];
+	// var arrayTest = [5, 5, 5];
+	// var stringCombo = ["5", 5, "5", 10];
+	// var testing = [null, "65", 82]
+	// //returns an object with information
+	// //information about the array, including the lengthOfArray(.length), containsAllStrings(true or false),
+	// // and the combineResult of adding all elements together(the sum of, or the array together).
+	//
+	// function joiningArrays(anyArray) {
+	// 	if (anyArray.includes(null)) return anyArray.join("") + null;
+	// 	/**https://www.w3schools.com/jsref/jsref_includes_array.asp**/
+	// 	else if (isNaN(parseFloat(anyArray))) return anyArray.join("");
+	// 	else {
+	// 		var sum = 0;
+	// 		for (var i = 0; i < anyArray.length; i++) {
+	// 			 sum += parseFloat(anyArray[i]);
+	// 		} return parseFloat(sum);
+	// 		// for (var i = 0; i < anyArray.length; i++) {
+	// 		// 	var sum = 0;
+	// 		// 	sum += parseFloat(anyArray);
+	// 		// 	return parseFloat(sum);
+	// 		}
+	// 	}
+	// function checkForAllStrings(anyArray){
+	// 	if (typeof anyArray !== "string") return false;
+	// 	else return true;
+	// }
+	// function analyzeArray(anyArray){
+	//
+	// 	for (var i = 0; i < anyArray.length; i++){
+	// 		var analyzeArray = "(" + anyArray + ") returns...";
+	// 		return anyArray = {
+	// 			analyzeArray,
+	// 			lengthOfArray: anyArray.length,
+	// 			containsAllStrings: anyArray.every(checkForAllStrings),
+	// 			combineResult: joiningArrays(anyArray)
+	// 		}
+	// 	}
+	// }
+	// console.log("-----------V testing functionsV")
+	// console.log(analyzeArray(array1));
+	// console.log(analyzeArray(array2));
+	// console.log(analyzeArray(array3));
+	// console.log(analyzeArray(arrayTest));
+	// console.log(analyzeArray(stringCombo));
+	// console.log(analyzeArray(testing));
+	//
+	//
 	
 	// ================================= JS Challenge
 	
@@ -821,19 +821,30 @@
 	// // Review this code carefully https://gist.github.com/ryanorsinger/5627b954d119dabb3d8c44d56b38c354 if you want more guidance on Exercises 43, 44, and 45.
 	// // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
 	
-	function isVowel(isThisAvowel){
+	function isVowel(vowelOrnot){
 		var vowels = ['a', 'e', 'i', 'o', 'u'];
-		isThisAvowel = vowels.forEach(function(){
-			if (isThisAvowel) return true;
-			else return false;
-		});
-	}
-	assert(isVowel("a"), true, "Exercise 43");
-	assert(isVowel("U"), true, "Exercise 43");
-	assert(isVowel("banana"), false, "Exercise 43");
-	assert(isVowel("Q"), false, "Exercise 43");
-	assert(isVowel("y"), false, "Exercise 43");
-	addToDone("Exercise 43 is correct.")
+		if (vowels.includes(vowelOrnot.toLowerCase())) return true;
+		else return false;
+	};
+		// for (var i = 0; i < vowels.length; i++){
+		// 	if (vowels.includes(vowelOrnot)) return true;
+		// 	else return false;
+			// console.log(vowels[i] + vowelOrnot.toLowerCase());
+			// if (vowels[i] !== vowelOrnot.toLowerCase()) return false;
+			// else return true;
+		// };
+	
+	console.log(isVowel("a"));
+	console.log(isVowel("U"));
+	console.log(isVowel("banana"));
+	console.log(isVowel("Q"));
+	console.log(isVowel("y"));
+	// assert(isVowel("a"), true, "Exercise 43");
+	// assert(isVowel("U"), true, "Exercise 43");
+	// assert(isVowel("banana"), false, "Exercise 43");
+	// assert(isVowel("Q"), false, "Exercise 43");
+	// assert(isVowel("y"), false, "Exercise 43");
+	// addToDone("Exercise 43 is correct.")
 </script>
 <body>
 </body>
