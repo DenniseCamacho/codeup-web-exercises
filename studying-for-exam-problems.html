@@ -842,17 +842,26 @@
 	
 	// Exercise 44
 	// Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
-	
 	function hasVowels(string) {
-		var stringArray = string.split("");
+		var stringArray = string.toLowerCase().split("");
 		var vowels = ["a", "e", "i", "o", "u"];
-		var answer;
-		stringArray.forEach(function (value, index, array) {
-		answer = value;
-		});
-		return answer;
-	}
-		// if (vowels.indexOf(stringArray) !== -1) return true;
+		
+		for (var i = 0; i < vowels.length; i++){
+			if (string.indexOf(vowels[i]) > -1) return true;
+			// console.log(stringArray.indexOf(vowels[i]));
+		}; return false;
+	};
+	//after several attempts to return all the letters in the array to check them by the all the letters in the string... eventually retrieved the answer when I took out the return false from the for loop. I need to ask for clarification later.
+		// var everyVowel;
+		// var everyLetter;
+		// stringArray.forEach(function (value, index, array) {
+		// everyLetter = value;
+		// });
+		// vowels.forEach(function (value){
+		// 	everyVowel = value;
+		// });
+		// console.log(stringArray.indexOf(vowels[0]) + " - " + stringArray + " " + vowels);
+	// if (vowels.indexOf(stringArray) !== -1) return true;
 		// else return false;};
 	// console.log(hasVowels("word"));
 	console.log(hasVowels("banana"), true, "Exercise 1");
