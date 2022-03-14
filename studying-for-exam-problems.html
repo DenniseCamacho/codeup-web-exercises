@@ -833,18 +833,30 @@
 			// if (vowels[i] !== vowelOrnot.toLowerCase()) return false;
 			// else return true;
 		// };
+	// console.log(isVowel("a"));
+	// console.log(isVowel("U"));
+	// console.log(isVowel("banana"));
+	// console.log(isVowel("Q"));
+	// console.log(isVowel("y"));
+	//I was solving the problem by checking the "vowelOrNot" against every item in the array, I just needed the answer to equal one item in the array.
 	
-	console.log(isVowel("a"));
-	console.log(isVowel("U"));
-	console.log(isVowel("banana"));
-	console.log(isVowel("Q"));
-	console.log(isVowel("y"));
-	// assert(isVowel("a"), true, "Exercise 43");
-	// assert(isVowel("U"), true, "Exercise 43");
-	// assert(isVowel("banana"), false, "Exercise 43");
-	// assert(isVowel("Q"), false, "Exercise 43");
-	// assert(isVowel("y"), false, "Exercise 43");
-	// addToDone("Exercise 43 is correct.")
+	// Exercise 44
+	// Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
+	function hasVowels(string) {
+		var vowels = ['a', 'e', 'i', 'o', 'u'];
+		var answer;
+		for (var i = 0; i < string.length; i++) {
+			vowels.some(function(value, index, array){
+				if (string.charAt(i) == value) answer = true;
+				else answer = false;
+			});
+			return answer;
+		}
+	}
+	console.log(hasVowels("banana"), true, "Exercise 1");
+	console.log(hasVowels("ubuntu"), true, "Exercise 2");
+	console.log(hasVowels("QQQQ"), false, "Exercise 3");
+	console.log(hasVowels("wyrd"), false, "Exercise 4");
 </script>
 <body>
 </body>
