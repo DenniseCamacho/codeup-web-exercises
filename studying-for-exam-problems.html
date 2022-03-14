@@ -844,19 +844,19 @@
 	// Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
 	function hasVowels(string) {
 		var vowels = ['a', 'e', 'i', 'o', 'u'];
+		var stringArray = string.split("");
 		var answer;
-		for (var i = 0; i < string.length; i++) {
-			vowels.some(function(value, index, array){
-				if (string.charAt(i) == value) answer = true;
-				else answer = false;
-			});
-			return answer;
-		}
-	}
-	console.log(hasVowels("banana"), true, "Exercise 1");
-	console.log(hasVowels("ubuntu"), true, "Exercise 2");
-	console.log(hasVowels("QQQQ"), false, "Exercise 3");
-	console.log(hasVowels("wyrd"), false, "Exercise 4");
+		vowels.forEach(function(value, index, array){
+			if (stringArray.includes(value)) answer = true;
+			else answer = false;
+		});
+		return answer;
+		};
+	console.log(hasVowels("word"));
+	// console.log(hasVowels("banana"), true, "Exercise 1");
+	// console.log(hasVowels("ubuntu"), true, "Exercise 2");
+	// console.log(hasVowels("QQQQ"), false, "Exercise 3");
+	// console.log(hasVowels("wyrd"), false, "Exercise 4");
 </script>
 <body>
 </body>
