@@ -21,15 +21,19 @@
 
 </head>
 <body>
+<h1 class="text-center">Mapbox Exercise</h1><br>
 <h2 class="purpleh2 container text-center font-monospace text-light w-50">Go to 'Tacos La Cabaña' for some
 	bomb
 	tacos <i class="bi bi-suit-heart"></i>
 	(:</h2>
 <section id='map' class="card m-auto mt-5"></section>
+<button id="zoom-in" class="d-flex m-auto mt-2">Zoom</button>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
-<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <!--keep script underneath/after srcs js/keys.js-->
+<script src="js/keys.js"></script>
 <script>
 	"use strict";
 	var accessToken = MAPBOX_API_TOKEN;
@@ -38,18 +42,54 @@
 		container: 'map', // container ID
 		style: 'mapbox://styles/mapbox/streets-v11', // style URL
 		center: [-98.673518, 29.303889], // starting position [lng, lat]
-		zoom: 15// starting zoom
+		zoom: 8// starting zoom
 	});
+	//need to link geocode
+	//<script src="js/mapbox-geocoder-utils.js">
+	//
+	// var marker = new mapboxgl.Marker({
+	// 			color: 'mediumpurple',
+	// 			draggable: true
+	// })
+	// 			 .setLngLat([-98.6735189, 29.3038893])
+	// 			.addTo(map)
+	//
+	//
+	// var popup = new mapboxgl.Popup({
+	// 	closeOnClick: true,
+	// })
+	// 		.setLngLat([-98.6735189, 29.3038893])
+	// 		.setHTML('<h1>Tacos Cabana!</h1>')
+	// 		.addTo(map);
 	
-	var marker = new mapboxgl.Marker({
-				color: 'mediumpurple',
-				draggable: true
-			})  .setLngLat([-98.6735189, 29.3038893])
-				.addTo(map);
-	marker.on("click", function(){
-		new mapboxgl.Popup();
-	})
+	var restaurants = [
+		{
+			"name": "Tacos La Cabaña",
+			"address": "12025 W Loop 1604 S, San Antonio, TX 78252",
+			"website": "https://www.facebook.com/Tacos-La-Caba%C3%B1a-723050221783049/?ref=page_internal"
+		},
+		{"name": "Tacos La Cabaña", "address": "12025 W Loop 1604 S, San Antonio, TX 78252", "website": "n/a"},
+		{"name": "Tacos La Cabaña", "address": "12025 W Loop 1604 S, San Antonio, TX 78252", "website": "n/a"},
+		{"name": "Tacos La Cabaña", "address": "12025 W Loop 1604 S, San Antonio, TX 78252", "website": "n/a"},
+		{"name": "Tacos La Cabaña", "address": "12025 W Loop 1604 S, San Antonio, TX 78252", "website": "n/a"}
+	]
+	// restaurants.forEach(function(){ });
+	restaurants.forEach(function(){
+geocode(restaurants[i].address, MAPBOX_API_TOKEN).then(function(results){
+	map.setCenter(results);
+	var popup = new mapboxgl.Popup()
+			.setHTML('<h3>' + restaurants[i].name + '</h3>' + '<a href="'+ restaurants[i].website +'">Website</a>');
 	
+	var marker  = new mapboxgl.Marker()
+			.setPopup(popup)
+			.setLngLat(results)
+			.addTo(map);
+});
+	});
+
+$('#zoom-in').click(function(){
+	map.setZoom(18)
+});
 	
 </script>
 </body>
