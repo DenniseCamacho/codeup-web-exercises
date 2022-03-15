@@ -66,23 +66,21 @@ stuff and things
 			exclude: 'minutely,hourly,current,alerts',
 			units: 'imperial'
 		}).done(function(data) {
-			console.log(data, "--Testing data---", data.daily[0].temp.day);
-			var html = "";
-			for (var i = 0; i < data.length; i++){
-				$("div.weather-Data").html(function() {
-					html += "<p> " + data.daily[i].temp.day
-					+ "<p> " + data.daily[i].temp.day + " </p>"
-					+ "<p> " + data.daily[i].temp.day + " </p>"
-					+ "<p> " + data.daily[i].temp.day + " </p>"
-					+ "<p> " + data.daily[i].temp.day + " </p>"
-					+ "<p> " + data.daily[i].temp.day + " </p>"
-					+ "<p> " + data.daily[i].temp.day + " </p>"
-					+ "<p> " + data.daily[i].temp.day + " </p>";
-				});
-				return html;
-			};
+			// console.log(data, "--Testing data---", data.daily[0].temp.day);
+			var values = $.each(data, function (index, value){
+				return value; //I can now go through the index values...but what do i do with this
+			});
 			
-		});
+			// $(data).each(function(i, obj){
+			//
+			// 	$("#weatherData").html(
+			// 			"<h2>" + data.daily[i].temp.day + "</h2>" +
+			// 			"<h2>" + data.daily[i].temp.day + "</h2>"
+			// 	);
+			// 	console.log(i + obj)
+			// })
+			// $("#weatherData").html("<p>" + data.daily[0].temp.day + "</p>"); this works
+		})
 	});
 			// // log 63 from humidity ---it matters that its under this.
 			// console.log(data.daily[0].temp.day + " will supposedly be the weather today");
