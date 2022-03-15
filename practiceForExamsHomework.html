@@ -10,12 +10,22 @@
 <script>
 	"use strict";
 	
-	
+	function mirror(string){
+		if (typeof string !== "string" || parseFloat(string)) return false;
+		else return string.split("").reverse().join("");
+	}
+	console.log(mirror('cat')   );     // returns 'tac'
+	console.log(mirror('asdf')  );     // returns 'fdsa'
+	console.log(mirror('Codeup'));     // returns 'puedoC'
+	console.log(mirror('123')   );    // returns '321'
+	console.log(mirror('At')    );     // returns 'tA'
+	console.log(mirror(null)    );     // returns false
+	console.log(mirror([1,3,4]) );     // returns false
+	console.log(mirror(123)     );     // returns false
 	/*
 	 Write a function, mirror, that takes in a string and returns the string with its characters in reverse order.
         If the input is not a string, the function should return false. The case of each character should
         remain unchanged.
-
         mirror('cat') // returns 'tac'
         mirror('asdf') // returns 'fdsa'
         mirror('Codeup') // returns 'puedoC'
