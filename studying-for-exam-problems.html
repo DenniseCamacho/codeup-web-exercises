@@ -919,7 +919,7 @@
 	
 	// Exercise 47
 // Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
-	var vowels = ["a", "e", "i", "o", "u"];
+// 	var vowels = ["a", "e", "i", "o", "u"];
 	//trying to console.log each item
 	function anyItem(array){
 		var value = "";
@@ -928,16 +928,35 @@
 		}
 		return value;
 	}
-
 	
-	function startsWithVowel(string) {
-		if (string.startsWith(anyItem(vowels))) return true;
+	// function startsWithVowel(string) {
+	// 	if (string.startsWith(anyItem(vowels))) return true;
+	// 	else return false;
+	// 			};
+	// console.log(startsWithVowel("ubuntu"), true, "Exercise 47");
+	// console.log(startsWithVowel("banana"), false, "Exercise 47");
+	// console.log(startsWithVowel("mango"), false, "Exercise 47");
+	
+	// Exercise 48
+	// Write a function definition named endsWithVowel that takes in string and true if the string ends with a vowel
+	function endsWithVowel(string){
+		var vowels = ["a", "e", "i", "o", "u"];
+		if (string.endsWith(anyItem(vowels[0])) ||
+				string.endsWith(anyItem(vowels[1])) ||
+				string.endsWith(anyItem(vowels[2])) ||
+				string.endsWith(anyItem(vowels[3])) ||
+				string.endsWith(anyItem(vowels[4]))
+		){
+			return true;
+		}
 		else return false;
-				};
-	console.log(startsWithVowel("ubuntu"), true, "Exercise 47");
-	console.log(startsWithVowel("banana"), false, "Exercise 47");
-	console.log(startsWithVowel("mango"), false, "Exercise 47");
+	}
 	
+	
+	console.log(endsWithVowel("ubuntu"), true, "Exercise 48");
+	console.log(endsWithVowel("banana"), true, "Exercise 48");
+	console.log(endsWithVowel("mango"), true, "Exercise 48");
+	console.log(endsWithVowel("spinach"), false, "Exercise 48");
 	
 	
 	
