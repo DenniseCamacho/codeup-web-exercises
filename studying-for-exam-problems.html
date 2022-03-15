@@ -960,24 +960,63 @@
 	
 	// Exercise 49
 	// Write a function definition named startsAndEndsWithVowel that takes in string and returns true if the string starts and ends with a vowel
-	function startsAndEndsWithVowel(word){
-		var vowels = ["a", "e", "i", "o", "u"];
-		var everyVowel = justVowels();
-		function justVowels() {
-		var vowels2 = ""
-			for (var i = 0; i < vowels.length; i++) {
-				vowels2 = vowels[i];
-			}
-			return vowels2
+	// function startsAndEndsWithVowel(word){
+	// 	var vowels = ["a", "e", "i", "o", "u"];
+	// 	var everyVowel = justVowels();
+	// 	function justVowels() {
+	// 	var vowels2 = ""
+	// 		for (var i = 0; i < vowels.length; i++) {
+	// 			vowels2 = vowels[i];
+	// 		}
+	// 		return vowels2
+	// 	};
+	// 	if (word.startsWith(everyVowel) && word.endsWith(everyVowel)) return true;
+	// 	else return false;
+	// }
+	// console.log(startsAndEndsWithVowel("ubuntu"), true, "Exercise 49");
+	// console.log(startsAndEndsWithVowel("banana"), false, "Exercise 49");
+	//
+	//
+	// Create a function, createFirstNamesArray, that takes in an array of user objects and returns an array of first name strings. Assume that each user object has a property called 'firstName'.
+	//
+	// 		Example...
+	//
+	var users = [
+		{
+			firstName: 'Bob',
+			lastName: 'Smith',
+			email: 'bob@email.com'
+		},
+		{
+			firstName: 'Sally',
+			lastName: 'Smith',
+			email: 'sally@email.com'
+		},
+		{
+			firstName: 'Fred',
+			lastName: 'Smith',
+			email: 'fred@email.com'
+		},
+		{
+			firstName: 'Cathy',
+			lastName: 'Smith',
+			email: 'cathy@email.com'
+		},
+		{
+			firstName: 'Joe',
+			lastName: 'Smith',
+			email: 'joe@email.com'
+		},
+	];
+	function createFirstNamesArray(users){
+		var name = "";
+		for(var i = 0; i < users.length; i++) {
+			name += users[i].firstName;
 		};
-		if (word.startsWith(everyVowel) && word.endsWith(everyVowel)) return true;
-		else return false;
-	}
-	console.log(startsAndEndsWithVowel("ubuntu"), true, "Exercise 49");
-	console.log(startsAndEndsWithVowel("banana"), false, "Exercise 49");
-	
-	
-	
+		return name;
+	};
+	//
+	console.log(createFirstNamesArray(users)); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
 	
 </script>
 <body>
