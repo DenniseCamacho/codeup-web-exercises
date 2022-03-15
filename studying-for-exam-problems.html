@@ -821,11 +821,11 @@
 	// // Review this code carefully https://gist.github.com/ryanorsinger/5627b954d119dabb3d8c44d56b38c354 if you want more guidance on Exercises 43, 44, and 45.
 	// // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
 	
-	function isVowel(vowelOrnot){
-		var vowels = ['a', 'e', 'i', 'o', 'u'];
-		if (vowels.includes(vowelOrnot.toLowerCase())) return true;
-		else return false;
-	};
+	// function isVowel(vowelOrnot){
+	// 	var vowels = ['a', 'e', 'i', 'o', 'u'];
+	// 	if (vowels.includes(vowelOrnot.toLowerCase())) return true;
+	// 	else return false;
+	// };
 		// for (var i = 0; i < vowels.length; i++){
 		// 	if (vowels.includes(vowelOrnot)) return true;
 		// 	else return false;
@@ -839,35 +839,66 @@
 	// console.log(isVowel("Q"));
 	// console.log(isVowel("y"));
 	//I was solving the problem by checking the "vowelOrNot" against every item in the array, I just needed the answer to equal one item in the array.
-	
-	// Exercise 44
-	// Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
-	function hasVowels(string) {
-		var stringArray = string.toLowerCase().split("");
-		var vowels = ["a", "e", "i", "o", "u"];
-		
-		for (var i = 0; i < vowels.length; i++){
-			if (string.indexOf(vowels[i]) > -1) return true;
-			// console.log(stringArray.indexOf(vowels[i]));
-		}; return false;
+	/**Question**/
+	// // Exercise 44
+	// // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
+	// function hasVowels(string) {
+	// 	// var stringArray = string.toLowerCase().split(""); not necessary.
+	// 	var vowels = ["a", "e", "i", "o", "u"];
+	// 	for (var i = 0; i < vowels.length; i++){
+	// 		if (string.indexOf(vowels[i]) > -1) return true;
+	// 		// console.log(stringArray.indexOf(vowels[i]));
+	// 	}; return false; // if this is in the for loop, it doesn't work...
+	// };
+	// console.log(hasVowels("banana"), true, "Exercise 1");
+	// console.log(hasVowels("ubuntu"), true, "Exercise 2");
+	// console.log(hasVowels("QQQQ"), false, "Exercise 3");
+	// console.log(hasVowels("wyrd"), false, "Exercise 4");
+	// //after several attempts to return all the letters in the array to check them by
+	// // the all the letters in the string... eventually retrieved the answer when
+	// // I took out the return false from the for loop.
+	// // I need to ask for clarification later.
+	// 	// var everyVowel;
+	// 	// var everyLetter;
+	// 	// stringArray.forEach(function (value, index, array) {
+	// 	// everyLetter = value;
+	// 	// });
+	// 	// vowels.forEach(function (value){
+	// 	// 	everyVowel = value;
+	// 	// });
+	// 	// console.log(stringArray.indexOf(vowels[0]) + " - " + stringArray + " " + vowels);
+	// // if (vowels.indexOf(stringArray) !== -1) return true;
+	// 	// else return false;};
+	// // console.log(hasVowels("word"));
+	/** ************************************************************************ **/
+		var vowels = [
+			{vowel: "a"},
+			{vowel: "e"},
+			{vowel: "i"},
+			{vowel: "o"},
+			{vowel: "u"}
+		];
+	// 	var allVowels = Object.values(vowels);
+	// 	var newArr = [].concat(vowels);
+	//
+	// console.log(typeof allVowels);
+	// console.log(typeof newArr);
+	function countVowels(string) {
+		var answer;
+		var newArr2;
+		// = [].concat(string.split(""));
+		for (var i = 0; i < vowels.length; i++) {
+			answer = [].concat(string.split(""));
+			};
+		return answer;
 	};
-	//after several attempts to return all the letters in the array to check them by the all the letters in the string... eventually retrieved the answer when I took out the return false from the for loop. I need to ask for clarification later.
-		// var everyVowel;
-		// var everyLetter;
-		// stringArray.forEach(function (value, index, array) {
-		// everyLetter = value;
-		// });
-		// vowels.forEach(function (value){
-		// 	everyVowel = value;
-		// });
-		// console.log(stringArray.indexOf(vowels[0]) + " - " + stringArray + " " + vowels);
-	// if (vowels.indexOf(stringArray) !== -1) return true;
-		// else return false;};
-	// console.log(hasVowels("word"));
-	console.log(hasVowels("banana"), true, "Exercise 1");
-	console.log(hasVowels("ubuntu"), true, "Exercise 2");
-	console.log(hasVowels("QQQQ"), false, "Exercise 3");
-	console.log(hasVowels("wyrd"), false, "Exercise 4");
+	
+	console.log(countVowels("love"), 2);
+	console.log(countVowels("banana"), 3, "Exercise 45");
+	console.log(countVowels("ubuntu"), 3, "Exercise 45");
+	console.log(countVowels("mango"), 2, "Exercise 45");
+	console.log(countVowels("QQQQ"), 0, "Exercise 45");
+	console.log(countVowels("wyrd"), 0, "Exercise 45");
 </script>
 <body>
 </body>

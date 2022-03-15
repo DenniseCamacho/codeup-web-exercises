@@ -23,15 +23,13 @@ $(document).ready(function(){
 		$.get('data/blog.json').done(function(blogPosts){
 			var post = "";
 			for (var i = 0; i < blogPosts.length; i++){
-				console.log(
 						post +=
 								'<h1 class="col-12">' +'Title: ' + blogPosts[i].title + '</h1>' +
 								'<article class="col-12"><h2>' +'Content: '+ '</h2>' + blogPosts[i].content +
 								'</article>' +
 								'<details class="d-flex col-12 align-self-end mb-5">' + blogPosts[i].categories +
 								'<br>'
-								+ blogPosts[i].date + '</details>'
-				);
+								+ blogPosts[i].date + '</details>';
 			}
 			$('#posts').html(post);
 		});
