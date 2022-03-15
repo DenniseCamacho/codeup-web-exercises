@@ -922,9 +922,11 @@
 	var vowels = ["a", "e", "i", "o", "u"];
 	//trying to console.log each item
 	function anyItem(array){
+		var value = "";
 		for (var i = 0; i < array.length; i++){
-			console.log(array[i]);
+			value = array[i];
 		}
+		return value;
 	}
 
 	
@@ -935,7 +937,7 @@
 	console.log(startsWithVowel("ubuntu"), true, "Exercise 47");
 	console.log(startsWithVowel("banana"), false, "Exercise 47");
 	console.log(startsWithVowel("mango"), false, "Exercise 47");
-	addToDone("Exercise 47 is correct.")
+	
 	
 	
 	
