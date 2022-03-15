@@ -32,7 +32,7 @@
 	<section id="weatherContainer1" class="card">
 		<h2 id="weatherDate1" class="weatherDate card-header">Date Here</h2>
 		<div class="card-body">
-			<p id="weatherTemp1"     class="card-text">temp</p>
+			<p id="weatherTemp1"     class="weatherTemp card-text">temp</p>
 			<p id="weatherDesc1"     class="card-text">description</p>
 			<p id="weatherHumidity1" class="card-text">humidity</p>
 			<p id="weatherWind1"     class="card-text">wind</p>
@@ -42,7 +42,7 @@
 	<section id="weatherContainer2" class="card">
 		<h2 id="weatherDate2" class="weatherDate card-header">Date Here</h2>
 		<div class="card-body">
-			<p id="weatherTemp2"     class="card-text">temp</p>
+			<p id="weatherTemp2"     class="weatherTemp card-text">temp</p>
 			<p id="weatherDesc2"     class="card-text">description</p>
 			<p id="weatherHumidity2" class="card-text">humidity</p>
 			<p id="weatherWind2"     class="card-text">wind</p>
@@ -52,7 +52,7 @@
 	<section id="weatherContainer3" class="card">
 		<h2 id="weatherDate3" class="weatherDate card-header">Date Here</h2>
 		<div class="card-body">
-			<p id="weatherTemp3"     class="card-text">temp</p>
+			<p id="weatherTemp3"     class="weatherTemp card-text">temp</p>
 			<p id="weatherDesc3"     class="card-text">description</p>
 			<p id="weatherHumidity3" class="card-text">humidity</p>
 			<p id="weatherWind3"     class="card-text">wind</p>
@@ -62,7 +62,7 @@
 	<section id="weatherContainer4" class="card">
 		<h2 id="weatherDate4" class="weatherDate card-header">Date Here</h2>
 		<div class="card-body">
-			<p id="weatherTemp4"     class="card-text">temp</p>
+			<p id="weatherTemp4"     class="weatherTemp card-text">temp</p>
 			<p id="weatherDesc4"     class="card-text">description</p>
 			<p id="weatherHumidity4" class="card-text">humidity</p>
 			<p id="weatherWind4"     class="card-text">wind</p>
@@ -72,7 +72,7 @@
 	<section id="weatherContainer5" class="card">
 		<h2 id="weatherDate5" class="weatherDate card-header">Date Here</h2>
 		<div class="card-body">
-			<p id="weatherTemp5"     class="card-text">temp</p>
+			<p id="weatherTemp5"     class="weatherTemp card-text">temp</p>
 			<p id="weatherDesc5"     class="card-text">description</p>
 			<p id="weatherHumidity5" class="card-text">humidity</p>
 			<p id="weatherWind5"     class="card-text">wind</p>
@@ -112,37 +112,40 @@
 			appid: WEATHER_TOKEN,
 			exclude: 'minutely,hourly,current,alerts',
 			units: 'imperial'
-		}).done(function(data) {
+		}).done(function (data) {
 			console.log(data);
-			// console.log(data, "--Testing data---", data.daily[0].temp.day);
-			$.each(data, function (index, value){
-				console.log(index, value);
+			$(data).each(function (i, obj) {
+				$(".weatherTemp").html(
+						"<h2>" + data.daily[i].temp.day + "</h2>"
+				);
 			});
-				//I can now go through the index values...but I'm not sure what to do with this, so I'll try something else.
-			})
-			
-			// $(data).each(function(i, obj){
-			//
-			// 	$("#weatherData").html(
-			// 			"<h2>" + data.daily[i].temp.day + "</h2>" +
-			// 			"<h2>" + data.daily[i].temp.day + "</h2>"
-			// 	);
-			// 	console.log(i + obj)
-			// })
-			// $("#weatherData").html("<p>" + data.daily[0].temp.day + "</p>"); this works
+		}).fail(function (jqXhr, status, error) {
+			console.log(jqXhr);
+			console.log(status);
+			console.log(error);
+		});
 	});
-			// // log 63 from humidity ---it matters that its under this.
-			// console.log(data.daily[0].temp.day + " will supposedly be the weather today");
-			//
-			
-		// }).fail(function(jqXhr, status, error) {
-		// 	console.log(jqXhr);
-		// 	console.log(status);
-		// 	console.log(error);
-		// });
-	
-	
-	
+	/** //
+	// 		console.log(data, "--Testing data---", data.daily[0].temp.day);
+	// 		$.each(data, function (index, value){
+	// 			console.log(index, value);
+	// 		});
+	// 			I can now go through the index values...but I'm not sure what to do with this, so I'll try something else.
+	// 			console.log(i + obj)
+	// 		})
+	// 		$("#weatherData").html("<p>" + data.daily[0].temp.day + "</p>"); this works
+	// 		// log 63 from humidity ---it matters that its under this.
+	// 		console.log(data.daily[0].temp.day + " will supposedly be the weather today");
+	//
+	//
+	// 	}).fail(function(jqXhr, status, error) {
+	// 		console.log(jqXhr);
+	// 		console.log(status);
+	// 		console.log(error);
+	// 	});
+	//
+	//
+	//
 	//
 	// 		function createHTML(data)
 	// 	{
@@ -214,7 +217,7 @@
 	// // $('#clickme').click(function(){
 	// // 	$('#user_display').html($('#user_input').val());
 	// //
-	// // });
+	// // }); **/
 	
 </script>
 </body>
