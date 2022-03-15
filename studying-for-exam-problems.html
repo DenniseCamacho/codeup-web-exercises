@@ -1011,10 +1011,13 @@
 	function createFirstNamesArray(users){
 		var name = "";
 		for(var i = 0; i < users.length; i++) {
-			name += users[i].firstName;
+			name += users[i].firstName + ",";
 		};
+		name = name.split(",");
+		name.pop();
 		return name;
 	};
+	//adding.split(",") and + "," and .pop()
 	//
 	console.log(createFirstNamesArray(users)); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
 	
