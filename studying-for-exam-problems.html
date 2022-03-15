@@ -892,22 +892,32 @@
 	// 		};
 	// 	return answer;
 	// };
-	function countVowels(value2) {
-		var vowelCount = 0;
-		value2.split("").forEach(function(value, index, array){
-			if (value == "a" || value == "e" || value == "i" || value == "o" || value == "u"){
-			vowelCount++;
+	// function countVowels(value2) {
+	// 	var vowelCount = 0;
+	// 	value2.split("").forEach(function(value, index, array){
+	// 		if (value == "a" || value == "e" || value == "i" || value == "o" || value == "u"){
+	// 		vowelCount++;
+	// 		};
+	// 	});
+	// 	return vowelCount;
+	// };
+	// Exercise 46
+	// Write a function definition named removeVowels that takes in string and returns the string without any vowels
+	function removeVowels(value1) {
+		var vowels = ["a", "e", "i", "o", "u"];
+		var newWord = value1.split("").filter(function(item){
+			if (item === "a" || item === "e" || item === "i" || item === "o" || item === "u"){
+				return false; //returning the item gave me all the vowels back...
 			};
 		});
-		return vowelCount;
-	};
+		 return newWord.join("");
+	}
+	console.log(removeVowels("banana"), "bnn", "Exercise 46");
+	console.log(removeVowels("ubuntu"), "bnt", "Exercise 46");
+	console.log(removeVowels("mango"), "mng", "Exercise 46");
+	console.log(removeVowels("QQQQ"), "QQQQ", "Exercise 46");
 	
-	console.log(countVowels("love"), 2);
-	console.log(countVowels("banana"), 3, "Exercise 45");
-	console.log(countVowels("ubuntu"), 3, "Exercise 45");
-	console.log(countVowels("mango"), 2, "Exercise 45");
-	console.log(countVowels("QQQQ"), 0, "Exercise 45");
-	console.log(countVowels("wyrd"), 0, "Exercise 45");
+	
 	
 	
 </script>
