@@ -13,30 +13,77 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<style>
 		#map{
-			width: 400px;
-			height: 300px;
-		}
-		#weatherData{
-			background-color: orange;
-			width: 400px;
+			width: 100%;
 			height: 300px;
 		}
 	</style>
 </head>
 <body>
 
-<h1>Exercise Weather Map</h1>
+<h1 class="bg-primary text-light">Exercise Weather Map</h1>
 
-<div id="weatherData" class="weather-Data">
-stuff and things
-</div>
+<!--searchbar-->
+<!--<div><span id="user_display"></span></div>-->
+<!--<input type="text" id="user_input">-->
+<!--<button id="clickme">Find</button>-->
 
+<!--a giant weather box holding weather boxes-->
+<section id="allWeatherContaiers" class="card d-flex flex-row flex-wrap col-12 w-auto m-auto justify-content-between border-0">
+	<section id="weatherContainer1" class="card">
+		<h2 id="weatherDate1" class="weatherDate card-header">Date Here</h2>
+		<div class="card-body">
+			<p id="weatherTemp1"     class="card-text">temp</p>
+			<p id="weatherDesc1"     class="card-text">description</p>
+			<p id="weatherHumidity1" class="card-text">humidity</p>
+			<p id="weatherWind1"     class="card-text">wind</p>
+			<p id="weatherPressure1" class="card-text">pressure</p>
+		</div>
+	</section>
+	<section id="weatherContainer2" class="card">
+		<h2 id="weatherDate2" class="weatherDate card-header">Date Here</h2>
+		<div class="card-body">
+			<p id="weatherTemp2"     class="card-text">temp</p>
+			<p id="weatherDesc2"     class="card-text">description</p>
+			<p id="weatherHumidity2" class="card-text">humidity</p>
+			<p id="weatherWind2"     class="card-text">wind</p>
+			<p id="weatherPressure2" class="card-text">pressure</p>
+		</div>
+	</section>
+	<section id="weatherContainer3" class="card">
+		<h2 id="weatherDate3" class="weatherDate card-header">Date Here</h2>
+		<div class="card-body">
+			<p id="weatherTemp3"     class="card-text">temp</p>
+			<p id="weatherDesc3"     class="card-text">description</p>
+			<p id="weatherHumidity3" class="card-text">humidity</p>
+			<p id="weatherWind3"     class="card-text">wind</p>
+			<p id="weatherPressure3" class="card-text">pressure</p>
+		</div>
+	</section>
+	<section id="weatherContainer4" class="card">
+		<h2 id="weatherDate4" class="weatherDate card-header">Date Here</h2>
+		<div class="card-body">
+			<p id="weatherTemp4"     class="card-text">temp</p>
+			<p id="weatherDesc4"     class="card-text">description</p>
+			<p id="weatherHumidity4" class="card-text">humidity</p>
+			<p id="weatherWind4"     class="card-text">wind</p>
+			<p id="weatherPressure4" class="card-text">pressure</p>
+		</div>
+	</section>
+	<section id="weatherContainer5" class="card">
+		<h2 id="weatherDate5" class="weatherDate card-header">Date Here</h2>
+		<div class="card-body">
+			<p id="weatherTemp5"     class="card-text">temp</p>
+			<p id="weatherDesc5"     class="card-text">description</p>
+			<p id="weatherHumidity5" class="card-text">humidity</p>
+			<p id="weatherWind5"     class="card-text">wind</p>
+			<p id="weatherPressure5" class="card-text">pressure</p>
+		</div>
+	</section>
+</section>
+<!--the map-->
 <section id="map"></section>
 
 
-<!--<div><span id="user_display"></span></div>-->
-<!--<input type="text" id="user_input">-->
-<!--<button id="clickme">click me</button>-->
 
 
 <!--bootstrap-->
@@ -66,10 +113,13 @@ stuff and things
 			exclude: 'minutely,hourly,current,alerts',
 			units: 'imperial'
 		}).done(function(data) {
+			console.log(data);
 			// console.log(data, "--Testing data---", data.daily[0].temp.day);
-			var values = $.each(data, function (index, value){
-				return value; //I can now go through the index values...but what do i do with this
+			$.each(data, function (index, value){
+				console.log(index, value);
 			});
+				//I can now go through the index values...but I'm not sure what to do with this, so I'll try something else.
+			})
 			
 			// $(data).each(function(i, obj){
 			//
@@ -80,7 +130,6 @@ stuff and things
 			// 	console.log(i + obj)
 			// })
 			// $("#weatherData").html("<p>" + data.daily[0].temp.day + "</p>"); this works
-		})
 	});
 			// // log 63 from humidity ---it matters that its under this.
 			// console.log(data.daily[0].temp.day + " will supposedly be the weather today");
