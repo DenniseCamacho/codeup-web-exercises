@@ -21,16 +21,17 @@
 </head>
 
 <body>
-	
 	<h1 class="bg-primary text-light">Weather Map</h1>
-	
 	<!--searchbar-->
 	<!--<div><span id="user_display"></span></div>-->
 	<!--<input type="text" id="user_input">-->
 	<!--<button id="clickme">Find</button>-->
 	
 	<!--a giant weather box holding weather boxes-->
-	<section id="allWeatherContaiers" class="card d-flex flex-row col-12 w-auto m-auto justify-content-between border-0">
+	<section id="allWeatherContaiers" class="d-flex flex-row flex-wrap col-12 w-auto m-auto justify-content-evenly border-0 bg-light">
+	<!--		$("#allWeatherContaiers").html(html);-->
+	</section>
+<!--	-->
 	<!--&lt;!&ndash;	weather section1&ndash;&gt;-->
 	<!--	<section id="weatherContainer1" class="card">-->
 	<!--		<h2 id="weatherDate1" class="weatherDate card-header">Date Here</h2>-->
@@ -86,7 +87,6 @@
 	<!--			<p id="weatherPressure5" class="weatherP card-text">pressure</p>-->
 	<!--		</div>-->
 	<!--	</section>-->
-	</section>
 	<!--the map-->
 	<section id="map"></section>
 	
@@ -121,7 +121,6 @@
 			center: [-74.5, 40], // starting position [lng, lat]
 			zoom: 9 // starting zoom
 		});
-		
 		$.get('https://api.openweathermap.org/data/2.5/onecall', {
 			lat: 29.4252,
 			lon: -98.4916,
@@ -133,28 +132,31 @@
 			var html = "";
 	for(var i = 0; i < 5; i++) {
 		html +=
-		"<section id='weatherContainer1' className='card'>" +
-			"<h2 id='weatherDate1' className='weatherDate card-header'>" + data.daily[i].dt + "</h2>" +
+		"<section id='weatherContainer1' class='card text-dark bg-light mb-3' style='max-width: 18rem;'>" +
+			"<h2 id='weatherDate1' className='card-header'>" + data.daily[i].dt + "</h2>" +
 			"<div className='weatherCard card-body'>" +
-				"<p id='weatherTemp1' className='weatherT card-text'>" + "Temperature: " + "<b>" + data.daily[i].temp.max + "/" + data.daily[i].temp.min  + "</b></p>" +
-				"<p id='weatherDesc1' className='weatherD card-text'>" + "Description: " + "<b>" + data.daily[i].weather[0].description + "</b></p>" +
-				"<p id='weatherHumidity1' className='weatherH card-text'>" + "Humidity: " + "<b>" + data.daily[i].humidity + "</b></p>" +
-				"<p id='weatherWind1' className='weatherW card-text'>" + "Wind: " + "<b>" + data.daily[i].wind_speed + "</b></p>" +
-				"<p id='weatherPressure1' className='weatherP card-text'>" + "Pressure: " + "<b>" + data.daily[i].pressure + "</b></p>" +
+				"<p id='weatherTemp1' className='weatherT card-text col-1'>" + "Temperature: " + "<b>" +
+					data.daily[i].temp.max + " / " + data.daily[i].temp.min  +
+				"</b></p>" +
+				
+				"<p id='weatherDesc1' className='weatherD card-text col-1'>" + "Description: " + "<b>" +
+					data.daily[i].weather[0].description +
+				"</b></p>" +
+				
+				"<p id='weatherHumidity1' className='weatherH card-text col-1'>" + "Humidity: " + "<b>" +
+					data.daily[i].humidity +
+				"</b></p>" +
+				
+				"<p id='weatherWind1' className='weatherW card-text col-1'>" + "Wind: " + "<b>" +
+					data.daily[i].wind_speed
+				+ "</b></p>" +
+				
+				"<p id='weatherPressure1' className='weatherP card-text col-2'>" + "Pressure: " + "<b>" +
+				data.daily[i].pressure +
+				"</b></p>" +
 			"</div>" +
 		"</section>"
 	}
-					// "<h4>" + data.daily[i].dt + "</h4>" +
-					// "Temperature: " + data.daily[i].temp.max + "/" + data.daily[i].temp.min  +
-					//
-					// "Description: " + "<h4>" + data.daily[i].weather[i].description + "</h4>" +
-					//
-					// "Humidity: " + "<h4>" + data.daily[i].humidity + "</h4>" +
-					//
-					// "Wind: " + "<h4>" + data.daily[i].wind_speed + "</h4>" +
-					//
-					// "Pressure: " + "<h4>" + data.daily[i].pressure + "</h4>"
-		
 		$("#allWeatherContaiers").html(html);
 		
 		}).fail(function (jqXhr, status, error) {
@@ -163,106 +165,102 @@
 				console.log(error);
 		});
 	});
-				//https://java.codeup.com/img/5day-forecast-map.png
-				//https://api.jquery.com/jquery.each/
-			// 	$.each(data, function (index, value){
-			// 					console.log(index, value);
-			// // 	$(data).each(function (i, obj) {
-			// //
-			
-			// // 	});
-			// }).fail(function (jqXhr, status, error) {
-			// 		console.log(jqXhr);
-			// 		console.log(status);
-			// 		console.log(error);
-			// });
-			
-			
-		/** //
-		// 		console.log(data, "--Testing data---", data.daily[0].temp.day);
-		// 		$.each(data, function (index, value){
-		// 			console.log(index, value);
-		// 		});
-		// 			I can now go through the index values...but I'm not sure what to do with this, so I'll try something else.
-		// 			console.log(i + obj)
-		// 		})
-		// 		$("#weatherData").html("<p>" + data.daily[0].temp.day + "</p>"); this works
-		// 		// log 63 from humidity ---it matters that its under this.
-		// 		console.log(data.daily[0].temp.day + " will supposedly be the weather today");
-		//
-		//
-		// 	}).fail(function(jqXhr, status, error) {
-		// 		console.log(jqXhr);
-		// 		console.log(status);
-		// 		console.log(error);
-		// 	});
-		//
-		//
-		//
-		//
-		// 		function createHTML(data)
-		// 	{
-		// 		var html = "";
-		// 		for (var i = 0; i < data.length; i += 1) {
-		// 			html +=
-		// 					"<p>" + data.daily[i].temp.day + "</p>";
-		// 		}
-		// 		return html;
-		// 	};
-		//
-		// 	$.get('https://api.openweathermap.org/data/2.5/onecall', {
-		// 		lat: 29.4252,
-		// 		lon: -98.4916,
-		// 		appid: WEATHER_TOKEN,
-		// 		exclude: 'minutely,hourly,current,alerts',
-		// 		units: 'imperial'
-		// 	}).done(function(data) {
-		// 			$('#weatherData').html(createHTML);
-		// 		})
-		// 				.fail(function (jqXhr, status, error) {
-		// 					console.log(jqXhr);
-		// 					console.log(status);
-		// 					console.log(error);
-		// 				});
-		// });
-		//
-		// //
-		//
-		//
-		//
-		//
-		//
-		// // $.get('https://api.openweathermap.org/data/2.5/onecall', {
-		// // 	lat: 29.4252,
-		// // 	lon: -98.4916,
-		// // 	appid: WEATHER_TOKEN,
-		// // 	exclude: 'minutely,hourly,current,alerts',
-		// // 	units: 'imperial'
-		// // }).done(function (data){
-		// // 	console.log(data.daily[0].temp.day);
-		// // 	var weatherText = "";
-		// // 	for(var i = 0; i < data.length; i++){
-		// // 		weatherText += document.getElementById("weatherData").innerHTML =
-		// // 				'<h2>' + data.daily[0].temp.day + '</h2>';
-		// // 	}
-		// // 	$("#weatherData").html(weatherText)
-		// //
-		//
-		// 	// console.log(data.daily[0].dt);
-		// 	//
-		// 	// $("#weatherData").html(data.daily[0].dt);
-		//
-		// 	// console.log(($("#insert-weather-data").html(html));
-		// 	// log 63 from humidity ---it matters that its under this.
-		//
-		// 	// console.log(data.daily[0].feels_like.day.toFixed(0) + " will supposedly be the weather today");
-		//
-		//
-		// // $('#clickme').click(function(){
-		// // 	$('#user_display').html($('#user_input').val());
-		// //
-		// // }); **/
-		
+//<div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+// 		<div class="card-header">Header</div>
+// 		<div class="card-body">
+// 			<h5 class="card-title">Light card title</h5>
+// 			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+// 		</div>
+// "<h4>" + data.daily[i].dt + "</h4>" +
+// "Temperature: " + data.daily[i].temp.max + "/" + data.daily[i].temp.min  +
+//
+// "Description: " + "<h4>" + data.daily[i].weather[i].description + "</h4>" +
+//
+// "Humidity: " + "<h4>" + data.daily[i].humidity + "</h4>" +
+//
+// "Wind: " + "<h4>" + data.daily[i].wind_speed + "</h4>" +
+//
+// "Pressure: " + "<h4>" + data.daily[i].pressure + "</h4>"
+//https://java.codeup.com/img/5day-forecast-map.png
+//https://api.jquery.com/jquery.each/
+// 	$.each(data, function (index, value){
+// 					console.log(index, value);
+// // 	$(data).each(function (i, obj) {
+// // 	});
+// }).fail(function (jqXhr, status, error) {
+// 		console.log(jqXhr);
+// 		console.log(status);
+// 		console.log(error);
+// });
+// // 		console.log(data, "--Testing data---", data.daily[0].temp.day);
+// // 		$.each(data, function (index, value){
+// // 			console.log(index, value);
+// // 		});
+// // 			I can now go through the index values...but I'm not sure what to do with this, so I'll try something else.
+// // 			console.log(i + obj)
+// // 		})
+// // 		$("#weatherData").html("<p>" + data.daily[0].temp.day + "</p>"); this works
+// // 		// log 63 from humidity ---it matters that its under this.
+// // 		console.log(data.daily[0].temp.day + " will supposedly be the weather today");
+// //
+// //
+// // 	}).fail(function(jqXhr, status, error) {
+// // 		console.log(jqXhr);
+// // 		console.log(status);
+// // 		console.log(error);
+// // 	});
+// // 		function createHTML(data)
+// // 	{
+// // 		var html = "";
+// // 		for (var i = 0; i < data.length; i += 1) {
+// // 			html +=
+// // 					"<p>" + data.daily[i].temp.day + "</p>";
+// // 		}
+// // 		return html;
+// // 	};
+// // 	$.get('https://api.openweathermap.org/data/2.5/onecall', {
+// // 		lat: 29.4252,
+// // 		lon: -98.4916,
+// // 		appid: WEATHER_TOKEN,
+// // 		exclude: 'minutely,hourly,current,alerts',
+// // 		units: 'imperial'
+// // 	}).done(function(data) {
+// // 			$('#weatherData').html(createHTML);
+// // 		})
+// // 				.fail(function (jqXhr, status, error) {
+// // 					console.log(jqXhr);
+// // 					console.log(status);
+// // 					console.log(error);
+// // 				});
+// // });
+// // // $.get('https://api.openweathermap.org/data/2.5/onecall', {
+// // // 	lat: 29.4252,
+// // // 	lon: -98.4916,
+// // // 	appid: WEATHER_TOKEN,
+// // // 	exclude: 'minutely,hourly,current,alerts',
+// // // 	units: 'imperial'
+// // // }).done(function (data){
+// // // 	console.log(data.daily[0].temp.day);
+// // // 	var weatherText = "";
+// // // 	for(var i = 0; i < data.length; i++){
+// // // 		weatherText += document.getElementById("weatherData").innerHTML =
+// // // 				'<h2>' + data.daily[0].temp.day + '</h2>';
+// // // 	}
+// // // 	$("#weatherData").html(weatherText)
+// // 	// console.log(data.daily[0].dt);
+// // 	//
+// // 	// $("#weatherData").html(data.daily[0].dt);
+// //
+// // 	// console.log(($("#insert-weather-data").html(html));
+// // 	// log 63 from humidity ---it matters that its under this.
+// //
+// // 	// console.log(data.daily[0].feels_like.day.toFixed(0) + " will supposedly be the weather today");
+// //
+// //
+// // // $('#clickme').click(function(){
+// // // 	$('#user_display').html($('#user_input').val());
+// // //
+// // // });//
 	</script>
 </body>
 </html>
