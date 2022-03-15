@@ -908,7 +908,7 @@
 		var newWord = value1.split("").filter(function(item){
 			if (item === "a" || item === "e" || item === "i" || item === "o" || item === "u"){
 				return false; //returning the item gave me all the vowels back...
-			};
+			} else return item; // forgetting to add this gave me nothing >_<
 		});
 		 return newWord.join("");
 	}
