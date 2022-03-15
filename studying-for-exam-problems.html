@@ -871,26 +871,35 @@
 	// 	// else return false;};
 	// // console.log(hasVowels("word"));
 	/** ************************************************************************ **/
-		var vowels = [
-			{vowel: "a"},
-			{vowel: "e"},
-			{vowel: "i"},
-			{vowel: "o"},
-			{vowel: "u"}
-		];
+		// var vowels = [
+		// 	{vowel: "a"},
+		// 	{vowel: "e"},
+		// 	{vowel: "i"},
+		// 	{vowel: "o"},
+		// 	{vowel: "u"}
+		// ];
 	// 	var allVowels = Object.values(vowels);
 	// 	var newArr = [].concat(vowels);
 	//
 	// console.log(typeof allVowels);
 	// console.log(typeof newArr);
-	function countVowels(string) {
-		var answer;
-		var newArr2;
-		// = [].concat(string.split(""));
-		for (var i = 0; i < vowels.length; i++) {
-			answer = [].concat(string.split(""));
+	// function countVowels(string) {
+	// 	var answer;
+	// 	var newArr2;
+	// 	// = [].concat(string.split(""));
+	// 	for (var i = 0; i < vowels.length; i++) {
+	// 		answer = [].concat(string.split(""));
+	// 		};
+	// 	return answer;
+	// };
+	function countVowels(value2) {
+		var vowelCount = 0;
+		value2.split("").forEach(function(value, index, array){
+			if (value == "a" || value == "e" || value == "i" || value == "o" || value == "u"){
+			vowelCount++;
 			};
-		return answer;
+		});
+		return vowelCount;
 	};
 	
 	console.log(countVowels("love"), 2);
@@ -899,6 +908,8 @@
 	console.log(countVowels("mango"), 2, "Exercise 45");
 	console.log(countVowels("QQQQ"), 0, "Exercise 45");
 	console.log(countVowels("wyrd"), 0, "Exercise 45");
+	
+	
 </script>
 <body>
 </body>
