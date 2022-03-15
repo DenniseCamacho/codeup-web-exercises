@@ -903,19 +903,40 @@
 	// };
 	// Exercise 46
 	// Write a function definition named removeVowels that takes in string and returns the string without any vowels
-	function removeVowels(value1) {
-		var vowels = ["a", "e", "i", "o", "u"];
-		var newWord = value1.split("").filter(function(item){
-			if (item === "a" || item === "e" || item === "i" || item === "o" || item === "u"){
-				return false; //returning the item gave me all the vowels back...
-			} else return item; // forgetting to add this gave me nothing >_<
-		});
-		 return newWord.join("");
+	// function removeVowels(value1) {
+	// 	var vowels = ["a", "e", "i", "o", "u"];
+	// 	var newWord = value1.split("").filter(function(item){
+	// 		if (item === "a" || item === "e" || item === "i" || item === "o" || item === "u"){
+	// 			return false; //returning the item gave me all the vowels back...
+	// 		} else return item; // forgetting to add this gave me nothing >_<
+	// 	});
+	// 	 return newWord.join("");
+	// }
+	// console.log(removeVowels("banana"), "bnn", "Exercise 46");
+	// console.log(removeVowels("ubuntu"), "bnt", "Exercise 46");
+	// console.log(removeVowels("mango"), "mng", "Exercise 46");
+	// console.log(removeVowels("QQQQ"), "QQQQ", "Exercise 46");
+	
+	// Exercise 47
+// Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
+	var vowels = ["a", "e", "i", "o", "u"];
+	//trying to console.log each item
+	function anyItem(array){
+		for (var i = 0; i < array.length; i++){
+			console.log(array[i]);
+		}
 	}
-	console.log(removeVowels("banana"), "bnn", "Exercise 46");
-	console.log(removeVowels("ubuntu"), "bnt", "Exercise 46");
-	console.log(removeVowels("mango"), "mng", "Exercise 46");
-	console.log(removeVowels("QQQQ"), "QQQQ", "Exercise 46");
+
+	
+	function startsWithVowel(string) {
+		if (string.startsWith(anyItem(vowels))) return true;
+		else return false;
+				};
+	console.log(startsWithVowel("ubuntu"), true, "Exercise 47");
+	console.log(startsWithVowel("banana"), false, "Exercise 47");
+	console.log(startsWithVowel("mango"), false, "Exercise 47");
+	addToDone("Exercise 47 is correct.")
+	
 	
 	
 	
