@@ -23,19 +23,19 @@ div.box:active {
 }
 
 .box:nth-child(1){
-    background-color: red;
+    background-color: maroon;
 }
 .box:nth-child(2){
-    background-color: blue;
+    background-color: midnightblue;
 }
 .box:nth-child(3){
-    background-color: yellow;
+    background-color: darkgoldenrod;
 }
 .box:nth-child(4){
     /*!*background-color: green;*! is covered by div*/
 }
 .box:nth-child(5){
-    background-color: orange;
+    background-color: darkorange;
 }
 .box:nth-child(6){
     background-color: purple;
@@ -44,11 +44,11 @@ div.box:active {
     background-color: mediumpurple;
 }
 .box:nth-child(9){
-    background-color: mediumblue;
+    background-color: royalblue;
 }
 .box:nth-child(10){
     background-color: mediumseagreen;
 }
 .box:nth-child(11){
-    background-color: green;
+    background-color: darkolivegreen;
 }
