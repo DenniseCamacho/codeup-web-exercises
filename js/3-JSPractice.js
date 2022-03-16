@@ -1013,3 +1013,53 @@
 // //adding.split(",") and + "," and .pop()
 // //
 // console.log(createFirstNamesArray(users)); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
+// Exercise 50
+// Write a function definition named first that takes in sequence and returns the first value of that sequence.
+// function first(sequence){
+// 	if (typeof sequence == "string") {
+// 		var sequenceThatWasAString = "";
+// 		var sequenceThatWasNotAString = "";
+// 		sequence.split("").forEach(function (value, index, array) {
+// 			if (index == "0") sequenceThatWasAString = value;
+// 		});
+// 		return sequenceThatWasAString;
+// 	} else {
+// 		sequence.forEach(function (value, index, array) {
+// 			if (index == "0") sequenceThatWasNotAString = value;
+// 		});
+// 		return sequenceThatWasNotAString;
+// 	}
+// }
+// console.log(first("ubuntu"), "--u", "Exercise 50");
+// console.log(first([1, 2, 3]), "--1", "Exercise 50");
+// console.log(first(["JS", "is", "awesome"]), "--JS", "Exercise 50");
+// function forth(sequence){
+// 	var string= "";
+// 	var array= "";
+// 	if (typeof sequence !== "string") {
+// 		sequence.forEach(function(value,index){
+// 			if (index == "3") {array = value;}
+// 		}); return array;
+// 	} else {
+// 		sequence.split("").forEach(function(value,index){
+// 			if (index == "3") {string = value;}
+// 		}); return string;
+// 	}
+// }
+
+// Exercise 54
+// Write a function definition named last that takes in sequence and returns the last value of that sequence.
+
+// function last(sequence){
+// 	if (typeof sequence !== "string"){
+// 		return sequence.pop();
+// 	}
+// 	else {
+// 		return sequence.split("").pop();
+// 	}
+// }
+// console.log(last("ubuntu"), "u", "Exercise 54");
+// console.log(last("1234"), "u", "Exercise 54");
+// console.log(last([1, 2, 3, 4]), 4, "Exercise 54");
+// console.log(last(["JS", "is", "awesome"]), "awesome", "Exercise 54");
+// console.log(last(["kiwi", "mango", "guava"]), "guava", "Exercise 54");
