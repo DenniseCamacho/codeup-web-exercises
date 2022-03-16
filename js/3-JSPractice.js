@@ -1102,10 +1102,14 @@
 // Exercise 57
 // Write a function definition named firstAndSecond that takes in sequence and returns the first and second value of that sequence as an array
 function firstAndSecond(sequence){
-	var imSleepy = "";
-	sequence.forEach(function (value, index, array){
-		if (index == "0" && index == "1") imSleepy += value;
-	}); return imSleepy;
+		var firstTwo = "";
+		sequence.forEach(function(value, index){
+			if (index == "0" && index == "1"){
+				firstTwo = value;
+			}
+		});
+		return false;
+		return firstTwo;
 }
 
 console.log(firstAndSecond([1, 2, 3, 4]), "testing", [1, 2], "Exercise 57");
