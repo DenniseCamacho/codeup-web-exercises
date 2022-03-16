@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather Practice</title>
+	<!--	mobileview-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--	weather-->
+	
+	<!--	mapbox / geocode-->
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+	<script src="js/mapbox-geocoder-utils.js"></script>
+	<!--	bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!--	css or link CSS-->
+	<style>
+	
+	</style>
+</head>
+<body>
+
+
+
+
+<!--bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--mapbox-->
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!--keys-->
+<script src="js/keys.js"></script>
+
+<script>
+	//JS
+	$.get('https://api.scripture.api.bible/v1/swagger.json', {
+		appid: BIBLE_TOKEN
+	}).done(function(data) {
+		console.log(data);
+		console.log(data.tags[0].name);
+	}).fail(function (jqXhr, status, error) {
+		console.log(jqXhr);
+		console.log(status);
+		console.log(error);
+	});
+	
+	
+</script>
+</body>
+</html>
