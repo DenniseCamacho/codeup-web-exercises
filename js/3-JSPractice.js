@@ -1063,3 +1063,51 @@
 // console.log(last([1, 2, 3, 4]), 4, "Exercise 54");
 // console.log(last(["JS", "is", "awesome"]), "awesome", "Exercise 54");
 // console.log(last(["kiwi", "mango", "guava"]), "guava", "Exercise 54");
+
+// function secondTolast(sequence){
+// 	if (typeof sequence !== "string"){
+// 		sequence.pop();
+// 		return sequence.pop();
+// 	}
+// 	else {
+// 		var sToArray = sequence.split("");
+// 		sToArray.pop();
+// 		return sToArray.pop();
+// 	}
+// }
+// console.log(secondToLast("ubuntu"), "t", "Exercise 55");
+// console.log(secondToLast([1, 2, 3, 4]), 3, "Exercise 55");
+// console.log(secondToLast(["JS", "is", "awesome"]), "is", "Exercise 55");
+// console.log(secondToLast(["kiwi", "mango", "guava"]), "mango", "Exercise 55");
+
+// function thirdToLast(sequence){
+// 	if (typeof sequence !== "string") {
+// 		sequence.pop();
+// 		sequence.pop();
+// 		return sequence.pop();
+// 	} else {
+// 		var stringToArray = sequence.split("")
+// 		stringToArray.pop();
+// 		stringToArray.pop();
+// 		return stringToArray.pop();
+//
+// 	}
+// };
+// console.log(thirdToLast("ubuntu"), "n", "Exercise 56");
+// console.log(thirdToLast([1, 2, 3, 4]), 2, "Exercise 56");
+// console.log(thirdToLast(["JS", "is", "awesome"]), "JS", "Exercise 56");
+// console.log(thirdToLast(["strawberry", "kiwi", "mango", "guava"]), "kiwi", "Exercise 56");
+
+//just realized there's an isArray() method... ^^;
+// Exercise 57
+// Write a function definition named firstAndSecond that takes in sequence and returns the first and second value of that sequence as an array
+function firstAndSecond(sequence){
+	var imSleepy = "";
+	sequence.forEach(function (value, index, array){
+		if (index == "0" && index == "1") imSleepy += value;
+	}); return imSleepy;
+}
+
+console.log(firstAndSecond([1, 2, 3, 4]), "testing", [1, 2], "Exercise 57");
+console.log(firstAndSecond(["JS", "is", "awesome"]), "testing",["JS", "is"], "Exercise 57");
+console.log(firstAndSecond(["strawberry", "kiwi", "mango", "guava"]), "testing", ["strawberry", "kiwi"], "Exercise 57");
