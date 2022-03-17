@@ -33,28 +33,36 @@ const users = [
 // to the languages array
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-var name = 'your_name_here';
-var email = '';
-var languages = [];
+const name = 'dennise';
+const email = 'dennise.e.camacho@gmail.com';
+const languages = ['html', 'css', 'javascript'];
 
 // TODO: rewrite the object literal using object property shorthand
+
+// users.push({
+//   name: name,
+//   email: email,
+//   languages: languages
+// });
 users.push({
-  name: name,
-  email: email,
-  languages: languages
-});
+  name,
+  email,
+  languages
+})
 
 // TODO: replace `var` with `let` in the following variable declarations
-var emails = [];
-var names = [];
+let emails = [];
+let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(function(user) {
-  return emails.push(user.email);
-});
-users.forEach(function(user) {
-  return names.push(user.name);
-});
+// users.forEach(function(user) {
+//   return emails.push(user.email);
+// });
+const allEmails = user => emails.push(email);
+
+// users.forEach(function(user) {
+//   return names.push(user.name);
+// });
 
 // TODO: replace `var` with `let` in the following declaration
 var developers = [];
@@ -80,3 +88,54 @@ developers.forEach(function (developer) {
   list += '<li>' + developer + '</li>';
 });
 list += '</ul>';
+
+
+
+
+// ..... (¯`v´¯)♥
+// .......•.¸.•´
+// ....¸.•´
+// ... (
+// ☻/
+// /▌♥♥
+// / \ ♥♥
+
+
+
+// const picture1 = () => console.log('Love never fails.');
+// const picture2 = () => console.log('..... (¯`v´¯)♥');
+// const picture3 = () => console.log('.......•.¸.•´');
+// const picture4 = () => console.log('... (');
+// const picture5 = () => console.log('☻/');
+// const picture6 = () => console.log('/▌♥♥');
+// const picture7 = () => console.log('/ \\ ♥♥');
+
+setTimeout(() => console.log('Love is kind.'), 2000);
+setTimeout(() => console.log('..... (¯`v´¯)♥'), 2100)
+setTimeout(() => console.log('.......•.¸.•´'),2200)
+setTimeout(() => console.log('... ('),2300)
+setTimeout(() => console.log(' ☻/'),2400)
+setTimeout(() => console.log('/▌♥♥'),2500)
+setTimeout(() => console.log('/ \\ ♥♥'),2600)
+// setTimeout(picture2(), 1001);
+
+// setTimeout(function(){
+//   picture1();
+//   picture2();
+//   picture3();
+//   picture4();
+//   picture5();
+//   picture6();
+//   picture7();
+// }, 2000);
+
+
+// const bibleVerse1 = () => console.log(
+//     'Jesus said to him, “I am the way, and the truth, and the life; no one comes to the Father but through Me. - John 14:6 \n'
+// );
+// const bibleVerse2 = () => console.log(
+//     'and may be found in Him, not having a righteousness of my own derived from the Law, but that which is through faith in Christ, the righteousness which comes from God on the basis of faith, - Philippians 3:9\n'
+// );
+//
+// setInterval(bibleVerse1, 5000);
+// setInterval(bibleVerse2, 6000);
