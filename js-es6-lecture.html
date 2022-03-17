@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Js e6 lecture</title>
+<!--	mobile view-->
+<!--	bootstrap5-->
+<!--	jQuery-->
+
+</head>
+<body>
+<div id="text-stuff"> ah </div>
+
+
+
+<!--bootstrap?-->
+<!--jQuery-->
+<!--keys-->
+<script>
+	"use strict";
+	//scope?
+	//diff between var and let...
+	// anything between{} is a {code block}
+	// var scope is global.
+	// {
+	// 	var myName = "Dennise";
+	// } // global scope/does not stay in codeblock/
+	// console.log(myName);
+	// // this shows^-
+
+	// {
+	// 	let dogsName = "skittles";
+	// } //local scope/stays in the codeblock
+	// console.log(dogsName);
+	// //see the difference^? it doesn't show.
+	// //the scope is local.^
+	//
+	// the variable inside (coco) codeblock has global scope.
+	// var name = "Dennise"
+	// {
+	// 	if (true){var name = "coco";}
+	// console.log(name);
+	// }
+	//
+	// function scopeTester(){
+	// 	var firstName = 'Dennise';
+	// 	var anotherName = 'spike';
+	// 	let brothersName = 'jojo';
+	// 	console.log(brothersName);
+	// };
+	//
+	// console.log(scopeTester());
+	//
+	
+	const outputDiv = document.getElementById("text-stuff");
+	
+	
+	//contains refrence to object, not the object itself.
+	const car = {
+		make: "Toyota",
+		model: "Tacoma",
+		year: 2019,
+		mileage: 12657,
+		owner: {
+			firstName: "dennise",
+			lastName: 'camacho'
+		}
+	}
+	car.color = "pink"; //you can make a new thing O_O
+	
+	const car2 = {
+		make: "Toyota",
+		model: "Tacoma",
+		year: 2021,
+		mileage: 2000,
+		owner: {
+			firstName: "dennise",
+			lastName: 'camacho'
+		}
+	}
+	// let make = car.make ;
+	// let model = car.model ;
+	// let year = car.year ;
+	// let mileage = car.mileage ;
+	//
+	const {make, model, year, mileage, owner: {firstName, lastName}, color} = car; //object destructioning.
+	
+	let carDescription =
+			`<p>I see a ${color} ${year} ${make} ${model} with ${mileage} miles owned by ${firstName}.</p>`;
+	
+	outputDiv.innerHTML += carDescription;
+	
+	
+	let carArray = [car, car2];
+	for (let i = 0; i < carArray.length; i ++) {
+		const {make, model, year, mileage, owner: {firstName, lastName}, color} = carArray[i];
+		const carDescription =
+				`<p>I see a ${color} ${year} ${make} ${model} with ${mileage} miles owned by ${firstName}.</p>`;
+		outputDiv.innerHTML += carDescription;
+	}
+	
+	
+	//function declaration
+	// function add (num1, num2){
+	// 	return num1 + num2;
+	// }
+	//function expression
+	// const add = function(num1, num2){
+	// 	return num1 + num2;
+	// }
+	//arrow function
+	const add = (num1, num2) => num1 + num2;
+	//      ^- function add(num1,num2)  {              }
+	//function//no{} just =>//no return statement.
+	//in the terminal you would write add(2,4)
+	const add10 = num => num + 10;
+	//          1parameter = no ()   one parameter function returns + 10;
+	// add10(50); // 60
+	//
+	const helloWord = () => "hello word";
+	//helloWord(); ... no parameters is ()
+	
+	const outputCar = ({make, model, year, mileage, owner: {firstName, lastName}, color} = car) =>
+	`I see a ${color} ${year} ${make} ${model} with ${mileage} miles owned by ${firstName}.`;
+	
+</script>
+</body>
+</html>
