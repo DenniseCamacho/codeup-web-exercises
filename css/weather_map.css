@@ -1,0 +1,29 @@
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: pink;
+    }
+    section.everyCard>span:nth-of-type(1) {
+        display: none;
+    }
+    section.everyCard>b:nth-of-type(1) {
+       font-size: 3em;
+    }
+    #map {
+        height: 50vh;
+        margin-top: -70em;
+    }
+    .everyCard {
+        text-align: center;
+        background-color: yellow;
+    }
+    .everyCard:nth-child(2), .everyCard:nth-child(3), .everyCard:nth-child(4), .everyCard:nth-child(5){
+        visibility: hidden;
+    }
+    .searchbarSection {
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+}
