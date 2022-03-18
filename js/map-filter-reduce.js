@@ -58,8 +58,8 @@ console.log(Math.round(addExperience / users.length), "#3");
 
 //TODO:	Use .reduce to get the longest email from the list of users.
 const longestEmail = users.reduce((previousValue, currentValue) => {
-	if (previousValue > currentValue.email.length){
-		return previousValue;
+	if (previousValue < currentValue.email.length){
+		return currentValue.email;
 	}}, 0);
 console.log(longestEmail, '#4');
 //https://www.youtube.com/watch?v=6_XzV25rkcE&ab_channel=SteveGriffith-Prof3ssorSt3v3
