@@ -68,7 +68,8 @@ console.log(longestEmail);
 // 	Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 const namesReduced = users.reduce((previousValue, currentValue) =>
 previousValue + ", " + currentValue.name, "");
-console.log(namesReduced.split(" ").shift())
+console.log('Your instructors are:' + namesReduced.split(",").slice(1).join())
+//seperated by a ',' for array methods; slicing the first comma out of the array, joining them back into a string.
 // const justNamesReduced = dogs.reduce((prevVal, current) => prevVal+current.dogName,"");
 // console.log(justNamesReduced);
 //
