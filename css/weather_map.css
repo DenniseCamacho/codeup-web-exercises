@@ -1,9 +1,7 @@
 
 
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: pink;
-    }
+
     /*this is for the date and time.*/
     section.everyCard>span:nth-of-type(1) {
         display: flex;
@@ -16,19 +14,24 @@
     }
     /*this is for the temperature numbers.*/
     section.everyCard>b:nth-of-type(1) {
-       font-size: 3em;
+       font-size: 2em;
     }
     #map {
         height:400px;
         width: 90%;
         margin: auto 0;
+
         /*margin: 100px;*/
+    }
+    /*To keep the border edges the same... */
+    .inputFind, .buttonFind, #map, .everyCard{
+        border-radius: .5em;
     }
     .everyCard {
         max-width: 90%;
         margin: auto;
         text-align: center;
-        background-color: yellow;
+        background-color: whitesmoke;
     }
     /*this hides the forecast in mobile view*/
     .everyCard:nth-child(2), .everyCard:nth-child(3), .everyCard:nth-child(4), .everyCard:nth-child(5){
@@ -36,7 +39,7 @@
         display: none;
     /*    this gave me so many issues.
      if  i did not put 'display: none', the map would act
-     as if the forecast were displaying.*/
+     as if the rest of the forecast were displaying.*/
     }
     .searchbarSection {
         max-width: 90%;

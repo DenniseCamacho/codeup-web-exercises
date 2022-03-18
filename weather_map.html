@@ -17,14 +17,15 @@
 
 </head>
 
-<body>
+<body class="bg-info bg-gradient">
 	<h1 class="bg-primary text-light text-center">Weather Map</h1>
 	<!--searchbar-->
 	<section class ="searchbarSection d-flex flex-column">
 	<div><span id="user_display"></span></div>
 	<label class="text-center">Place:</label>
-	<input type="text" id="user_input" class="mb-sm-3">
-	<button id="clickme">Find</button>
+	<input type="text" id="user_input" placeholder="San Antonio, Texas"
+	       class="inputFind mb-3 text-center">
+	<button id="clickme" class="buttonFind mb-0">Find</button>
 	</section>
 	
 	<!-- holding weather boxes-->
@@ -32,7 +33,7 @@
 	<!--	      ^----$("#allWeatherContaiers").html(html);-->
 	</section>
 	<!--the map, it was difficult to center outside of bootstrap.-->
-	<div id="map" class="m-auto mt-3 mb-3"></div>
+	<div id="map" class="m-auto mt-3 mb-5"></div>
 	
 	
 	
@@ -93,10 +94,11 @@ $(document).ready(function() {
 		html +=
 		"<section class='everyCard'>" +
 			"<span>" + date1 + "</span>" +
-				"<span>" + "Temperature: " + "</span>" + "<b>" + parseInt(data.daily[i].temp.max) + "<span>" + "/" +
+				"<span>" + "Temperature: " + "</span>" + "<b>" + parseInt(data.daily[i].temp.max) + "<span>" +
+				"º / " +
 				"</span>" +
 				parseInt(data.daily[i].temp.min)
-				+ "</b><br>" +
+				+ "º</b><br>" +
 				"Description: " + "<b>" + data.daily[i].weather[0].description
 				+ "</b><br>" +
 				"<details>" +
