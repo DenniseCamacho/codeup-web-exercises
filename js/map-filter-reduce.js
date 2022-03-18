@@ -49,27 +49,28 @@ console.log(emailAddresses, '#2');
 
 
 //TODO: Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
-const addExperience = users.reduce((original, next) => {
-	const total = original + next.yearsOfExperience;
-	return total;
-}, "");
-console.log(parseInt(addExperience / addExperience.length), "#3");
+const addExperience = users.reduce((theZero, next) => {
+	return theZero + next.yearsOfExperience;
+}, 0);
+console.log(Math.round(addExperience / users.length), "#3");
 //ins:
 
 
 //TODO:	Use .reduce to get the longest email from the list of users.
 const longestEmail = users.reduce((previousValue, currentValue) => {
-	if (previousValue > currentValue.email){
+	if (previousValue > currentValue.email.length){
 		return previousValue;
-	}}, "");
-console.log(longestEmail);
+	}}, 0);
+console.log(longestEmail, '#4');
+//https://www.youtube.com/watch?v=6_XzV25rkcE&ab_channel=SteveGriffith-Prof3ssorSt3v3
 
-
-// 	Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+//TODO: 	Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 const namesReduced = users.reduce((previousValue, currentValue) =>
 previousValue + ", " + currentValue.name, "");
-console.log('Your instructors are:' + namesReduced.split(",").slice(1).join())
+const namesReducedRetouched = namesReduced.split(",").slice(1).join();
+console.log('Your instructors are:' + namesReducedRetouched, '#5');
 //seperated by a ',' for array methods; slicing the first comma out of the array, joining them back into a string.
+// https://www.w3schools.com/jsref/jsref_obj_array.asp
 // const justNamesReduced = dogs.reduce((prevVal, current) => prevVal+current.dogName,"");
 // console.log(justNamesReduced);
 //
