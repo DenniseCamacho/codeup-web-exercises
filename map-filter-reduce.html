@@ -20,291 +20,312 @@
 </main>
 
 
-
+<script src="js/map-filter-reduce.js"></script>
 <script>
 	"use strict";
 	
-	// Array of numbers someone likes for some reason
-	const favoriteNumbers = [11, 17, 15, 12, 100, 7, 1, 3, 9, 50,52, 44, 13, 19];
+	//Exercise.
+	// Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
 	
-	const myCats = ['Little One', "Mao Mao", "Lizzy"]
 	
-	const arrayOfTVShows = [
-		{
-			title: "The Office",
-			seasons: 9,
-			imdbScore: 9,
-			firstEpisodeYear: 2005,
-			characters: ["Micheal", "Pam", "Jim", "Andy"]
-		},
-		{
-			title: "Game of Thrones",
-			seasons: 8,
-			imdbScore: 9.3,
-			firstEpisodeYear: 2011,
-			characters: ["Jon", "Arya", "Sansa", "Tyrion"]
-		},
-		{
-			title: "The Good Place",
-			seasons: 4,
-			imdbScore: 8.2,
-			firstEpisodeYear: 2016,
-			characters: ["Janet", "Chidi", "Elenor", "Jason", "Tahani"]
-		},
-		{
-			title: "Breaking Bad",
-			seasons: 5,
-			imdbScore: 9.5,
-			firstEpisodeYear: 2008,
-			characters: ["Walter", "Jesse", "Skylar"]
-		},
-	]
+	// 		Use .map to create an array of strings where each element is a user's email address
 	
-	// MAP
+	// Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
 	
-	// // TODO: double each number in the favorite numbers array.
+	// 		Use .reduce to get the longest email from the list of users.
+	
+	// 		Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//notes/practice
+	// // Array of numbers someone likes for some reason
+	// const favoriteNumbers = [11, 17, 15, 12, 100, 7, 1, 3, 9, 50,52, 44, 13, 19];
 	//
-	// const doubleNumbersArray = favoriteNumbers.map((number) => number*2);
+	// const myCats = ['Little One', "Mao Mao", "Lizzy"]
 	//
-	// console.log("doubleNumbersArray:", doubleNumbersArray)
-	// console.log("favoriteNumbers:", favoriteNumbers)
+	// const arrayOfTVShows = [
+	// 	{
+	// 		title: "The Office",
+	// 		seasons: 9,
+	// 		imdbScore: 9,
+	// 		firstEpisodeYear: 2005,
+	// 		characters: ["Micheal", "Pam", "Jim", "Andy"]
+	// 	},
+	// 	{
+	// 		title: "Game of Thrones",
+	// 		seasons: 8,
+	// 		imdbScore: 9.3,
+	// 		firstEpisodeYear: 2011,
+	// 		characters: ["Jon", "Arya", "Sansa", "Tyrion"]
+	// 	},
+	// 	{
+	// 		title: "The Good Place",
+	// 		seasons: 4,
+	// 		imdbScore: 8.2,
+	// 		firstEpisodeYear: 2016,
+	// 		characters: ["Janet", "Chidi", "Elenor", "Jason", "Tahani"]
+	// 	},
+	// 	{
+	// 		title: "Breaking Bad",
+	// 		seasons: 5,
+	// 		imdbScore: 9.5,
+	// 		firstEpisodeYear: 2008,
+	// 		characters: ["Walter", "Jesse", "Skylar"]
+	// 	},
+	// ]
 	//
-	// const forEachExample = [];
-	// favoriteNumbers.forEach((element) =>  {
-	// 	forEachExample.push(element *2)
-	// })
-	//
-	// console.log("forEachExample:", forEachExample)
-	//
-	// const uppercaseCats = myCats.map((element) => element.toUpperCase())
-	//
-	// console.log("uppercaseCats:", uppercaseCats)
-	//
-	//
-	// const mapElementToLI = (element) => `<li>${element}</li>`
-	//
-	// const uppercaseCatsHTML = uppercaseCats.map(mapElementToLI)
-	//
-	// console.log("uppercaseCatsHTML:", uppercaseCatsHTML)
-	//
-	//
-	// document.getElementById("myCats").innerHTML = uppercaseCatsHTML.join("")
-	//
-	// //TODO: create a headline that could be accessed later. using the title, seasons and imdbScore
-	//
-	// const mapHeadlineToArray =  (show) => {
-	// 	const { title, seasons, imdbScore }  = show
-	//
-	// 	return {
-	// 		...show,
-	// 		headline: `${title} (${seasons} seasons) has an average IMDB score of ${imdbScore}`
-	// 	}
-	// }
-	// const headlineTVShows = arrayOfTVShows.map(mapHeadlineToArray);
-	//
-	// console.log("headlineTVShows:", headlineTVShows)
-	//
-	
-	// TODO: Given the following array, complete the todos...
-	
-	const dogs = [
-		{
-			dogName: 'Bubbles',
-			age: 10,
-			isTrained: false
-		},
-		{
-			dogName: 'Lexie',
-			age: 3,
-			isTrained: true
-		},
-		{
-			dogName: 'Doggy',
-			age: 5,
-			isTrained: false
-		},
-		{
-			dogName: 'Flopper',
-			age: 3,
-			isTrained: true
-		},
-		{
-			dogName: 'Lexie',
-			age: 1,
-			isTrained: true
-		},
-		{
-			dogName: 'Skip',
-			age: 7,
-			isTrained: true
-		},
-		{
-			dogName: 'Blue',
-			age: 4,
-			isTrained: false
-		}
-	];
-	
-	
-	//-----------------
-	// MAP
-	
-	// TODO 1: using map, create a new array of dog names from the dogs array
-	console.log('Exercise 1:');
-	const dogNameArray = dogs.map((element) => element.dogName);
-	console.log('dogName:', dogNameArray);
-	
-	// TODO 2: using map, create a new array of dog ages from the dogs array
-	console.log('Exercise 2:');
-	const dogAgesArray = dogs.map((dogAges) => dogAges.age);
-	console.log('ages:', dogAgesArray);
-	
-	// TODO 3: using map, create a new array of dog objects from the dogs array that only have dog names and age properties and values
-	console.log('Exercise 3:');
-	const getDogsNamesAndAges = ({dogName : name, age}) => {
-		return {
-			name, age
-		}
-	}
-	const dogsNewArrayAgeandName = dogs.map(getDogsNamesAndAges);
-	console.log("names and ages: ", dogsNewArrayAgeandName);
-	
-	// FILTER
-	
-	// TODO 4: using filter, create a new array containing only dogs younger than 10 years old
-	console.log('Exercise 4:');
-	const arrayOfdogsUnder10 = dogs.filter((anyparameternameheredogs) => anyparameternameheredogs.age < 10);
-	console.log("youngDogs :", arrayOfdogsUnder10);
-	
-	
-	// TODO 5: using filter, create a new array containing only dogs named 'Lexie'
-	console.log('Exercise 5:');
-	const onlyLexie = dogs.filter((goesthroughvalues) => goesthroughvalues.dogName == "Lexie");
-	console.log("Name :", onlyLexie);
-	
-	// TODO 6: using filter, create a new array containing only dogs that are trained and younger than 10
-	console.log('Exercise 6:');
-	const trainedAndUnder10 = dogs.filter((goesthroughvalues) => goesthroughvalues.isTrained && goesthroughvalues.age
-			< 10);
-	console.log(trainedAndUnder10, "---");
-	
-	// REDUCE
-	
-	// TODO 7: using reduce, return a string containing all dog names together with no spaces ("BubblesLexieDoggy...")
-	const justNamesReduced = dogs.reduce((prevVal, current) => prevVal+current.dogName,"");
-	console.log(justNamesReduced);
-	
-	console.log('Exercise 7:');
-	
-	// TODO 8: using reduce, return the total of adding all dog ages together (18)
-	console.log('Exercise 8:');
-	
-	// TODO 9: using reduce, return an array of dog objects with all isTrained properties set to true
-	console.log('Exercise 9:');
-	
-	
-	// EXTRA CHALLENGES
-	
-	// TODO 10: what is the average age of each dog?
-	console.log('Exercise 10:');
-	
-	// TODO 11: what is the average age of dogs that are trained?
-	console.log('Exercise 11:');
-	
-	// TODO 12: what is the average length of names of untrained dogs?
-	console.log('Exercise 12:');
-	
-	// TODO 13: what are the combined ages of all dogs in dog years? (7x more than a human year)
-	console.log('Exercise 13:');
-	
-	// TODO 14: create a string of the first letters of each dog name for dogs three years old (should be "LF")
-	console.log('Exercise 14:');
-
-	
-	
-	//
-	// ////instructornotes
 	// // MAP
 	//
-	// // TODO: double each number in the favorite numbers array.
+	// // // TODO: double each number in the favorite numbers array.
+	// //
+	// // const doubleNumbersArray = favoriteNumbers.map((number) => number*2);
+	// //
+	// // console.log("doubleNumbersArray:", doubleNumbersArray)
+	// // console.log("favoriteNumbers:", favoriteNumbers)
+	// //
+	// // const forEachExample = [];
+	// // favoriteNumbers.forEach((element) =>  {
+	// // 	forEachExample.push(element *2)
+	// // })
+	// //
+	// // console.log("forEachExample:", forEachExample)
+	// //
+	// // const uppercaseCats = myCats.map((element) => element.toUpperCase())
+	// //
+	// // console.log("uppercaseCats:", uppercaseCats)
+	// //
+	// //
+	// // const mapElementToLI = (element) => `<li>${element}</li>`
+	// //
+	// // const uppercaseCatsHTML = uppercaseCats.map(mapElementToLI)
+	// //
+	// // console.log("uppercaseCatsHTML:", uppercaseCatsHTML)
+	// //
+	// //
+	// // document.getElementById("myCats").innerHTML = uppercaseCatsHTML.join("")
+	// //
+	// // //TODO: create a headline that could be accessed later. using the title, seasons and imdbScore
+	// //
+	// // const mapHeadlineToArray =  (show) => {
+	// // 	const { title, seasons, imdbScore }  = show
+	// //
+	// // 	return {
+	// // 		...show,
+	// // 		headline: `${title} (${seasons} seasons) has an average IMDB score of ${imdbScore}`
+	// // 	}
+	// // }
+	// // const headlineTVShows = arrayOfTVShows.map(mapHeadlineToArray);
+	// //
+	// // console.log("headlineTVShows:", headlineTVShows)
+	// //
 	//
-	// const doubleNumbersArray = favoriteNumbers.map((number) => number*2);
+	// // TODO: Given the following array, complete the todos...
 	//
-	// console.log("doubleNumbersArray:", doubleNumbersArray)
-	// console.log("favoriteNumbers:", favoriteNumbers)
+	// const dogs = [
+	// 	{
+	// 		dogName: 'Bubbles',
+	// 		age: 10,
+	// 		isTrained: false
+	// 	},
+	// 	{
+	// 		dogName: 'Lexie',
+	// 		age: 3,
+	// 		isTrained: true
+	// 	},
+	// 	{
+	// 		dogName: 'Doggy',
+	// 		age: 5,
+	// 		isTrained: false
+	// 	},
+	// 	{
+	// 		dogName: 'Flopper',
+	// 		age: 3,
+	// 		isTrained: true
+	// 	},
+	// 	{
+	// 		dogName: 'Lexie',
+	// 		age: 1,
+	// 		isTrained: true
+	// 	},
+	// 	{
+	// 		dogName: 'Skip',
+	// 		age: 7,
+	// 		isTrained: true
+	// 	},
+	// 	{
+	// 		dogName: 'Blue',
+	// 		age: 4,
+	// 		isTrained: false
+	// 	}
+	// ];
 	//
-	// const forEachExample = [];
-	// favoriteNumbers.forEach((element) =>  {
-	// 	forEachExample.push(element *2)
-	// })
 	//
-	// console.log("forEachExample:", forEachExample)
+	// //-----------------
+	// // MAP
 	//
-	// const uppercaseCats = myCats.map((element) => element.toUpperCase())
+	// // TODO 1: using map, create a new array of dog names from the dogs array
+	// console.log('Exercise 1:');
+	// const dogNameArray = dogs.map((element) => element.dogName);
+	// console.log('dogName:', dogNameArray);
 	//
-	// console.log("uppercaseCats:", uppercaseCats)
+	// // TODO 2: using map, create a new array of dog ages from the dogs array
+	// console.log('Exercise 2:');
+	// const dogAgesArray = dogs.map((dogAges) => dogAges.age);
+	// console.log('ages:', dogAgesArray);
 	//
-	// // This is easily reusable in other map functions
-	// const mapElementToLI = (element) => `<li>${element}</li>`
-	//
-	// const uppercaseCatsHTML = uppercaseCats.map(mapElementToLI)
-	//
-	// console.log("uppercaseCatsHTML:", uppercaseCatsHTML)
-	//
-	//
-	// document.getElementById("myCats").innerHTML = uppercaseCatsHTML.join("")
-	//
-	// //TODO: create a headline that could be accessed later. using the title, seasons and imdbScore
-	//
-	// const mapHeadlineToArray =  (show) => {
-	// 	const { title, seasons, imdbScore }  = show
-	//
+	// // TODO 3: using map, create a new array of dog objects from the dogs array that only have dog names and age properties and values
+	// console.log('Exercise 3:');
+	// const getDogsNamesAndAges = ({dogName : name, age}) => {
 	// 	return {
-	// 		...show, // spread operator
-	// 		headline: `${title} (${seasons} seasons) has an average IMDB score of ${imdbScore}`
+	// 		name, age
 	// 	}
 	// }
-	// const headlineTVShows = arrayOfTVShows.map(mapHeadlineToArray);
-	//
-	// console.log("headlineTVShows:", headlineTVShows)
-	//
+	// const dogsNewArrayAgeandName = dogs.map(getDogsNamesAndAges);
+	// console.log("names and ages: ", dogsNewArrayAgeandName);
 	//
 	// // FILTER
 	//
-	// // TODO: Get only the odd numbers from the favorite numbers array
-	//
-	// const oddFavorites = favoriteNumbers.filter((number) => number % 2)
-	//
-	// console.log("oddFavorites:", oddFavorites)
-	//
-	// // TODO: From the cats array I want to only get the cats that have a name of 7 or
-	// //  less characters.
-	//
-	// const filterCatsUnder7Characters = (cat) => cat.length < 10
-	//
-	// const catsWithShortNames = myCats.filter(filterCatsUnder7Characters);
-	//
-	// console.log("catsWithShortNames:", catsWithShortNames)
-	//
-	// // TODO: Combine the tools!
-	// // TODO: take the cats array that you returned from the filter above and map it to the page.
-	//
-	// const catsWithShortNamesHTML = myCats.filter(filterCatsUnder7Characters).map(mapElementToLI)
-	//
-	// console.log("catsWithShortNamesHTML:", catsWithShortNamesHTML)
-	//
-	// document.getElementById("shortNamesCats").innerHTML = catsWithShortNamesHTML.join("");
+	// // TODO 4: using filter, create a new array containing only dogs younger than 10 years old
+	// console.log('Exercise 4:');
+	// const arrayOfdogsUnder10 = dogs.filter((anyparameternameheredogs) => anyparameternameheredogs.age < 10);
+	// console.log("youngDogs :", arrayOfdogsUnder10);
 	//
 	//
-	// // TODO: Filter the movies array such that it would return items 9 or over on the
-	// //  imdb rating scale and the show is created after or equal to 2008
+	// // TODO 5: using filter, create a new array containing only dogs named 'Lexie'
+	// console.log('Exercise 5:');
+	// const onlyLexie = dogs.filter((goesthroughvalues) => goesthroughvalues.dogName == "Lexie");
+	// console.log("Name :", onlyLexie);
 	//
-	// const bestShow = arrayOfTVShows.filter((show) => show.imdbScore >= 9 && show.firstEpisodeYear >= 2008)
-	//
-	// console.log("bestShow:", bestShow)
-	//
+	// // TODO 6: using filter, create a new array containing only dogs that are trained and younger than 10
+	// console.log('Exercise 6:');
+	// const trainedAndUnder10 = dogs.filter((goesthroughvalues) => goesthroughvalues.isTrained && goesthroughvalues.age
+	// 		< 10);
+	// console.log(trainedAndUnder10, "---");
 	//
 	// // REDUCE
+	//
+	// // TODO 7: using reduce, return a string containing all dog names together with no spaces ("BubblesLexieDoggy...")
+	// const justNamesReduced = dogs.reduce((prevVal, current) => prevVal+current.dogName,"");
+	// console.log(justNamesReduced);
+	//
+	// console.log('Exercise 7:');
+	//
+	// // TODO 8: using reduce, return the total of adding all dog ages together (18)
+	// console.log('Exercise 8:');
+	//
+	// // TODO 9: using reduce, return an array of dog objects with all isTrained properties set to true
+	// console.log('Exercise 9:');
+	//
+	//
+	// // EXTRA CHALLENGES
+	//
+	// // TODO 10: what is the average age of each dog?
+	// console.log('Exercise 10:');
+	//
+	// // TODO 11: what is the average age of dogs that are trained?
+	// console.log('Exercise 11:');
+	//
+	// // TODO 12: what is the average length of names of untrained dogs?
+	// console.log('Exercise 12:');
+	//
+	// // TODO 13: what are the combined ages of all dogs in dog years? (7x more than a human year)
+	// console.log('Exercise 13:');
+	//
+	// // TODO 14: create a string of the first letters of each dog name for dogs three years old (should be "LF")
+	// console.log('Exercise 14:');
+	//
+	//
+	//
+	// //
+	// // ////instructornotes
+	// // // MAP
+	// //
+	// // // TODO: double each number in the favorite numbers array.
+	// //
+	// // const doubleNumbersArray = favoriteNumbers.map((number) => number*2);
+	// //
+	// // console.log("doubleNumbersArray:", doubleNumbersArray)
+	// // console.log("favoriteNumbers:", favoriteNumbers)
+	// //
+	// // const forEachExample = [];
+	// // favoriteNumbers.forEach((element) =>  {
+	// // 	forEachExample.push(element *2)
+	// // })
+	// //
+	// // console.log("forEachExample:", forEachExample)
+	// //
+	// // const uppercaseCats = myCats.map((element) => element.toUpperCase())
+	// //
+	// // console.log("uppercaseCats:", uppercaseCats)
+	// //
+	// // // This is easily reusable in other map functions
+	// // const mapElementToLI = (element) => `<li>${element}</li>`
+	// //
+	// // const uppercaseCatsHTML = uppercaseCats.map(mapElementToLI)
+	// //
+	// // console.log("uppercaseCatsHTML:", uppercaseCatsHTML)
+	// //
+	// //
+	// // document.getElementById("myCats").innerHTML = uppercaseCatsHTML.join("")
+	// //
+	// // //TODO: create a headline that could be accessed later. using the title, seasons and imdbScore
+	// //
+	// // const mapHeadlineToArray =  (show) => {
+	// // 	const { title, seasons, imdbScore }  = show
+	// //
+	// // 	return {
+	// // 		...show, // spread operator
+	// // 		headline: `${title} (${seasons} seasons) has an average IMDB score of ${imdbScore}`
+	// // 	}
+	// // }
+	// // const headlineTVShows = arrayOfTVShows.map(mapHeadlineToArray);
+	// //
+	// // console.log("headlineTVShows:", headlineTVShows)
+	// //
+	// //
+	// // // FILTER
+	// //
+	// // // TODO: Get only the odd numbers from the favorite numbers array
+	// //
+	// // const oddFavorites = favoriteNumbers.filter((number) => number % 2)
+	// //
+	// // console.log("oddFavorites:", oddFavorites)
+	// //
+	// // // TODO: From the cats array I want to only get the cats that have a name of 7 or
+	// // //  less characters.
+	// //
+	// // const filterCatsUnder7Characters = (cat) => cat.length < 10
+	// //
+	// // const catsWithShortNames = myCats.filter(filterCatsUnder7Characters);
+	// //
+	// // console.log("catsWithShortNames:", catsWithShortNames)
+	// //
+	// // // TODO: Combine the tools!
+	// // // TODO: take the cats array that you returned from the filter above and map it to the page.
+	// //
+	// // const catsWithShortNamesHTML = myCats.filter(filterCatsUnder7Characters).map(mapElementToLI)
+	// //
+	// // console.log("catsWithShortNamesHTML:", catsWithShortNamesHTML)
+	// //
+	// // document.getElementById("shortNamesCats").innerHTML = catsWithShortNamesHTML.join("");
+	// //
+	// //
+	// // // TODO: Filter the movies array such that it would return items 9 or over on the
+	// // //  imdb rating scale and the show is created after or equal to 2008
+	// //
+	// // const bestShow = arrayOfTVShows.filter((show) => show.imdbScore >= 9 && show.firstEpisodeYear >= 2008)
+	// //
+	// // console.log("bestShow:", bestShow)
+	// //
+	// //
+	// // // REDUCE
 	
 </script>
 </body>
