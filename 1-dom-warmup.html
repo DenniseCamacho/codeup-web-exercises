@@ -2,8 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+<!--	mobile view-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Title</title>
 	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0 auto;
+		}
+		section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			flex-direction: row;
+			margin-bottom: 1em;
+			margin-top: 1em;
+		}
 		#square {
 			width: 200px;
 			height: 200px;
@@ -13,16 +29,44 @@
 			width: 200px;
 			height: 200px;
 			border: 1px solid black;
+			margin: .5em;
+		}
+		button {
+			margin: .2em;
 		}
 	</style>
 </head>
 <body>
-<div id="blueSquare" class="square" data-color="blue"></div>
-<div id="redSquare" class="square" data-color="red"></div>
-<div id="greenSquare" class="square" data-color="green"></div>
 
+<main>
+	<section>
+		<div id="blueSquare" class="square" data-color="blue"></div>
+		<div id="redSquare" class="square" data-color="red"></div>
+		<div id="greenSquare" class="square" data-color="green"></div>
+	</section>
+	
+	<section>
+		<button class="buttons1" id="warning-button" data-color="red">Button</button>
+		<button class="buttons1" id="warning-button2" data-color="maroon">Button</button>
+		<button class="buttons1" id="reset-button" data-color="white">Button</button>
+	</section>
+</main>
 
 <script>
+	//background red
+	const warningButton = document.getElementById('warning-button');
+	warningButton.addEventListener('click', () => document.body.style.dataset.color);
+	//get the "data-color" attribute.
+	const buttonElements = document.getElementsByTagName('button');
+	const dataColor = buttonElements.getAttribute("data-color");
+	console.log(dataColor);
+	
+	//background orange
+	const warningButton2 = document
+	
+	
+	
+	
 	const blueSquare = document.getElementById("blueSquare");
 	const redSquare = document.getElementById("redSquare");
 	const greenSquare = document.getElementById("greenSquare");
@@ -46,7 +90,7 @@
 	// });
 	//
 	
-	
+	//
 </script>
 </body>
 </html>
