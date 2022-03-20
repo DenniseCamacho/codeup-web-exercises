@@ -49,6 +49,7 @@
 		<button class="buttons1" id="warning-button" data-color="blue">Button</button>
 		<button class="buttons1" id="warning-button2" data-color="red">Button</button>
 		<button class="buttons1" id="reset-button" data-color="white">Button</button>
+		<button>Reset</button>
 	</section>
 </main>
 
@@ -89,6 +90,12 @@
 		element.addEventListener('click', () => element.style.backgroundColor = "red");
 		} else if (index == 2) {
 			element.addEventListener('click', () => element.style.backgroundColor = "green");
+		} else if (index == 3) {
+			element.addEventListener('click', ()=> console.log(
+					notAnarray[0].style.backgroundColor = "",
+			notAnarray[1].style.backgroundColor = "",
+			notAnarray[2].style.backgroundColor = ""
+			));
 		}
 		
 		});
