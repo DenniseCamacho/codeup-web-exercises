@@ -34,6 +34,15 @@
 		button {
 			margin: .2em;
 		}
+		.square:nth-child(1):hover {
+			background-color: blue;
+		}
+		.square:nth-child(2):hover {
+			background-color: red;
+		}
+		.square:nth-child(3):hover {
+			background-color: green;
+		}
 	</style>
 </head>
 <body>
@@ -54,17 +63,28 @@
 </main>
 
 <script>
+	"use strict";
+	const squares = document.querySelectorAll('div.square');
+	const squareColors = squares.forEach((element, index, node) => {
+		element.addEventListener('click', () =>{
+			if (index === 0) {
+				element.style.backgroundColor = "blue";
+			} else if (index ===1) {
+				element.style.backgroundColor = "red"
+			} else element.style.backgroundColor = "green";
+		})
+	});
 	
-	
-	const blueSquare = document.getElementById("blueSquare");
-	const redSquare = document.getElementById("redSquare");
-	const greenSquare = document.getElementById("greenSquare");
-	blueSquare.onmouseover = () => blueSquare.style.backgroundColor = "blue";
-	blueSquare.onmouseleave = () => blueSquare.style.backgroundColor = "";
-	redSquare.onmouseover = () => redSquare.style.backgroundColor = "red";
-	redSquare.onmouseleave = () => redSquare.style.backgroundColor = "";
-	greenSquare.onmouseover = () => greenSquare.style.backgroundColor = "green";
-	greenSquare.onmouseleave = () => greenSquare.style.backgroundColor = "";
+	// const blueSquare = document.getElementById("blueSquare");
+	// const redSquare = document.getElementById("redSquare");
+	// const greenSquare = document.getElementById("greenSquare");
+	// blueSquare.onmouseover = () => blueSquare.style.backgroundColor = "blue";
+	// blueSquare.onmouseleave = () => blueSquare.style.backgroundColor = "";
+	// redSquare.onmouseover = () => redSquare.style.backgroundColor = "red";
+	// redSquare.onmouseleave = () => redSquare.style.backgroundColor = "";
+	// greenSquare.onmouseover = () => greenSquare.style.backgroundColor = "green";
+	// greenSquare.onmouseleave = () => greenSquare.style.backgroundColor = "";
+	//
 	//---^---my answer...
 	//---v----instructor...
 	// document.querySelectorAll(".square").
@@ -86,7 +106,6 @@
 	
 	buttonElements.forEach((element, index, notAnarray)=> {
 		console.log('Element: ', element, 'Index: ', index, 'nodeList? :', notAnarray);
-		
 		if (index == 1) {
 		element.addEventListener('click', () => element.style.backgroundColor = "red");
 		} else if (index == 2) {
@@ -94,7 +113,7 @@
 		} else if (index == 3) {
 			element.addEventListener('click', ()=>
 					console.log(
-					notAnarray[0].style.backgroundColor = "",
+			notAnarray[0].style.backgroundColor = "",
 			notAnarray[1].style.backgroundColor = "",
 			document.body.style.backgroundColor = ""
 			)
@@ -102,6 +121,12 @@
 		}
 		
 		});
+	const resetButton = buttonElements[3];
+	resetButton.addEventListener('click', (index, element, node) =>{
+		console.log(squares[0].removeAttribute('style'));
+	});
+	//....removes the first squares color!
+	
 	
 	
 	//how do i get the "data-color" attribute?
