@@ -64,7 +64,10 @@
 
 <script>
 	"use strict";
+	
+	//THIS SELECTED ALL THE DIVS WITH THE CLASS SQURE
 	const squares = document.querySelectorAll('div.square');
+	//THIS WENT THROUGH ALL THOSE CLASSES AND ADDED THE CLICK EVENT, CHANGING THE COLORS DEPENDING ON THE INDEX.
 	const squareColors = squares.forEach((element, index, node) => {
 		element.addEventListener('click', () =>{
 			if (index === 0) {
@@ -74,7 +77,7 @@
 			} else element.style.backgroundColor = "green";
 		})
 	});
-	
+	//THIS SECTION IS OLD CODE THAT I STARTED OUT WITH FOR HOVERING, AND INSTRUCTORS METHOD.
 	// const blueSquare = document.getElementById("blueSquare");
 	// const redSquare = document.getElementById("redSquare");
 	// const greenSquare = document.getElementById("greenSquare");
@@ -97,14 +100,26 @@
 	// 				event.target.style.backgroundColor = "";
 	// 			});
 	// });
-
+	//SECTION ABOVE IS OLD CODE THAT I STARTED OUT WITH FOR HOVERING, AND INSTRUCTORS METHOD.
 	
-	//background red
+	
+	//I WANTED TO CREATE BUTTONS THAT CHANGED COLOR, AND LEARN THE DIFFERENCE BETWEEN BACKGROUNDCOLOR &
+	//THE WHOLE PAGES BACKGROUND COLOR. I WANTED TO KNOW HOW TO STYLE THE ACTUAL BUTTON
+	// VERSES THE BUTTON STYLING THE PAGES BACKGROUND.
+	
+	//I TRIED TO START OUT WITH SELECTING EACH BUTTON BY THE ID,
 	const warningButton = document.getElementById('warning-button');
+	//ADDING THE CLICK EVENT TO ONLY THE BUTTON WITH THE ID NAME, CHANGING ITS BACKGROUND COLOR TO BLUE.
 	warningButton.addEventListener('click', () => warningButton.style.backgroundColor = "blue");
+	
+	// I CHANGED MY MIND AND USED querySelectorAll('button') INSTEAD.
+	// I WANTED TO KEEP THE BLUE ONE TO SEE THE DIFFERENCE IN USING FOREACH.
+	//THIS SELECTS ALL THE BUTTONS.
 	const buttonElements = document.querySelectorAll('button');
 	
+	//I DIDN'T WANT ALL THE BUTTONS TO DO THE SAME THING, SO I MADE IF/ELSE FUNCTIONS BASED ON THEIR INDEX NUMBER.
 	buttonElements.forEach((element, index, notAnarray)=> {
+		//CONSOLE.LOG TO UNDERSTAND THE DIFFERENT PARAMETERS AND WHAT THEY RETRIEVED.
 		console.log('Element: ', element, 'Index: ', index, 'nodeList? :', notAnarray);
 		if (index == 1) {
 		element.addEventListener('click', () => element.style.backgroundColor = "red");
@@ -113,19 +128,27 @@
 		} else if (index == 3) {
 			element.addEventListener('click', ()=>
 					console.log(
+							//I COULDNT USE THE INDEX ON THIS BUTTON TO RESET THE COLORS, SO I USED THE NODE NUMBER
 			notAnarray[0].style.backgroundColor = "",
 			notAnarray[1].style.backgroundColor = "",
-			document.body.style.backgroundColor = ""
-			)
-		);
+			document.body.style.backgroundColor = "",
+							//ORIGINALLY, I ONLY HAD THE BUTTON RESETTING THE BUTTON/WEBSITE BACKGROUND COLORS,
+							//BUT THEN REALIZED I COULD HAVE IT RESET THE SQUARES STYLE COLOR TOO.
+							squares[0].removeAttribute('style')
+			));
 		}
-		
 		});
-	const resetButton = buttonElements[3];
-	resetButton.addEventListener('click', (index, element, node) =>{
-		console.log(squares[0].removeAttribute('style'));
-	});
+	
+	//THIS WAS ME TESTING OUT HOW TO GET THE BUTTON TO RESET THE SQUARE COLORS OUTSIDE THE ABOVE FUNCTION.
+	//I NEEDED TO GET THE SPECIFIC BUTTON SO I USED [3] ,
+	// buttonElements IS THE "const buttonElements = document.querySelectorAll('button');" ABOVE.
+	
+	// const resetButton = buttonElements[3];
+	// resetButton.addEventListener('click', (index, element, node) =>{
+	// 	console.log(squares[0].removeAttribute('style'));
+	// });
 	//....removes the first squares color!
+	//https://bobbyhadz.com/blog/javascript-remove-all-styles-from-element#:~:text=Use%20the%20removeAttribute()%20method,style%20attribute%20from%20the%20element.
 	
 	
 	
