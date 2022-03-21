@@ -161,6 +161,21 @@
 	//background orange
 
 	//
+	
+	
+	const buttonOutputList = document.getElementById('list-chars-btn');
+	const characterList = document.getElementById('characters-list');
+	let inputTextBarValue = document.getElementById('characters');
+	const formValue = document.forms.valueOf();
+	buttonOutputList.addEventListener('click', (e)=> {
+		e.preventDefault();
+		characterList.innerHTML += '<li>' + inputTextBarValue.value +' </li>'
+	});
+	console.log(inputTextBarValue)
+	//I was stuck on this for a while because I put .value in let inputTextBarValue = document.getElementById('characters')
+	// I put let inputTextBarValue = document.getElementById('characters').value which was wrong it should have been in the innerHTML D: D: D: ;
+	
+	
 </script>
 </body>
 </html>
