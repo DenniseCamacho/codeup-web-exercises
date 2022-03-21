@@ -36,14 +36,18 @@
 		button {
 			margin: .2em;
 		}
-		.square:nth-child(1):hover {
+		section>.square:nth-child(1):hover {
 			background-color: blue;
 		}
-		.square:nth-child(2):hover {
+		section>.square:nth-child(2):hover {
 			background-color: red;
 		}
-		.square:nth-child(3):hover {
+		section>.square:nth-child(3):hover {
 			background-color: green;
+		}
+		
+		.yellow {
+			background-color: yellow;
 		}
 	</style>
 </head>
@@ -62,10 +66,25 @@
 		<button class="buttons1" id="reset-button" data-color="white">Button</button>
 		<button>Reset</button>
 	</section>
+	<hr>
+	<section class = "section2">
+	<div id="changingColors" class="d-flex flex-wrap justify-content-center">
+		<h2>The squares that change colors</h2>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+	</div>
+	</section>
 </main>
 
 <script>
 	"use strict";
+	//TRY USING FOR EACH LATER SO IT GOES THROUGH THE SQUARES AND NOT INTERFERE WITH PREVIOUS EXERCISE.
+	const squares2 = document.getElementById('changingColors');
+	squares2.addEventListener('click', (e) => {
+		squares2.classList.toggle('yellow');
+	});
 	
 	//THIS SELECTED ALL THE DIVS WITH THE CLASS SQURE
 	const squares = document.querySelectorAll('div.square');
@@ -74,9 +93,11 @@
 		element.addEventListener('click', () =>{
 			if (index === 0) {
 				element.style.backgroundColor = "blue";
-			} else if (index ===1) {
+			} else if (index === 1) {
 				element.style.backgroundColor = "red"
-			} else element.style.backgroundColor = "green";
+			} else if (index === 2) {
+				element.style.backgroundColor = "green";
+			}
 		})
 	});
 	//THIS SECTION IS OLD CODE THAT I STARTED OUT WITH FOR HOVERING, AND INSTRUCTORS METHOD.
@@ -163,17 +184,20 @@
 	//
 	
 	
-	const buttonOutputList = document.getElementById('list-chars-btn');
-	const characterList = document.getElementById('characters-list');
-	let inputTextBarValue = document.getElementById('characters');
-	const formValue = document.forms.valueOf();
-	buttonOutputList.addEventListener('click', (e)=> {
-		e.preventDefault();
-		characterList.innerHTML += '<li>' + inputTextBarValue.value +' </li>'
-	});
-	console.log(inputTextBarValue)
+	// const buttonOutputList = document.getElementById('list-chars-btn');
+	// const characterList = document.getElementById('characters-list');
+	// let inputTextBarValue = document.getElementById('characters');
+	// const formValue = document.forms.valueOf();
+	// buttonOutputList.addEventListener('click', (e)=> {
+	// 	e.preventDefault();
+	// 	characterList.innerHTML += '<li>' + inputTextBarValue.value +' </li>'
+	// });
+	// console.log(inputTextBarValue)
 	//I was stuck on this for a while because I put .value in let inputTextBarValue = document.getElementById('characters')
 	// I put let inputTextBarValue = document.getElementById('characters').value which was wrong it should have been in the innerHTML D: D: D: ;
+	
+	//toggle the squares from yellow to white
+	
 	
 	
 </script>
