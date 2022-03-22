@@ -59,7 +59,6 @@
 		<div id="redSquare" class="square" data-color="red"></div>
 		<div id="greenSquare" class="square" data-color="green"></div>
 	</section>
-	
 	<section>
 		<button class="buttons1" id="warning-button" data-color="blue">Button</button>
 		<button class="buttons1" id="warning-button2" data-color="red">Button</button>
@@ -67,7 +66,7 @@
 		<button>Reset</button>
 	</section>
 	<hr>
-	<section class = "section2">
+	<section class="section2">
 	<div id="changingColors" class="d-flex flex-wrap justify-content-center">
 		<h2 class="col-12 text-center">The squares that change colors</h2>
 		<div class="square"></div>
@@ -78,13 +77,24 @@
 	</section>
 </main>
 
+<section>
 <script>
 	"use strict";
 	//TRY USING FOR EACH LATER SO IT GOES THROUGH THE SQUARES AND NOT INTERFERE WITH PREVIOUS EXERCISE.
 	const squares2 = document.getElementById('changingColors');
-	squares2.addEventListener('click', (e) => {
-		squares2.classList.toggle('yellow');
-	});
+	const squaresfor2 = document.querySelectorAll('div');
+	squaresfor2.forEach((element,index)=>{
+		console.log(element, index)
+		if (index >= 4 && index <= 7){
+			element.addEventListener('click', ()=>{
+				element.classList.toggle('yellow');
+			})
+		}
+	})
+	
+	// squares2.addEventListener('click', (e) => {
+	// 	squares2.classList.toggle('yellow');
+	// });
 	
 	//THIS SELECTED ALL THE DIVS WITH THE CLASS SQURE
 	const squares = document.querySelectorAll('div.square');
@@ -144,7 +154,7 @@
 	//I DIDN'T WANT ALL THE BUTTONS TO DO THE SAME THING, SO I MADE IF/ELSE FUNCTIONS BASED ON THEIR INDEX NUMBER.
 	buttonElements.forEach((element, index, notAnarray)=> {
 		//CONSOLE.LOG TO UNDERSTAND THE DIFFERENT PARAMETERS AND WHAT THEY RETRIEVED.
-		console.log('Element: ', element, 'Index: ', index, 'nodeList? :', notAnarray);
+		// console.log('Element: ', element, 'Index: ', index, 'nodeList? :', notAnarray);
 		if (index == 1) {
 		element.addEventListener('click', () => element.style.backgroundColor = "red");
 		} else if (index == 2) {
@@ -201,5 +211,6 @@
 	
 	
 </script>
+</section>
 </body>
 </html>
