@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<!--	MOBILE-VIEW-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--	BOOTSTRAP-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!--	CSS-->
+<!--	<link rel="stylesheet" href="#">-->
+	<style>
+		.circles {
+			height: 100px;
+			width: 100px;
+		}
+		.circles-shaded {
+			background-color: rebeccapurple;
+			box-shadow: inset 2px 2px 2px 0px #0005;
+			border-style: dashed;
+			
+		}
+	</style>
+</head>
+<body>
+<section class="d-flex flex-column container align-items-center mt-md-5">
+	<div class="d-flex flex-row row-cols-md-auto">
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+	</div>
+	<div class="d-flex flex-row ">
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+	</div>
+	<div class="d-flex flex-row ">
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+	</div>
+	<div class="d-flex flex-row d-md-none">
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+	</div>
+	<div class="d-flex flex-row d-md-none">
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+	</div>
+	<div class="d-flex flex-row d-md-none">
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+	</div>
+	<div class="d-flex flex-row d-md-none">
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+	</div>
+	<div class="d-flex flex-row d-md-none">
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+	</div>
+	<div class="d-flex flex-row d-md-none">
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+		<div class="circles circles-shaded rounded-circle bg-secondary"></div>
+	</div>
+</section>
+
+<!--JAVASCRIPT-->
+
+<script>
+	const circles = document.querySelectorAll('.circles');
+	circles.forEach((element, index, node) =>{
+		console.log(element.addEventListener('click', (e)=>{
+		console.log(element.classList.toggle('bg-secondary'))
+			// element.classList.toggle('circles-shaded')
+			element.classList.toggle('rounded-circle')
+		}));
+	});
+	console.log(circles)
+	
+	// const alert_all_squares = (squares)=>{
+	// 	squares.forEach((element, number, key) => {
+	// 	if (squares.classlist == 'rounded-circle'){
+	// 		console.log('square')
+	// 	}
+	// 	});
+	// };
+	// alert_all_squares(circles)
+	
+	//
+</script>
+</body>
+</html>
