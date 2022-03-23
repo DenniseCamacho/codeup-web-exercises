@@ -30,8 +30,8 @@
 	//THIS IS SO I COULD USE TEMPLATE LITERALS, BUT NOT SURE IF IT MAKES ANY DIFFERENCE.
 	const willBootStrapWorkStart = `<div class="card my-3 m-auto" style="max-width: 500px;">`
 	const cardDiv2 = `<div class="row g-0">`
-	const cardDiv3 = `<div class="col-md-4">`
-	const cardDiv4 = `<div class="col-md-8">`
+	const cardDiv3 = `<div class="col-4">`
+	const cardDiv4 = `<div class="col-8">`
 	const cardDiv5 = `<div class="card-body">`
 	const bootStrapCardTitle = `<h5 class="card-title">`
 	const theDetailsTag = `<details>`
@@ -54,7 +54,7 @@
 				const movie_plot     = movie.plot    ;
 				const movie_actors   = movie.actors  ;
 				//I WAS RUNNING INTO ISSUES WITH THE IMAGE SHOWING UP, SO I HAD TO PUT THE TAGS HERE.
-				const theImage = `<img src="${movie_image}" class="d-block w-100" alt="${movie_plot}">`
+				const theImage = `<img src="${movie_image}" class="w-100" alt="${movie_plot}">`
 				// console.log( `${movie_title}` === "undefined"); // TRYING TO GET RID OF UNDEFINED.
 				// console.log(  Object.keys(movie) ); // TESTING .LENGTH, TO GET RID OF UNDEFINED.
 				//Object.keys(movie).length > 2 // TESTING IF STATEMENTS
