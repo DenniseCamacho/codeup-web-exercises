@@ -57,15 +57,18 @@
 
 
 <script>
-	
+	"use strict";
 	//THIS TAKES THE DIV WITH THE ID TO PUT THE INFORMATION IN IT.
 	let output_information = document.getElementById('output-information');
 	//THIS IS THE URL THE INFORMATION IS COMING FROM.
 	const movies_url = 'https://marked-meadow-provelone.glitch.me/movies';
-
+	const willBootStrapWorkStart = `<div class="card" style="width: 18rem;">`
+	const divEnd = `</div>`
 	
 	fetch(movies_url).then( (response) => {
 		response.json().then( (movies) => {
+			
+			
 			movies.forEach( (movie , index, idk)  => {
 				const movie_title    = movie.title   ;
 				const movie_rating   = movie.rating  ;
@@ -75,9 +78,12 @@
 				const movie_director = movie.director;
 				const movie_plot     = movie.plot    ;
 				const movie_actors   = movie.actors  ;
-				console.log(Object.keys(movie.title).length)
-				if (Object.keys(movie).length > 2) {
-					output_information.innerText += `
+				// console.log( `${movie_title}` === "undefined"); // TRYING TO GET RID OF UNDEFINED.
+				// console.log(  Object.keys(movie) ); // TESTING .LENGTH, TO GET RID OF UNDEFINED.
+				//Object.keys(movie).length > 2 // TESTING IF STATEMENTS
+				if (`${movie_title}` !== "undefined") {
+					output_information.innerHTML += `
+					${willBootStrapWorkStart}
 							Title:      ${movie_title}
 							Rating:		${movie_rating}
 							Year:		${movie_year}
@@ -85,6 +91,7 @@
 							Director:	${movie_director}
 							Plot:		${movie_plot}
 							Actors:		${movie_actors}
+					${divEnd}
 					`
 				}
 			});
