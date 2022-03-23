@@ -5,35 +5,88 @@
 	<title>Title</title>
 </head>
 <body>
-<div id="output-information"></div>
+<div id="output-information">
+
+</div>
+
+<!--<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">-->
+<!--	<div class="carousel-indicators">-->
+<!--		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+<!--		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+<!--		<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+<!--	</div>-->
+<!--	<div class="carousel-inner">-->
+<!--		<div class="carousel-item active" data-bs-interval="10000">-->
+<!--			<img src="..." class="d-block w-100" alt="...">-->
+<!--			<div class="carousel-caption d-none d-md-block">-->
+<!--				<h5>First slide label</h5>-->
+<!--				<p>Some representative placeholder content for the first slide.</p>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="carousel-item" data-bs-interval="2000">-->
+<!--			<img src="..." class="d-block w-100" alt="...">-->
+<!--			<div class="carousel-caption d-none d-md-block">-->
+<!--				<h5>Second slide label</h5>-->
+<!--				<p>Some representative placeholder content for the second slide.</p>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="carousel-item">-->
+<!--			<img src="..." class="d-block w-100" alt="...">-->
+<!--			<div class="carousel-caption d-none d-md-block">-->
+<!--				<h5>Third slide label</h5>-->
+<!--				<p>Some representative placeholder content for the third slide.</p>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">-->
+<!--		<span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--		<span class="visually-hidden">Previous</span>-->
+<!--	</button>-->
+<!--	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">-->
+<!--		<span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--		<span class="visually-hidden">Next</span>-->
+<!--	</button>-->
+<!--</div>-->
+
+
+
+
+
+
 
 
 
 <script>
+	
+	//THIS TAKES THE DIV WITH THE ID TO PUT THE INFORMATION IN IT.
 	let output_information = document.getElementById('output-information');
+	//THIS IS THE URL THE INFORMATION IS COMING FROM.
 	const movies_url = 'https://marked-meadow-provelone.glitch.me/movies';
 
 	
-	fetch(movies_url).then( response => {
+	fetch(movies_url).then( (response) => {
 		response.json().then( (movies) => {
 			movies.forEach( (movie , index, idk)  => {
-				const movie_title   =movie.title     ;
-				const movie_rating  =movie.rating    ;
-				const movie_image   =movie.poster    ;
-				const movie_year    =movie.year      ;
-				const movie_genre   =movie.genre     ;
-				const movie_director=movie.director  ;
-				const movie_plot    =movie.plot      ;
-				const movie_actors  =movie.actors    ;
-				console.log(`
-							Title: ${movie_title}
+				const movie_title    = movie.title   ;
+				const movie_rating   = movie.rating  ;
+				const movie_image    = movie.poster  ;
+				const movie_year     = movie.year    ;
+				const movie_genre    = movie.genre   ;
+				const movie_director = movie.director;
+				const movie_plot     = movie.plot    ;
+				const movie_actors   = movie.actors  ;
+				console.log(Object.keys(movie.title).length)
+				if (Object.keys(movie).length > 2) {
+					output_information.innerText += `
+							Title:      ${movie_title}
 							Rating:		${movie_rating}
 							Year:		${movie_year}
 							Genre:		${movie_genre}
-							Director:		${movie_director}
+							Director:	${movie_director}
 							Plot:		${movie_plot}
 							Actors:		${movie_actors}
-					`)
+					`
+				}
 			});
 		});
 	});
