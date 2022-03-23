@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<div id="output-information"></div>
+
+
+
+<script>
+	let output_information = document.getElementById('output-information');
+	const movies_url = 'https://marked-meadow-provelone.glitch.me/movies';
+
+	
+	fetch(movies_url).then( response => {
+		response.json().then( (movies) => {
+			movies.forEach( (movie , index, idk)  => {
+				const movie_title   =movie.title     ;
+				const movie_rating  =movie.rating    ;
+				const movie_image   =movie.poster    ;
+				const movie_year    =movie.year      ;
+				const movie_genre   =movie.genre     ;
+				const movie_director=movie.director  ;
+				const movie_plot    =movie.plot      ;
+				const movie_actors  =movie.actors    ;
+				console.log(`
+							Title: ${movie_title}
+							Rating:		${movie_rating}
+							Year:		${movie_year}
+							Genre:		${movie_genre}
+							Director:		${movie_director}
+							Plot:		${movie_plot}
+							Actors:		${movie_actors}
+					`)
+			});
+		});
+	});
+	
+	// output_information.innerHTML += movies_url;
+	
+	
+</script>
+</body>
+</html>
