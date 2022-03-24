@@ -35,6 +35,9 @@
 <script>
 	"use strict";
 	$(document).ready(function(){
+		window.addEventListener("load", function(){
+			alert('the page has been loaded')
+		});
 		// $('li').css('font-size', '20px')
 		// $('li, h1, p').css('background-color', 'red')
 		// $('h1').on({
@@ -61,7 +64,7 @@
 		
 		};
 		function hoverRed(){
-			$('li:first-of-type').css('color', 'red');
+			$('li:nth-of-type(1)').css('color', 'red');
 		};
 		function hoverBlack(){
 			$('li:first-of-type').css('color', 'black');
