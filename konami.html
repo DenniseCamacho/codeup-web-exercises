@@ -18,51 +18,62 @@
 	let konamiCodeTwo = []
 			// new Array(7);
 	console.log(konamiCode)
-	$(document).keyup(function(event){
+	$(document).keyup(function(event) {
 		console.log(event.keyCode);
 		
-		switch (event.keyCode) {
-			case 38:
-				konamiCodeTwo += 38;
-				break;
-			case 38:
-				konamiCodeTwo += 38;
-				break;
-			case 40:
-				konamiCodeTwo += 40;
-				break;
-			case 40:
-				konamiCodeTwo += 40;
-				break;
-			case 37:
-				konamiCodeTwo += 37;
-				break;
-			case 39:
-				konamiCodeTwo += 39;
-				break;
-			case 37:
-				konamiCodeTwo += 37;
-				break;
-			case 39:
-				konamiCodeTwo += 39;
-				break;
-			case 66:
-				konamiCodeTwo += 66;
-				break;
-			case 65:
-				konamiCodeTwo += 65;
-				break;
-			case 13:
-				konamiCodeTwo += 13;
-				break;
-		}
-		console.log(konamiCodeTwo.length)
-		if (konamiCodeTwo.length > 22){
-			konamiCodeTwo = [];
-		};
-		console.log(konamiCodeTwo)
 		
 	});
+	
+	
+		//check if every number in the array is in the same index as the other array.
+	//if it is not in the array, reset the array.
+	
+	
+	// 	switch (event.keyCode) {
+	// 		case 38:
+	// 			konamiCodeTwo.push(38);
+	// 			break;
+	// 		case 38:
+	// 			konamiCodeTwo.push(38);
+	// 			break;
+	// 		case 40:
+	// 			konamiCodeTwo.push(40);
+	// 			break;
+	// 		case 40:
+	// 			konamiCodeTwo.push(40);
+	// 			break;
+	// 		case 37:
+	// 			konamiCodeTwo.push(37);
+	// 			break;
+	// 		case 39:
+	// 			konamiCodeTwo.push(39);
+	// 			break;
+	// 		case 37:
+	// 			konamiCodeTwo.push(37);
+	// 			break;
+	// 		case 39:
+	// 			konamiCodeTwo.push(39);
+	// 			break;
+	// 		case 66:
+	// 			konamiCodeTwo.push(66);
+	// 			break;
+	// 		case 65:
+	// 			konamiCodeTwo.push(65);
+	// 			break;
+	// 		case 13:
+	// 			konamiCodeTwo.push(13);
+	// 			break;
+	// 	}
+	//
+	// 	console.log("the length is:" + konamiCodeTwo.length)
+	// 	if (konamiCodeTwo.length > 11){
+	// 		konamiCodeTwo = [];
+	// 	};
+	//
+	// 	console.log(konamiCodeTwo)
+	//
+	//
+	// });
 		//
 		// if (event.keyCode === "3838404037393739666513") {
 		// 	console.log("this worked")
