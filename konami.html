@@ -10,14 +10,33 @@
 <script>
 	"use strict";
 	// !! key events fired in the following order: keydown->keypress->keyup !!
-	var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
-	var konamiCode2 = [];
+	//The Konami Code: Up, Up, Down, Down, Left, Right, Left, Right, B, A ( ↑ ↑ ↓ ↓ ← → ← → B A )
+	var konamiCode = "3838404037393739666513";
+	let konamiCode2 = []
+	console.log(konamiCode)
 	$(document).keyup(function(event){
 		console.log(event.keyCode);
-		var konamiCode2 = [];
-		if (event.keyCode == konamiCode){
-			console.log("30 lives for you");
+		console.log(konamiCode2 += event.keyCode);
+		
+		switch (konamiCode2) {
+			case konamiCode:
+				console.log("did this work?!");
 		}
+		//
+		// if (konamiCode2 === konamiCode) {
+		// 	console.log("did this work?")
+		// }
+		});
+	// const ages = [32, 33, 16, 40];
+	// const result = ages.filter(function checkAdult(valueAge){
+	// 					return valueAge >= 18;
+	// });
+	//
+	// function checkAdult(age) {
+	// 	return age >= 18;
+	// }
+	
+	
 		//
 		
 		// // if (event.keyCode == konamiCode) {console.log("30 lives for you")};
@@ -26,9 +45,6 @@
 		// 		console.log("testing");
 		// 	}
 		// });
-	});
-	
-	
 	
 </script>
 </body>
