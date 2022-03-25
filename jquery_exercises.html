@@ -35,6 +35,15 @@
 <!--put it above all script^^^^-->
 <script>
 	"use strict";
+	//Use the file jquery_exercises.html for these exercises. Commit your changes to GitHub.
+	// Remove your custom jQuery code from previous exercises.
+	//
+	// 		Add jQuery code that will change the background color of an h1 element when clicked.
+	//
+	// 		Make all paragraphs have a font size of 18px when they are double clicked.
+	//
+	// 		Set all li text color to red when the mouse is hovering; reset to black when it is not.
+	
 	$(document).ready(function(){
 		window.addEventListener("load", function(){
 			alert('the page has been loaded')
@@ -55,8 +64,6 @@
 		};
 		function fontSizeChange(){
 		$('#container1').css('font-size', '18px');
-		$('#container1').css('background-color', 'blue');
-			$('#container1').text('I\'m the finished exercise');
 		};
 		function fontSizeChange2(){
 			$('#container1').css('font-size', '1em');
@@ -65,12 +72,12 @@
 		
 		};
 		function hoverRed(){
-			$('li:nth-of-type(1)').css('color', 'red');
+			$(this).css('color', 'red');
 		};
 		function hoverBlack(){
-			$('li:first-of-type').css('color', 'black');
+			$(this).css('color', 'black');
 		};
-		$('li:first-of-type').hover(hoverRed, hoverBlack);
+		$("li").hover(hoverRed, hoverBlack);
 		$('#firstH1').click(changeH1);
 		$('#container1').click(fontSizeChange2);
 		$('#container1').dblclick(fontSizeChange);
