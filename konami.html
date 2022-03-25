@@ -9,24 +9,127 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 	"use strict";
+	//https://www.tutorialspoint.com/in-javascript-how-to-empty-an-array
 	// !! key events fired in the following order: keydown->keypress->keyup !!
 	//The Konami Code: Up, Up, Down, Down, Left, Right, Left, Right, B, A ( ↑ ↑ ↓ ↓ ← → ← → B A )
-	var konamiCode = "3838404037393739666513";
-	let konamiCode2 = []
+	var konamiCode = [38 ,38 ,40 ,40 ,37 ,37 ,37 ,39 ,66 ,65 ,13]
+			// "3838404037393739666513";
+	let konamiCode2 = [];
 	console.log(konamiCode)
 	$(document).keyup(function(event){
 		console.log(event.keyCode);
-		console.log(konamiCode2 += event.keyCode);
-		
-		switch (konamiCode2) {
-			case konamiCode:
-				console.log("did this work?!");
+		switch (event.keyCode) {
+			case 38 ,38 ,40 ,40 ,37 ,37 ,37 ,39 ,66 ,65 ,13:
+				konamiCode2.push(38 ,38 ,40 ,40 ,37 ,37 ,37 ,39 ,66 ,65 ,13);
+				break;
 		}
+		// if (konamiCode2.length === konamiCode.length) {
+		// 	konamiCode2.length = 0;
+		// }
+		console.log(konamiCode2)
+		
+	});
+		
+		
+		// if (event.keyCode === 38){
+		// 	konamiCode2.push(38);
+		// }
+		// if
+		// else {
+		// 	konamiCode2.length = 0;
+		// }
+	// konamiCode.forEach(value => {
+	//
+	// })
+		// console.log(konamiCode2);
+		
+		
+		
+		// switch (event.keyCode) {
+		// 	case 38:
+		// 		konamiCode2 += 38;
+		// 		break;
+		// 	case 38:
+		// 		konamiCode2 += 38;
+		// 		break;
+		// 	case 40:
+		// 		konamiCode2 += 40;
+		// 		break;
+		// 	case 40:
+		// 		konamiCode2 += 40;
+		// 		break;
+		// 	case 37:
+		// 		konamiCode2 += 37;
+		// 		break;
+		// 	case 39:
+		// 		konamiCode2 += 39;
+		// 		break;
+		// 	case 37:
+		// 		konamiCode2 += 37;
+		// 		break;
+		// 	case 39:
+		// 		konamiCode2 += 39;
+		// 		break;
+		// 	case 66:
+		// 		konamiCode2 += 66;
+		// 		break;
+		// 	case 65:
+		// 		konamiCode2 += 65;
+		// 		break;
+		// 	case 13:
+		// 		konamiCode2 += 13;
+		// 		break;
+		// }
+		// if (event.keyCode === 38) {
+		// 	konamiCode2 += 38;
+		// 	console.log(konamiCode2);
+		// }
+		//
+		// switch (event.keyCode) {
+		// 	case 38:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 38:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 40:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 40:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 37:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 39:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 37:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 39:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 66:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 65:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+		// 	case 13:
+		// 		konamiCode2 += event.keyCode;
+		// 		break;
+
+		// console.log(konamiCode2 += event.keyCode);
+		//
+		// switch (konamiCode2) {
+		// 	case konamiCode:
+		// 		console.log("did this work?!");
+		// }
 		//
 		// if (konamiCode2 === konamiCode) {
 		// 	console.log("did this work?")
 		// }
-		});
 	// const ages = [32, 33, 16, 40];
 	// const result = ages.filter(function checkAdult(valueAge){
 	// 					return valueAge >= 18;
