@@ -12,122 +12,173 @@
 	//https://www.tutorialspoint.com/in-javascript-how-to-empty-an-array
 	// !! key events fired in the following order: keydown->keypress->keyup !!
 	//The Konami Code: Up, Up, Down, Down, Left, Right, Left, Right, B, A ( ↑ ↑ ↓ ↓ ← → ← → B A )
-	var konamiCode = [38 ,38 ,40 ,40 ,37 ,37 ,37 ,39 ,66 ,65 ,13]
+	var konamiCode = [38 ,38 ,40 ,40 ,37 ,39 ,37 ,39 ,66 ,65 ,13]
 			// "3838404037393739666513";
-	let konamiCode2 = [];
+	
+	let konamiCodeTwo = []
+			// new Array(7);
 	console.log(konamiCode)
 	$(document).keyup(function(event){
 		console.log(event.keyCode);
+		
 		switch (event.keyCode) {
-			case 38 ,38 ,40 ,40 ,37 ,37 ,37 ,39 ,66 ,65 ,13:
-				konamiCode2.push(38 ,38 ,40 ,40 ,37 ,37 ,37 ,39 ,66 ,65 ,13);
+			case 38:
+				konamiCodeTwo += 38;
+				break;
+			case 38:
+				konamiCodeTwo += 38;
+				break;
+			case 40:
+				konamiCodeTwo += 40;
+				break;
+			case 40:
+				konamiCodeTwo += 40;
+				break;
+			case 37:
+				konamiCodeTwo += 37;
+				break;
+			case 39:
+				konamiCodeTwo += 39;
+				break;
+			case 37:
+				konamiCodeTwo += 37;
+				break;
+			case 39:
+				konamiCodeTwo += 39;
+				break;
+			case 66:
+				konamiCodeTwo += 66;
+				break;
+			case 65:
+				konamiCodeTwo += 65;
+				break;
+			case 13:
+				konamiCodeTwo += 13;
 				break;
 		}
-		// if (konamiCode2.length === konamiCode.length) {
-		// 	konamiCode2.length = 0;
-		// }
-		console.log(konamiCode2)
+		console.log(konamiCodeTwo.length)
+		if (konamiCodeTwo.length > 22){
+			konamiCodeTwo = [];
+		};
+		console.log(konamiCodeTwo)
 		
 	});
+		//
+		// if (event.keyCode === "3838404037393739666513") {
+		// 	console.log("this worked")
+		// }
+		// console.log(konamiCodeTwo.splice(0, konamiCodeTwo.length))
+		// switch (event.keyCode) {
+		// 	case 38 && 38 && 40 && 40 && 37 && 37 && 37 && 39 && 66 && 65 && 13:
+		// 		konamiCodeTwo.push(38 ,38 ,40 ,40 ,37 ,37 ,37 ,39 ,66 ,65 ,13);
+		// 		konamiCodeTwo.splice(0, konamiCodeTwo.length);
+		// 		console.log("it happened")
+		// 		break;
+		// }
+		// if (konamiCodeTwo.length === konamiCode.length) {
+		// 	konamiCodeTwo.length = 0;
+		// }
+		
+	
 		
 		
 		// if (event.keyCode === 38){
-		// 	konamiCode2.push(38);
+		// 	konamiCodeTwo.push(38);
 		// }
 		// if
 		// else {
-		// 	konamiCode2.length = 0;
+		// 	konamiCodeTwo.length = 0;
 		// }
 	// konamiCode.forEach(value => {
 	//
 	// })
-		// console.log(konamiCode2);
+		// console.log(konamiCodeTwo);
 		
 		
 		
 		// switch (event.keyCode) {
 		// 	case 38:
-		// 		konamiCode2 += 38;
+		// 		konamiCodeTwo += 38;
 		// 		break;
 		// 	case 38:
-		// 		konamiCode2 += 38;
+		// 		konamiCodeTwo += 38;
 		// 		break;
 		// 	case 40:
-		// 		konamiCode2 += 40;
+		// 		konamiCodeTwo += 40;
 		// 		break;
 		// 	case 40:
-		// 		konamiCode2 += 40;
+		// 		konamiCodeTwo += 40;
 		// 		break;
 		// 	case 37:
-		// 		konamiCode2 += 37;
+		// 		konamiCodeTwo += 37;
 		// 		break;
 		// 	case 39:
-		// 		konamiCode2 += 39;
+		// 		konamiCodeTwo += 39;
 		// 		break;
 		// 	case 37:
-		// 		konamiCode2 += 37;
+		// 		konamiCodeTwo += 37;
 		// 		break;
 		// 	case 39:
-		// 		konamiCode2 += 39;
+		// 		konamiCodeTwo += 39;
 		// 		break;
 		// 	case 66:
-		// 		konamiCode2 += 66;
+		// 		konamiCodeTwo += 66;
 		// 		break;
 		// 	case 65:
-		// 		konamiCode2 += 65;
+		// 		konamiCodeTwo += 65;
 		// 		break;
 		// 	case 13:
-		// 		konamiCode2 += 13;
+		// 		konamiCodeTwo += 13;
 		// 		break;
 		// }
 		// if (event.keyCode === 38) {
-		// 	konamiCode2 += 38;
-		// 	console.log(konamiCode2);
+		// 	konamiCodeTwo += 38;
+		// 	console.log(konamiCodeTwo);
 		// }
 		//
 		// switch (event.keyCode) {
 		// 	case 38:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 38:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 40:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 40:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 37:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 39:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 37:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 39:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 66:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 65:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 		// 	case 13:
-		// 		konamiCode2 += event.keyCode;
+		// 		konamiCodeTwo += event.keyCode;
 		// 		break;
 
-		// console.log(konamiCode2 += event.keyCode);
+		// console.log(konamiCodeTwo += event.keyCode);
 		//
-		// switch (konamiCode2) {
+		// switch (konamiCodeTwo) {
 		// 	case konamiCode:
 		// 		console.log("did this work?!");
 		// }
 		//
-		// if (konamiCode2 === konamiCode) {
+		// if (konamiCodeTwo === konamiCode) {
 		// 	console.log("did this work?")
 		// }
 	// const ages = [32, 33, 16, 40];
@@ -144,7 +195,7 @@
 		
 		// // if (event.keyCode == konamiCode) {console.log("30 lives for you")};
 		// $.each(konamiCode, function (index, values){
-		// 	if (event.toString() === konamiCode2) {
+		// 	if (event.toString() === konamiCodeTwo) {
 		// 		console.log("testing");
 		// 	}
 		// });
