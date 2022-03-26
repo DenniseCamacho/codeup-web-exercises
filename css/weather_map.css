@@ -46,3 +46,17 @@
         margin: auto auto 1em;
     }
 }
+
+@media screen and (min-width: 600px) {
+    body {
+        background: lightslategrey;
+        /*display: flex;*/
+    }
+    #map {
+        height:400px;
+        width: 90%;
+        margin: auto 0;
+
+        /*margin: 100px;*/
+    }
+}
