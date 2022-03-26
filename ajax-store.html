@@ -48,9 +48,10 @@
 		);};
 		$('#insertProducts').html(aStart);
 		
-		$('#getNewInfo').click(function(){
+		$('#getNewInfo').click(function(e){
 			//unsure of what to add here
-			
+			e.preventDefault()
+			$('#insertProducts').post();
 		})
 	});
 
