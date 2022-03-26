@@ -47,6 +47,8 @@
 		// let av = konamiCodeTwo.valueOf();
 		// console.log(`this is the ${av}`);
 		// console.log('this is the ' + konamiCode[0])
+		//I AM NOT SURE HOW TO MAKE THIS INTO A LOOP WHILE STILL COMPARING THE OTHER ARRAY...
+		//FOR THE SAKE OF TIME, I DID IT THIS WAY.
 		if (    konamiCode[0] == konamiCodeTwo[0] &&
 				konamiCode[1] == konamiCodeTwo[1]  &&
 				konamiCode[2] == konamiCodeTwo[2] &&
@@ -61,17 +63,19 @@
 				konamiCode[11] == konamiCodeTwo[11]
 		) {
 			document.body.style.backgroundColor = "purple";
-			$('h1').css('color', 'white');
-			$('h1').css('font-family', 'sans-serif');
+			$('h1')
+					.css('color', 'white')
+					.css('font-family', 'sans-serif')
+					.css('background', 'rebeccapurple')
+					.css('text-align', 'center');
 			let h1element = document.getElementsByTagName('H1')[0];
 					h1element.innerHTML = "KONAMI CODE!!!!!!!";
-			
-			
-			
 		}
 		if (konamiCode.length <= konamiCodeTwo.length) {
 			konamiCodeTwo = [];
-		}
+		} //RESETS LENGTH, PERHAPS IT SHOULD RESET AS SOON AS THE VALUE ISN'T THE SAME.
+	});
+	//CODING TRIAL AND ERROR ;-;
 			// case 38: console.log("");
 			// break;
 			// case 38: console.log("");
@@ -99,7 +103,6 @@
 		// }
 		// console.log(konamiCodeTwo)
 		// console.log(pushCertainKeys(konamiCode));
-	});
 	
 	// const keycode = event.keyCode; #
 	// const theKey = event.key; keyName
