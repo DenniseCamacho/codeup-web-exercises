@@ -15,36 +15,62 @@
 	const konamiCode = [38 ,38 ,40 ,40 ,37 ,39 ,37 ,39 ,66 ,65 ,13];
 			// "3838404037393739666513";
 	let konamiCodeTwo = [];
-	
-	const ogArray = [68, 79, 71];
-	let emptyArray = [];
 			// new Array(7);
 	// console.log(konamiCode)
 	$(document).keyup(function(event) {
 		console.log(event.keyCode)
 		//TAKE CERTAIN KEYS AND PUSH TO ARRAY
 		switch(event.keyCode) {
-			case 68:
-				console.log(emptyArray.push(68));
+			case 38:
+				console.log(konamiCodeTwo.push(38));
 				break;
-			case 79:
-				console.log(emptyArray.push(79));
+			case 40:
+				console.log(konamiCodeTwo.push(40));
 				break;
-			case 71:
-				console.log(emptyArray.push(71));
+			case 37:
+				console.log(konamiCodeTwo.push(37));
+				break;
+			case 39:
+				console.log(konamiCodeTwo.push(39));
+				break;
+			case 66:
+				console.log(konamiCodeTwo.push(66));
+				break;
+			case 65:
+				console.log(konamiCodeTwo.push(65));
+				break;
+			case 13:
+				console.log(konamiCodeTwo.push(13));
 				break;
 		}
-		console.log(emptyArray)
-		let av = emptyArray.valueOf();
-		console.log(`this is the ${av}`);
-		console.log('this is the ' + ogArray[0])
-		if (ogArray[0] == emptyArray[0] &&
-				ogArray[1] == emptyArray[1]  &&
-				ogArray[2] == emptyArray[2] ) {
-			console.log('you did it.')
+		console.log(konamiCodeTwo)
+		// let av = konamiCodeTwo.valueOf();
+		// console.log(`this is the ${av}`);
+		// console.log('this is the ' + konamiCode[0])
+		if (    konamiCode[0] == konamiCodeTwo[0] &&
+				konamiCode[1] == konamiCodeTwo[1]  &&
+				konamiCode[2] == konamiCodeTwo[2] &&
+				konamiCode[3] == konamiCodeTwo[3] &&
+				konamiCode[4] == konamiCodeTwo[4]  &&
+				konamiCode[5] == konamiCodeTwo[5] &&
+				konamiCode[6] == konamiCodeTwo[6] &&
+				konamiCode[7] == konamiCodeTwo[7]  &&
+				konamiCode[8] == konamiCodeTwo[8] &&
+				konamiCode[9] == konamiCodeTwo[9] &&
+				konamiCode[10] == konamiCodeTwo[10]  &&
+				konamiCode[11] == konamiCodeTwo[11]
+		) {
+			document.body.style.backgroundColor = "purple";
+			$('h1').css('color', 'white');
+			$('h1').css('font-family', 'sans-serif');
+			let h1element = document.getElementsByTagName('H1')[0];
+					h1element.innerHTML = "KONAMI CODE!!!!!!!";
+			
+			
+			
 		}
-		if (ogArray.length <= emptyArray.length) {
-			emptyArray = [];
+		if (konamiCode.length <= konamiCodeTwo.length) {
+			konamiCodeTwo = [];
 		}
 			// case 38: console.log("");
 			// break;
