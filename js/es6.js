@@ -1,7 +1,7 @@
 /*
  * Complete the TODO items below
  */
-const users = [
+let users = [
   {
     name: 'zach',
     email: 'zach@codeup.com',

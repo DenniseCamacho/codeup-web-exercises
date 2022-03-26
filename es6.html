@@ -18,10 +18,11 @@
 
 
 <script>
+	"use strict";
 	/*
  * Complete the TODO items below
  */
-	const users = [
+	 users = [
 		{
 			name: 'zach',
 			email: 'zach@codeup.com',
@@ -60,38 +61,38 @@
 	
 	// TODO: replace the `var` keyword with `const`, then try to reassign a variable
 	// declared as `const`
-	const name = 'dennise';
-	const email = 'dennise@email.com';
-	const languages = ['html', 'css', 'javascript'];
+	let name2 = 'dennise';
+	let email1 = 'dennise@email.com';
+	let languages1 = ['html', 'css', 'javascript'];
 	
 	
 	// TODO: rewrite the object literal using object property shorthand
-	users.push(`${name}``${email}``${languages}`);
+	users.push(`${name2}${email1}${languages1}`);
 	
 	// TODO: replace `var` with `let` in the following variable declarations
-	let emails = [];
-	let names = [];
+	let emails1 = [];
+	let names1 = [];
 	
 	// TODO: rewrite the following using arrow functions
 	users.forEach((user) => {
-		return emails.push(`${email}`);
+		return emails1.push(`${email}`);
 	});
 	users.forEach((user) => {
-		return names.push(`${name}`);
+		return names1.push(`${name}`);
 	});
 	
 	// TODO: replace `var` with `let` in the following declaration
-	let developers = [];
+	let developers1 = [];
 	users.forEach(function(user) {
 		// TODO: rewrite the code below to use object destructuring assignment
 		//       note that you can also use destructuring assignment in the function
 		//       parameter definition
-		const name = user.name;
-		const email = user.email;
-		const languages = user.languages;
+		let name = user.name;
+		let email = user.email;
+		let languages = user.languages;
 		
 		// TODO: rewrite the assignment below to use template strings
-		developers.push(`${name}'s email is ${email}, ${name} knows ${languages}`);
+		developers1.push(`${name}'s email is ${email}, ${name} knows ${languages}`);
 	});
 	
 	// TODO: Use `let` for the following variable
@@ -100,57 +101,47 @@
 	let eli = '</li>'
 	// TODO: rewrite the following loop to use a for..of loop
 	// developers.forEach(function (developer) {
-		for (developer of developers){
-			`${listStart}
-			${lii}${developer}${eli}`
-		// TODO: rewrite the assignment below to use template strings
-		// list += '<li>' + developer + '</li>';
-	}
-	list += '</ul>';
+	// 	for (developer of developers){
+	// 		`${listStart}
+	// 		${lii}${developer}${eli}`
+	// 	// TODO: rewrite the assignment below to use template strings
+	// 	// list += '<li>' + developer + '</li>';
+	// }
+	// list += '</ul>';
+	//
+	//
 	
 	
 	
 	
 	
-	
-	
-	
-	
-	const textArtExperiment = document.getElementById('textArtExperiment');
-	setTimeout(() => textArtExperiment.innerHTML += 'J', 1000);
-	setTimeout(() => textArtExperiment.innerHTML += 'a', 1100);
-	setTimeout(() => textArtExperiment.innerHTML += 'v', 1200);
-	setTimeout(() => textArtExperiment.innerHTML += 'a', 1300);
-	setTimeout(() => textArtExperiment.innerHTML += 'S', 1400);
-	setTimeout(() => textArtExperiment.innerHTML += 'c', 1500);
-	setTimeout(() => textArtExperiment.innerHTML += 'r', 1600);
-	setTimeout(() => textArtExperiment.innerHTML += 'i', 1700);
-	setTimeout(() => textArtExperiment.innerHTML += 'p', 1800);
-	setTimeout(() => textArtExperiment.innerHTML += 't', 1900);
-	setTimeout(() => textArtExperiment.innerHTML += ' ', 2000);
-	setTimeout(() => textArtExperiment.innerHTML += 'E', 2100);
-	setTimeout(() => textArtExperiment.innerHTML += 'x', 2200);
-	setTimeout(() => textArtExperiment.innerHTML += 'e', 2300);
-	setTimeout(() => textArtExperiment.innerHTML += 'r', 2400);
-	setTimeout(() => textArtExperiment.innerHTML += 'c', 2500);
-	setTimeout(() => textArtExperiment.innerHTML += 'i', 2600);
-	setTimeout(() => textArtExperiment.innerHTML += 's', 2700);
-	setTimeout(() => textArtExperiment.innerHTML += 'e', 2800);
-	setTimeout(() => textArtExperiment.innerHTML += 's', 2900);
-	setTimeout(() => textArtExperiment.innerHTML += '<span class="white">' + '_' +
-			'</span>', 2900);
-	
-	
-	
-	const white_blink = document.querySelectorAll('span');
-	white_blink.forEach((value, key, parent)=>{
-		if (key === 0){
-			setInterval(()=>{
-				white_blink.classList.toggle('.white')
-			}, 1000)
-		}
-	});
-	
+	//
+	//
+	// const textArtExperiment = document.getElementById('textArtExperiment');
+	// setTimeout(() => textArtExperiment.innerHTML += 'J', 1000);
+	// setTimeout(() => textArtExperiment.innerHTML += 'a', 1100);
+	// setTimeout(() => textArtExperiment.innerHTML += 'v', 1200);
+	// setTimeout(() => textArtExperiment.innerHTML += 'a', 1300);
+	// setTimeout(() => textArtExperiment.innerHTML += 'S', 1400);
+	// setTimeout(() => textArtExperiment.innerHTML += 'c', 1500);
+	// setTimeout(() => textArtExperiment.innerHTML += 'r', 1600);
+	// setTimeout(() => textArtExperiment.innerHTML += 'i', 1700);
+	// setTimeout(() => textArtExperiment.innerHTML += 'p', 1800);
+	// setTimeout(() => textArtExperiment.innerHTML += 't', 1900);
+	// setTimeout(() => textArtExperiment.innerHTML += ' ', 2000);
+	// setTimeout(() => textArtExperiment.innerHTML += 'E', 2100);
+	// setTimeout(() => textArtExperiment.innerHTML += 'x', 2200);
+	// setTimeout(() => textArtExperiment.innerHTML += 'e', 2300);
+	// setTimeout(() => textArtExperiment.innerHTML += 'r', 2400);
+	// setTimeout(() => textArtExperiment.innerHTML += 'c', 2500);
+	// setTimeout(() => textArtExperiment.innerHTML += 'i', 2600);
+	// setTimeout(() => textArtExperiment.innerHTML += 's', 2700);
+	// setTimeout(() => textArtExperiment.innerHTML += 'e', 2800);
+	// setTimeout(() => textArtExperiment.innerHTML += 's', 2900);
+	// setTimeout(() => textArtExperiment.innerHTML += '<span class="white">' + '_' +
+	// 		'</span>', 2900);
+	//
+	//
 	// setInterval(function (){
 	// 	ops = (ops < 1) ? 1:0;
 	// 	blink.style.opacity=ops;
