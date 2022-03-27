@@ -69,7 +69,7 @@ $(document).ready(function() {
 	$('#clickme').click(function(){
 		$('#user_display').html($('#user_input').val());
 		
-	})
+	});
 		mapboxgl.accessToken = MAPBOX_API_TOKEN;
 		const map = new mapboxgl.Map({
 			container: 'map', // container ID
@@ -78,7 +78,7 @@ $(document).ready(function() {
 			zoom: 9 // starting zoom
 		});
 	
-	
+	console.log(map)
 	// Create a default Marker and add it to the map.
 	const marker1 = new mapboxgl.Marker({
 		draggable: true
@@ -88,7 +88,7 @@ $(document).ready(function() {
 	marker1.on('drag', (e) => {
 		let newMarkerLat = parseFloat((marker1._lngLat.lat).toFixed(3));
 		let newMarkerLng = parseFloat((marker1._lngLat.lng).toFixed(3));
-		console.log(newMarkerLng, newMarkerLat)
+		console.log(newMarkerLng, newMarkerLat);
 	});
 		//weather data code bellow;
 		$.get('https://api.openweathermap.org/data/2.5/onecall', {
