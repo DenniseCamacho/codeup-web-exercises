@@ -43,20 +43,15 @@
 	var accessToken = MAPBOX_API_TOKEN;
 	mapboxgl.accessToken = MAPBOX_API_TOKEN;
 	var map = new mapboxgl.Map({
+		
 		container: 'map', // container ID
 		style: 'mapbox://styles/mapbox/streets-v11', // style URL
 		center: [-98.673518, 29.303889], // starting position [lng, lat]
 		zoom: 8// starting zoom
 	});
 	//need to link geocode
-	//<script src="js/mapbox-geocoder-utils.js">
-	//
-	// var marker = new mapboxgl.Marker({
-	// 			color: 'mediumpurple',
-	// 			draggable: true
-	// })
-	// 			 .setLngLat([-98.6735189, 29.3038893])
-	// 			.addTo(map)
+	
+	
 	//
 	//
 	// var popup = new mapboxgl.Popup({
@@ -72,10 +67,16 @@
 			"address": "12025 W Loop 1604 S, San Antonio, TX 78252",
 			"website": "https://www.facebook.com/Tacos-La-Cabana"
 		},
-		{"name": "Tacos La Cabaña", "address": "12025 W Loop 1604 S, San Antonio, TX 78252", "website": "n/a"},
-		{"name": "Tacos La Cabaña", "address": "12025 W Loop 1604 S, San Antonio, TX 78252", "website": "n/a"},
-		{"name": "Tacos La Cabaña", "address": "12025 W Loop 1604 S, San Antonio, TX 78252", "website": "n/a"},
-		{"name": "Tacos La Cabaña", "address": "12025 W Loop 1604 S, San Antonio, TX 78252", "website": "n/a"}
+		{
+			"name": "Dimassi’s Mediterranean Buffet",
+			"address": "111 SW Loop 410, San Antonio, TX 78245",
+			"website": "https://dimassis.com/"
+		},
+		{
+			"name": "Kobe Teppan & Sushi",
+			"address": "7824 Pat Booker Rd, Live Oak, TX 78233",
+			"website": "https://www.kobeliveoak.com/"
+		}
 	]
 	// restaurants.forEach(function( i was missing the restaurants parameter ){ });
 	restaurants.forEach(function(restaurants){
