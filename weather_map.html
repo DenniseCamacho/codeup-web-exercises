@@ -40,6 +40,7 @@
 		<div id="map" class="m-auto mt-3 mb-5"></div>
 	</main>
 	<footer>
+		<div id="info"></div>
 <!--		icons?-->
 <!--		https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML-->
 	</footer>
@@ -77,17 +78,21 @@ $(document).ready(function() {
 			zoom: 9 // starting zoom
 		});
 	
+	
 	// Create a default Marker and add it to the map.
 	const marker1 = new mapboxgl.Marker({
 		draggable: true
 	})
 			.setLngLat([-98.4916, 29.4252])
 			.addTo(map)
-	
+	marker1.on('drag', (e) => {
+		marker1.setLngLat([marker1._lngLat.lat, marker1._lngLat.lng])
+		marker1.addTo(map)
+	});
 		//weather data code bellow;
 		$.get('https://api.openweathermap.org/data/2.5/onecall', {
-			lat: 29.4252,
-			lon: -98.4916,
+			lat: marker1._lngLat.lat,
+			lon: marker1._lngLat.lng,
 			appid: WEATHER_TOKEN,
 			exclude: 'minutely,hourly,current,alerts',
 			units: 'imperial'
@@ -126,6 +131,9 @@ $(document).ready(function() {
 				console.log(error);
 		});
 });
+
+
+
 	</script>
 </body>
 </html>
