@@ -86,13 +86,14 @@ $(document).ready(function() {
 			.setLngLat([-98.4916, 29.4252])
 			.addTo(map)
 	marker1.on('drag', (e) => {
-		marker1.setLngLat([marker1._lngLat.lat, marker1._lngLat.lng])
-		marker1.addTo(map)
+		let newMarkerLat = parseFloat((marker1._lngLat.lat).toFixed(3));
+		let newMarkerLng = parseFloat((marker1._lngLat.lng).toFixed(3));
+		console.log(newMarkerLng, newMarkerLat)
 	});
 		//weather data code bellow;
 		$.get('https://api.openweathermap.org/data/2.5/onecall', {
-			lat: marker1._lngLat.lat,
-			lon: marker1._lngLat.lng,
+			lat: parseFloat((marker1._lngLat.lat).toFixed(3)),
+			lon: parseFloat((marker1._lngLat.lng).toFixed(3)),
 			appid: WEATHER_TOKEN,
 			exclude: 'minutely,hourly,current,alerts',
 			units: 'imperial'
