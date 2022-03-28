@@ -422,10 +422,10 @@
 // 	console.log(returnStringObject(NaN));
 
 // Write a function, countNegatives, and takes in a array of integers and returns the total number of negative numbers. 0 should be considered a non-negative number. If no negative numbers are present, return 0.
-var nums1 = [-5, 10, 2, 5]; // countNegatives(nums1) returns 1
-var nums2 = [1, -10, -2, 5]; // countNegatives(nums2) returns 2
-var nums3 = [3, 10, 2, 5]; // countNegatives(nums3) returns 0
-var nums4 = [-3, -10]; // countNegatives(nums4) returns 2
+// var nums1 = [-5, 10, 2, 5]; // countNegatives(nums1) returns 1
+// var nums2 = [1, -10, -2, 5]; // countNegatives(nums2) returns 2
+// var nums3 = [3, 10, 2, 5]; // countNegatives(nums3) returns 0
+// var nums4 = [-3, -10]; // countNegatives(nums4) returns 2
 // function countNegatives(numsArray){
 // 	var number = 0;
 // 	var newArray = []
@@ -453,8 +453,34 @@ var nums4 = [-3, -10]; // countNegatives(nums4) returns 2
 // console.log(countNegatives(nums2));
 // console.log(countNegatives(nums3));
 // console.log(countNegatives(nums4));
-
-
+// 	================================= WARM UP
+// 	Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+// 			‘a’ or ‘A’ becomes ‘@’
+// ‘i’ or ‘I’ becomes ‘1’
+// ‘s’ or ‘S’ becomse ‘$’
+// encodeStr(‘apple’) // returns ‘@pple’
+// 	encodeStr(‘codeup’) // returns ‘codeup’
+// 	encodeStr(‘SASS’) // returns ‘$@$$’
+// 	encodeStr(‘bike’) // returns ‘b1ke’
+function encodeStr(aString){
+		let newArr = aString.split("");
+		let newArr2 = newArr.map((value, index, array)=>{
+			if (value.toLowerCase() === "a") {
+				return "@"
+			};
+			if (value.toLowerCase() === "i"){
+				return "1"
+			};
+			if (value.toLowerCase() === "s") {
+				return "$"
+			};
+				});
+return newArr2
+}
+	console.log(encodeStr('apple')); // returns ‘@pple’
+	console.log(encodeStr('codeup')); // returns ‘codeup’
+	console.log(encodeStr('SASS')); // returns ‘$@$$’
+	console.log(encodeStr('bike')); // returns ‘b1ke’
 
 </script>
 </body>
