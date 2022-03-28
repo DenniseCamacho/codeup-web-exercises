@@ -466,17 +466,19 @@ function encodeStr(aString){
 		let newArr = aString.split("");
 		let newArr2 = newArr.map((value, index, array)=>{
 			if (value.toLowerCase() === "a") {
-				return "@"
-			};
-			if (value.toLowerCase() === "i"){
-				return "1"
-			};
-			if (value.toLowerCase() === "s") {
-				return "$"
-			};
+				return "@";
+			} else if (value.toLowerCase() === "i"){
+				return 1;
+			} else if (value.toLowerCase() === "s") {
+				return "$";
+			} else {
+				return value;//for the rest of the word.
+			}
 				});
-return newArr2
+return newArr2.join("");
 }
+//how do you return the whole value plus the new index item...? you're missing the else....the other characters are the other letters in the whole word
+	//
 	console.log(encodeStr('apple')); // returns ‘@pple’
 	console.log(encodeStr('codeup')); // returns ‘codeup’
 	console.log(encodeStr('SASS')); // returns ‘$@$$’
