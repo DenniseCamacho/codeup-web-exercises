@@ -453,53 +453,82 @@
 // console.log(countNegatives(nums2));
 // console.log(countNegatives(nums3));
 // console.log(countNegatives(nums4));
+// // 	================================= WARM UP
+// // 	Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+// // 			‘a’ or ‘A’ becomes ‘@’
+// // ‘i’ or ‘I’ becomes ‘1’
+// // ‘s’ or ‘S’ becomse ‘$’
+// // encodeStr(‘apple’) // returns ‘@pple’
+// // 	encodeStr(‘codeup’) // returns ‘codeup’
+// // 	encodeStr(‘SASS’) // returns ‘$@$$’
+// // 	encodeStr(‘bike’) // returns ‘b1ke’
+// function encodeStr(aString){
+// 		let newArr = aString.split("");
+// 		let newArr2 = newArr.map((value, index, array)=>{
+// 			if (value.toLowerCase() === "a") {
+// 				return "@";
+// 			} else if (value.toLowerCase() === "i"){
+// 				return 1;
+// 			} else if (value.toLowerCase() === "s") {
+// 				return "$";
+// 			} else {//THE REST OF THE VALUES ACCOUNTED FOR.
+// 				return value;//for the rest of the word.
+// 			}
+// 				});
+// return newArr2.join("");
+// }
+// //how do you return the whole value plus the new index item...? you're missing the else statement....the other characters are the other letters in the whole word
+// 	//
+//
+//
+// 	// Chris Berry:owl:  9:42 AM
+// 	// function encodeStr(str){
+// 	// 	str = str.replace(/[aA]/g, "@");
+// 	// 	str = str.replace(/[iI]/g, "1");
+// 	// 	str = str.replace(/[sS]/g, "$");
+// 	// 	return str;
+// 	// }
+// 	//
+// 	// Nick Gilmore  9:43 AM
+// 	// var lowercase = e.toLowerCase()
+// 	//
+// 	// var newString = lowercase.replaceAll('a', '@').replaceAll('i', "1").replaceAll('s', '$');
+// 	// console.log(newString);
+// 	//
+//
+// 	console.log(encodeStr('apple')); // returns ‘@pple’
+// 	console.log(encodeStr('codeup')); // returns ‘codeup’
+// 	console.log(encodeStr('SASS')); // returns ‘$@$$’
+// 	console.log(encodeStr('bike')); // returns ‘b1ke’
 // 	================================= WARM UP
-// 	Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
-// 			‘a’ or ‘A’ becomes ‘@’
-// ‘i’ or ‘I’ becomes ‘1’
-// ‘s’ or ‘S’ becomse ‘$’
-// encodeStr(‘apple’) // returns ‘@pple’
-// 	encodeStr(‘codeup’) // returns ‘codeup’
-// 	encodeStr(‘SASS’) // returns ‘$@$$’
-// 	encodeStr(‘bike’) // returns ‘b1ke’
-function encodeStr(aString){
-		let newArr = aString.split("");
-		let newArr2 = newArr.map((value, index, array)=>{
-			if (value.toLowerCase() === "a") {
-				return "@";
-			} else if (value.toLowerCase() === "i"){
-				return 1;
-			} else if (value.toLowerCase() === "s") {
-				return "$";
-			} else {//THE REST OF THE VALUES ACCOUNTED FOR.
-				return value;//for the rest of the word.
+//
+// 	Write a function, returnMostCommonVowel, that takes in a string and returns the most common vowel in the string.
+// 			Assume the characters in the string are all lowercase and only 'a' 'e' 'i' 'o' 'u' count as vowels. Return the most common vowel from the string.
+//
+// 			If the highest vowel count is shared between multiple vowels, return the first vowel alphabetically. (2 'a's and 2 'e's should 'a')
+//
+// 	If no vowels are in the string return false.
+	const vowels = ["a", "e", "i", "o", "u"];
+	let vowelCount = "";
+	function returnMostCommonVowel(anyWord){
+		anyWord.toLowerCase().split("").map((value, index, array) => {
+			if(value === vowels[0] ||
+				value === vowels[1] ||
+				value === vowels[2] ||
+				value === vowels[3] ||
+				value === vowels[4]) {
+				console.log(vowelCount++);
 			}
-				});
-return newArr2.join("");
-}
-//how do you return the whole value plus the new index item...? you're missing the else statement....the other characters are the other letters in the whole word
-	//
+		}).join();
+		return vowelCount;
+	};
+	console.log(returnMostCommonVowel('codeup')); // returns 'e';
+	console.log(returnMostCommonVowel('leetcode')); // returns 'e';
+	console.log(returnMostCommonVowel('banana')); // returns 'a';
+	console.log(returnMostCommonVowel('asdf')); // returns 'a';
+	console.log(returnMostCommonVowel('nnnn'));// returns false;
+	console.log(returnMostCommonVowel('hello')); // returns 'e';
 	
-	
-	// Chris Berry:owl:  9:42 AM
-	// function encodeStr(str){
-	// 	str = str.replace(/[aA]/g, "@");
-	// 	str = str.replace(/[iI]/g, "1");
-	// 	str = str.replace(/[sS]/g, "$");
-	// 	return str;
-	// }
-	//
-	// Nick Gilmore  9:43 AM
-	// var lowercase = e.toLowerCase()
-	//
-	// var newString = lowercase.replaceAll('a', '@').replaceAll('i', "1").replaceAll('s', '$');
-	// console.log(newString);
-	//
-	
-	console.log(encodeStr('apple')); // returns ‘@pple’
-	console.log(encodeStr('codeup')); // returns ‘codeup’
-	console.log(encodeStr('SASS')); // returns ‘$@$$’
-	console.log(encodeStr('bike')); // returns ‘b1ke’
 
 </script>
 </body>
