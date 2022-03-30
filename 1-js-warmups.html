@@ -562,16 +562,21 @@
 			salary: 100000
 		}
 	];
-	function returnAvgAdminSalary(array){
-		let total = "";
-		users.forEach((value, index, array)=>{
-			total = value.salary += value.salary;
-			return total
-		});
-		console.log(total/array.length);
-	};
+	// function returnAvgAdminSalary(array){
+	// 	let total = "";
+	// 	users.forEach((value, index, array)=>{
+	// 		total = value.salary += value.salary;
+	// 	});
+	// 	return total/array.length;
+	// };
+	//
+	// console.log(returnAvgAdminSalary(users)) // returns 116666
 	
-	console.log(returnAvgAdminSalary(users)) // returns 116666
+	//ins:
+	// function returnAvgAdminSalary(users) {
+	// 	const admins = users.filter((users)=>users.isAdmin);
+	// 	return admins.reduce((accum, curr)=>accum + curr.salary, 0/admins.length);
+	// }
 </script>
 </body>
 </html>
