@@ -508,28 +508,70 @@
 // 			If the highest vowel count is shared between multiple vowels, return the first vowel alphabetically. (2 'a's and 2 'e's should 'a')
 //
 // 	If no vowels are in the string return false.
-	const vowels = ["a", "e", "i", "o", "u"];
-	let vowelCount = "";
-	function returnMostCommonVowel(anyWord){
-		anyWord.toLowerCase().split("").map((value, index, array) => {
-			if(value === vowels[0] ||
-				value === vowels[1] ||
-				value === vowels[2] ||
-				value === vowels[3] ||
-				value === vowels[4]) {
-				console.log(vowelCount++);
-			}
-		}).join();
-		return vowelCount;
-	};
-	console.log(returnMostCommonVowel('codeup')); // returns 'e';
-	console.log(returnMostCommonVowel('leetcode')); // returns 'e';
-	console.log(returnMostCommonVowel('banana')); // returns 'a';
-	console.log(returnMostCommonVowel('asdf')); // returns 'a';
-	console.log(returnMostCommonVowel('nnnn'));// returns false;
-	console.log(returnMostCommonVowel('hello')); // returns 'e';
+// 	const vowels = ["a", "e", "i", "o", "u"];
+// 	let vowelCount = "";
+// 	function returnMostCommonVowel(anyWord){
+// 		anyWord.toLowerCase().split("").map((value, index, array) => {
+// 			if(value === vowels[0] ||
+// 				value === vowels[1] ||
+// 				value === vowels[2] ||
+// 				value === vowels[3] ||
+// 				value === vowels[4]) {
+// 				console.log(vowelCount++);
+// 			}
+// 		}).join();
+// 		return vowelCount;
+// 	};
+// 	console.log(returnMostCommonVowel('codeup')); // returns 'e';
+// 	console.log(returnMostCommonVowel('leetcode')); // returns 'e';
+// 	console.log(returnMostCommonVowel('banana')); // returns 'a';
+// 	console.log(returnMostCommonVowel('asdf')); // returns 'a';
+// 	console.log(returnMostCommonVowel('nnnn'));// returns false;
+// 	console.log(returnMostCommonVowel('hello')); // returns 'e';
+//
+// 	================================= WARM UP
+//
+	// Create a function, returnAvgAdminSalary, that takes in an array of users and returns the average salary of all admins. Round to the nearest dollar.
+			
+			// Example:
 	
-
+	const users = [
+		{
+			name: 'Fred',
+			isAdmin: true,
+			salary: 20000
+		},
+		{
+			name: 'Cathy',
+			isAdmin: false,
+			salary: 40000
+		},
+		{
+			name: 'Sally',
+			isAdmin: true,
+			salary: 80000
+		},
+		{
+			name: 'Kyle',
+			isAdmin: true,
+			salary: 50000
+		},
+		{
+			name: 'Cynthia',
+			isAdmin: false,
+			salary: 100000
+		}
+	];
+	function returnAvgAdminSalary(array){
+		let total = "";
+		users.forEach((value, index, array)=>{
+			total = value.salary += value.salary;
+			
+		});
+		console.log(total/array.length);
+	};
+	
+	console.log(returnAvgAdminSalary(users)) // returns 116666
 </script>
 </body>
 </html>
