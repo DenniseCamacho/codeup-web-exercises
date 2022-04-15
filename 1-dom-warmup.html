@@ -81,6 +81,7 @@
 <script>
 	"use strict";
 	//TRY USING FOR EACH LATER SO IT GOES THROUGH THE SQUARES AND NOT INTERFERE WITH PREVIOUS EXERCISE.
+	function yellowSquares(){
 	const squares2 = document.getElementById('changingColors');
 	const squaresfor2 = document.querySelectorAll('div');
 	squaresfor2.forEach((element,index)=>{
@@ -90,13 +91,16 @@
 				element.classList.toggle('yellow');
 			})
 		}
-	})
+	});
+	}
+	yellowSquares();
+	
 	
 	// squares2.addEventListener('click', (e) => {
 	// 	squares2.classList.toggle('yellow');
 	// });
 	
-	//THIS SELECTED ALL THE DIVS WITH THE CLASS SQURE
+	//THIS SELECTED ALL THE DIVS WITH THE CLASS SQUARE
 	const squares = document.querySelectorAll('div.square');
 	//THIS WENT THROUGH ALL THOSE CLASSES AND ADDED THE CLICK EVENT, CHANGING THE COLORS DEPENDING ON THE INDEX.
 	const squareColors = squares.forEach((element, index, node) => {
