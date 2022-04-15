@@ -60,8 +60,8 @@
 		<div id="greenSquare" class="square" data-color="green"></div>
 	</section>
 	<section>
-		<button class="buttons1" id="warning-button" data-color="blue">Button</button>
-		<button class="buttons1" id="warning-button2" data-color="red">Button</button>
+		<button class="buttons1" id="blue-button" data-color="blue">Button</button>
+		<button class="buttons1" id="warning-button" data-color="red">Button</button>
 		<button class="buttons1" id="reset-button" data-color="white">Button</button>
 		<button>Reset</button>
 	</section>
@@ -77,20 +77,32 @@
 	</section>
 </main>
 
+
+
+<!--JS-->
 <section>
 <script>
 	"use strict";
-	function yellowSquares(){
-	const squaresfor2 = document.querySelectorAll('div');
-	squaresfor2.forEach((element,index)=>{
-		console.log(element, index)
-		if (index >= 4 && index <= 7){
-			element.addEventListener('click', ()=>{
-				element.classList.toggle('yellow');
-			})
+	
+	
+	function yellowSquares() {
+		let toBeYellow = document.getElementsByClassName("square");
+		// console.log(toBeYellow);
+		for (let i = 3; i < toBeYellow.length; i++) {
+			toBeYellow[i].addEventListener("click", (event) => {
+				console.log("clicked")
+			});
 		}
-	});
 	}
+	// const squaresfor2 = document.querySelectorAll('div');
+	// squaresfor2.forEach((element,index)=>{
+	// 	console.log(element, index)
+	// 	if (index >= 4 && index <= 7){
+	// 		element.addEventListener('click', ()=>{
+	// 			element.classList.toggle('yellow');
+	// 		})
+	// 	}
+	// });
 	yellowSquares();
 	
 	function multiSquareColors(){
@@ -112,23 +124,23 @@
 	}
 	multiSquareColors();
 	
-	//I WANTED TO CREATE BUTTONS THAT CHANGED COLOR, AND LEARN THE DIFFERENCE BETWEEN BACKGROUNDCOLOR &
-	//THE WHOLE PAGES BACKGROUND COLOR. I WANTED TO KNOW HOW TO STYLE THE ACTUAL BUTTON
-	// VERSES THE BUTTON STYLING THE PAGES BACKGROUND.
+	function blueButton(){
+	const blueButton = document.getElementById('blue-button');
+	blueButton.addEventListener('click', () => blueButton.style.backgroundColor = "blue");
+	}
+	blueButton();
 	
-	//I TRIED TO START OUT WITH SELECTING EACH BUTTON BY THE ID,
-	const warningButton = document.getElementById('warning-button');
-	//ADDING THE CLICK EVENT TO ONLY THE BUTTON WITH THE ID NAME, CHANGING ITS BACKGROUND COLOR TO BLUE.
-	warningButton.addEventListener('click', () => warningButton.style.backgroundColor = "blue");
-	//BUT THEN WONDERED HOW I WOULD SELECT IT IF IT HAD NO ID.
+	function redButton(){
 	
-	// I CHANGED MY MIND AND USED querySelectorAll('button') INSTEAD.
-	// I WANTED TO KEEP THE BLUE ONE TO SEE THE DIFFERENCE IN USING FOREACH.
-	//THIS SELECTS ALL THE BUTTONS.
+	}
+	
+	function resetAll(){
+	
+	}
+	
+	function buttonFunctionsOnClick(){
 	const buttonElements = document.querySelectorAll('button');
 	
-	//IF/ELSE FUNCTIONS BASED ON THEIR INDEX NUMBER
-	// TO PREVENT SAME FUNCTION ON OTHER INDEXES.
 	buttonElements.forEach((element, index, notAnarray)=> {
 		//CONSOLE.LOG TO UNDERSTAND THE DIFFERENT PARAMETERS AND WHAT THEY RETRIEVED.
 		// console.log('Element: ', element, 'Index: ', index, 'nodeList? :', notAnarray);
@@ -139,52 +151,14 @@
 		} else if (index == 3) {
 			element.addEventListener('click', ()=>
 					console.log(
-							//I COULDNT USE THE INDEX ON THIS BUTTON TO RESET THE COLORS, SO I USED THE NODE NUMBER
 			notAnarray[0].style.backgroundColor = "",
 			notAnarray[1].style.backgroundColor = "",
 			document.body.style.backgroundColor = "",
-							//ORIGINALLY, I ONLY HAD THE BUTTON RESETTING THE BUTTON/WEBSITE BACKGROUND COLORS,
-							//BUT THEN REALIZED I COULD HAVE IT RESET THE SQUARES STYLE COLOR TOO.
-							squares[0].removeAttribute('style')
 			));
 		}
 		});
-	
-	//GET THE BUTTON TO RESET THE SQUARE COLORS OUTSIDE THE ABOVE FUNCTION.
-	//NEEDED SPECIFIC BUTTON [3] ,
-	// buttonElements IS THE "const buttonElements = document.querySelectorAll('button');" ABOVE.
-	
-	// const resetButton = buttonElements[3];
-	// resetButton.addEventListener('click', (index, element, node) =>{
-	// 	console.log(squares[0].removeAttribute('style'));
-	// });
-	//....removes the first squares color!
-	//https://bobbyhadz.com/blog/javascript-remove-all-styles-from-element#:~:text=Use%20the%20removeAttribute()%20method,style%20attribute%20from%20the%20element.
-	
-	
-	
-	//how do i get the "data-color" attribute?
-	// const dataColor = buttonElements.getAttribute("data-color");
-	
-	//background orange
+	}
 
-	//
-	
-	
-	// const buttonOutputList = document.getElementById('list-chars-btn');
-	// const characterList = document.getElementById('characters-list');
-	// let inputTextBarValue = document.getElementById('characters');
-	// const formValue = document.forms.valueOf();
-	// buttonOutputList.addEventListener('click', (e)=> {
-	// 	e.preventDefault();
-	// 	characterList.innerHTML += '<li>' + inputTextBarValue.value +' </li>'
-	// });
-	// console.log(inputTextBarValue)
-	//I was stuck on this for a while because I put .value in let inputTextBarValue = document.getElementById('characters')
-	// I put let inputTextBarValue = document.getElementById('characters').value which was wrong it should have been in the innerHTML D: D: D: ;
-	
-	//toggle the squares from yellow to white
-	
 
 	//THIS SECTION IS OLD CODE THAT I STARTED OUT WITH FOR HOVERING, AND INSTRUCTORS METHOD.
 	// const blueSquare = document.getElementById("blueSquare");
