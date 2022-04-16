@@ -62,8 +62,8 @@
 	<section>
 		<button class="buttons1" id="blue-button" data-color="blue">Button</button>
 		<button class="buttons1" id="warning-button" data-color="red">Button</button>
-		<button class="buttons1" id="reset-button" data-color="white">Button</button>
-		<button>Reset</button>
+		<button class="buttons1" id="green-button" data-color="green">Button</button>
+		<button class="buttons1" id="reset-button" data-key="reset">Reset</button>
 	</section>
 	<hr>
 	<section class="section2">
@@ -147,8 +147,14 @@
 	redButton();
 	
 	function resetAll(){
-	
+	const resetButton = document.getElementById('reset-button');
+	resetButton.addEventListener("click", (e)=>{
+		window.location.reload();
+		console.log("Does the page refresh");
+	});
 	}
+	resetAll();
+	
 	
 	function buttonFunctionsOnClick(){
 	const buttonElements = document.querySelectorAll('button');
