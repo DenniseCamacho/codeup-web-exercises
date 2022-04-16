@@ -84,24 +84,17 @@
 <script>
 	"use strict";
 	
-	
 	function yellowSquares() {
 		let toBeYellow = document.getElementsByClassName("square");
-		// console.log(toBeYellow);
 		for (let i = 3; i < toBeYellow.length; i++) {
 			toBeYellow[i].addEventListener("click", (event) => {
-				// toBeYellow[i].style.backgroundColor = "red";
-				// console.log(toBeYellow[i].style.cssText);
 				if(toBeYellow[i].style.cssText === "background-color: yellow;"){
 					toBeYellow[i].style.cssText = "background-color: ";
-					
 				}else{
 					toBeYellow[i].style.cssText = "background-color: yellow";
 				}
 			});
 		}
-	}
-	yellowSquares();
 	// const squaresfor2 = document.querySelectorAll('div');
 	// squaresfor2.forEach((element,index)=>{
 	// 	console.log(element, index)
@@ -111,6 +104,8 @@
 	// 		})
 	// 	}
 	// });
+	}
+	yellowSquares();
 	
 	function multiSquareColors(){
 	
@@ -133,13 +128,23 @@
 	
 	function blueButton(){
 	const blueButton = document.getElementById('blue-button');
-	blueButton.addEventListener('click', () => blueButton.style.backgroundColor = "blue");
+	blueButton.addEventListener('click', () => {
+		if(blueButton.style.backgroundColor === "blue"){
+			blueButton.style.backgroundColor = "";
+		} else blueButton.style.backgroundColor = "blue";
+	});
 	}
 	blueButton();
 	
 	function redButton(){
-	
+		const redButton = document.getElementById('warning-button');
+		redButton.addEventListener('click', () => {
+			if(redButton.style.backgroundColor === "red"){
+				redButton.style.backgroundColor = "";
+			} else redButton.style.backgroundColor = "red";
+		});
 	}
+	redButton();
 	
 	function resetAll(){
 	
