@@ -145,7 +145,7 @@
 		});
 	}
 	redButton();
-	
+	/**
 	function resetAll(){
 	const resetButton = document.getElementById('reset-button');
 	resetButton.addEventListener("click", (e)=>{
@@ -154,28 +154,34 @@
 	});
 	}
 	resetAll();
+	**/
 	
+	function resetOnClick(){
+	const allElements = document.querySelectorAll('*');
 	
-	function buttonFunctionsOnClick(){
-	const buttonElements = document.querySelectorAll('button');
-	
-	buttonElements.forEach((element, index, notAnarray)=> {
-		//CONSOLE.LOG TO UNDERSTAND THE DIFFERENT PARAMETERS AND WHAT THEY RETRIEVED.
+	allElements.forEach((element, index, notAnarray)=> {
+		//CONSOLE.LOG TO UNDERSTAND THE DIFFERENT arguements AND WHAT THEY RETRIEVED.
 		// console.log('Element: ', element, 'Index: ', index, 'nodeList? :', notAnarray);
-		if (index == 1) {
-		element.addEventListener('click', () => element.style.backgroundColor = "red");
-		} else if (index == 2) {
-			element.addEventListener('click', () => document.body.style.backgroundColor = "green");
-		} else if (index == 3) {
-			element.addEventListener('click', ()=>
-					console.log(
-			notAnarray[0].style.backgroundColor = "",
-			notAnarray[1].style.backgroundColor = "",
-			document.body.style.backgroundColor = "",
-			));
+		//10-12 14-16 17 is reset button & 22-25
+		for (let i = 0; i < 10; i++) {
+			if(i >= 10 || i <=12)
+			console.log(allElements[i]);
 		}
+		
+		
+		//TODO:reset elements to have no style properties, but do not refresh the page.
+	// if (index == 3) {
+	// 		element.addEventListener('click', ()=>
+	// 				console.log(
+	// 		notAnarray[0].style.backgroundColor = "pink",
+	// 		notAnarray[1].style.backgroundColor = "pink",
+	// 		document.body.style.backgroundColor = "",
+	// 		));
+	// 	}
 		});
 	}
+	
+	resetOnClick();
 
 
 	//THIS SECTION IS OLD CODE THAT I STARTED OUT WITH FOR HOVERING, AND INSTRUCTORS METHOD.
