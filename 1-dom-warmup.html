@@ -46,9 +46,9 @@
 			background-color: green;
 		}
 		
-		.yellow {
-			background-color: yellow;
-		}
+		/*.yellow {*/
+		/*	background-color: yellow;*/
+		/*}*/
 	</style>
 </head>
 <body>
@@ -90,13 +90,18 @@
 		// console.log(toBeYellow);
 		for (let i = 3; i < toBeYellow.length; i++) {
 			toBeYellow[i].addEventListener("click", (event) => {
-				console.log(i);
-				console.log(toBeYellow[i]);
-				console.log(toBeYellow[i].classList);
-				console.log(toBeYellow[i]);
+				// toBeYellow[i].style.backgroundColor = "red";
+				// console.log(toBeYellow[i].style.cssText);
+				if(toBeYellow[i].style.cssText === "background-color: yellow;"){
+					toBeYellow[i].style.cssText = "background-color: ";
+					
+				}else{
+					toBeYellow[i].style.cssText = "background-color: yellow";
+				}
 			});
 		}
 	}
+	yellowSquares();
 	// const squaresfor2 = document.querySelectorAll('div');
 	// squaresfor2.forEach((element,index)=>{
 	// 	console.log(element, index)
@@ -106,7 +111,6 @@
 	// 		})
 	// 	}
 	// });
-	yellowSquares();
 	
 	function multiSquareColors(){
 	
