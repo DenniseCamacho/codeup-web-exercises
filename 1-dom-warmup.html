@@ -157,19 +157,20 @@
 	**/
 	
 	function resetOnClick(){
-	const allElements = document.querySelectorAll('*');
+		const squareClasses = document.getElementsByClassName('square');
+		const bodyTag = document.getElementsByTagName('body');
+		const resetButton = document.getElementById('reset-button');
+		resetButton.addEventListener('click', ()=>{
+			for (let i = 0; i < squareClasses.length; i++) {
+				squareClasses[i].style.cssText = "";
+				bodyTag[0].style.backgroundColor = "";
+			}
+		});
+		
+	}
+	resetOnClick();
 	
-	allElements.forEach((element, index, notAnarray)=> {
-		//CONSOLE.LOG TO UNDERSTAND THE DIFFERENT arguements AND WHAT THEY RETRIEVED.
-		// console.log('Element: ', element, 'Index: ', index, 'nodeList? :', notAnarray);
-		//10-12 14-16 17 is reset button & 22-25
-		for (let i = 0; i < 10; i++) {
-			if(i >= 10 || i <=12)
-			console.log(allElements[i]);
-		}
-		
-		
-		//TODO:reset elements to have no style properties, but do not refresh the page.
+	
 	// if (index == 3) {
 	// 		element.addEventListener('click', ()=>
 	// 				console.log(
@@ -178,10 +179,8 @@
 	// 		document.body.style.backgroundColor = "",
 	// 		));
 	// 	}
-		});
-	}
+
 	
-	resetOnClick();
 
 
 	//THIS SECTION IS OLD CODE THAT I STARTED OUT WITH FOR HOVERING, AND INSTRUCTORS METHOD.
