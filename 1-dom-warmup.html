@@ -145,6 +145,27 @@
 		});
 	}
 	redButton();
+	
+	function resetOnClick(){
+		const redButton = document.getElementById('warning-button');
+		const blueButton = document.getElementById('blue-button');
+		const squareClasses = document.getElementsByClassName('square');
+		const bodyTag = document.getElementsByTagName('body');
+		const resetButton = document.getElementById('reset-button');
+		resetButton.addEventListener('click', ()=>{
+			for (let i = 0; i < squareClasses.length; i++) {
+				squareClasses[i].style.cssText = "";
+				bodyTag[0].style.backgroundColor = "";
+				redButton.style.backgroundColor = "";
+				blueButton.style.backgroundColor = "";
+			}
+		});
+		
+	}
+	resetOnClick();
+	
+	setTimeout(()=>{console.log("The page has not refreshed.")},3000);
+	
 	/**
 	function resetAll(){
 	const resetButton = document.getElementById('reset-button');
@@ -155,22 +176,7 @@
 	}
 	resetAll();
 	**/
-	
-	function resetOnClick(){
-		const squareClasses = document.getElementsByClassName('square');
-		const bodyTag = document.getElementsByTagName('body');
-		const resetButton = document.getElementById('reset-button');
-		resetButton.addEventListener('click', ()=>{
-			for (let i = 0; i < squareClasses.length; i++) {
-				squareClasses[i].style.cssText = "";
-				bodyTag[0].style.backgroundColor = "";
-			}
-		});
-		
-	}
-	resetOnClick();
-	
-	
+	/** old code
 	// if (index == 3) {
 	// 		element.addEventListener('click', ()=>
 	// 				console.log(
@@ -179,11 +185,7 @@
 	// 		document.body.style.backgroundColor = "",
 	// 		));
 	// 	}
-
-	
-
-
-	//THIS SECTION IS OLD CODE THAT I STARTED OUT WITH FOR HOVERING, AND INSTRUCTORS METHOD.
+	//began w/ this.
 	// const blueSquare = document.getElementById("blueSquare");
 	// const redSquare = document.getElementById("redSquare");
 	// const greenSquare = document.getElementById("greenSquare");
@@ -206,7 +208,14 @@
 	// 				event.target.style.backgroundColor = "";
 	// 			});
 	// });
-	//SECTION ABOVE IS OLD CODE THAT I STARTED OUT WITH FOR HOVERING, AND INSTRUCTORS METHOD.
+	//SECTION ABOVE CODE STARTED OUT WITH FOR HOVERING.
+	
+	**/
+
+	
+	
+	
+
 	</script>
 </section>
 </body>
