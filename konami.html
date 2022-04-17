@@ -9,73 +9,83 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 	"use strict";
+	
 	//https://java.codeup.com/jquery/events/keyboard-events/
 	//https://www.tutorialspoint.com/in-javascript-how-to-empty-an-array
 	// !! key events fired in the following order: keydown->keypress->keyup !!
 	//The Konami Code: Up, Up, Down, Down, Left, Right, Left, Right, B, A ( ↑ ↑ ↓ ↓ ← → ← → B A )
-	const konamiCode = [38 ,38 ,40 ,40 ,37 ,39 ,37 ,39 ,66 ,65 ,13];
-			// "3838404037393739666513";
-	let konamiCodeTwo = [];
-			// new Array(7);
-	// console.log(konamiCode)
-	$(document).keyup(function(event) {
-		console.log(event.keyCode)
-		//TAKE CERTAIN KEYS AND PUSH TO ARRAY
-		switch(event.keyCode) {
-			case 38:
-				console.log(konamiCodeTwo.push(38));
-				break;
-			case 40:
-				console.log(konamiCodeTwo.push(40));
-				break;
-			case 37:
-				console.log(konamiCodeTwo.push(37));
-				break;
-			case 39:
-				console.log(konamiCodeTwo.push(39));
-				break;
-			case 66:
-				console.log(konamiCodeTwo.push(66));
-				break;
-			case 65:
-				console.log(konamiCodeTwo.push(65));
-				break;
-			case 13:
-				console.log(konamiCodeTwo.push(13));
-				break;
-		}
-		console.log(konamiCodeTwo)
-		// let av = konamiCodeTwo.valueOf();
-		// console.log(`this is the ${av}`);
-		// console.log('this is the ' + konamiCode[0])
-		//I AM NOT SURE HOW TO MAKE THIS INTO A LOOP WHILE STILL COMPARING THE OTHER ARRAY...
-		//FOR THE SAKE OF TIME, I DID IT THIS WAY.
-		if (    konamiCode[0] == konamiCodeTwo[0] &&
-				konamiCode[1] == konamiCodeTwo[1]  &&
-				konamiCode[2] == konamiCodeTwo[2] &&
-				konamiCode[3] == konamiCodeTwo[3] &&
-				konamiCode[4] == konamiCodeTwo[4]  &&
-				konamiCode[5] == konamiCodeTwo[5] &&
-				konamiCode[6] == konamiCodeTwo[6] &&
-				konamiCode[7] == konamiCodeTwo[7]  &&
-				konamiCode[8] == konamiCodeTwo[8] &&
-				konamiCode[9] == konamiCodeTwo[9] &&
-				konamiCode[10] == konamiCodeTwo[10]  &&
-				konamiCode[11] == konamiCodeTwo[11]
-		) {
-			document.body.style.backgroundColor = "purple";
-			$('h1')
-					.css('color', 'white')
-					.css('font-family', 'sans-serif')
-					.css('background', 'rebeccapurple')
-					.css('text-align', 'center');
-			let h1element = document.getElementsByTagName('H1')[0];
-					h1element.innerHTML = "KONAMI CODE!!!!!!!";
-		}
-		if (konamiCode.length <= konamiCodeTwo.length) {
-			konamiCodeTwo = [];
-		} //RESETS LENGTH, PERHAPS IT SHOULD RESET AS SOON AS THE VALUE ISN'T THE SAME.
-	});
+	
+	function konamiCodee() {
+		konamiCodee = function(){};
+		const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+		// "3838404037393739666513";
+		let konamiCodeTwo = [];
+		// new Array(7);
+		// console.log(konamiCode)
+		$(document).keyup(function (event) {
+			console.log(event.keyCode)
+			//TAKE CERTAIN KEYS AND PUSH TO ARRAY
+			switch (event.keyCode) {
+				case 38:
+					console.log(konamiCodeTwo.push(38));
+					break;
+				case 40:
+					console.log(konamiCodeTwo.push(40));
+					break;
+				case 37:
+					console.log(konamiCodeTwo.push(37));
+					break;
+				case 39:
+					console.log(konamiCodeTwo.push(39));
+					break;
+				case 66:
+					console.log(konamiCodeTwo.push(66));
+					break;
+				case 65:
+					console.log(konamiCodeTwo.push(65));
+					break;
+				case 13:
+					console.log(konamiCodeTwo.push(13));
+					break;
+			}
+			console.log(konamiCodeTwo)
+			// let av = konamiCodeTwo.valueOf();
+			// console.log(`this is the ${av}`);
+			// console.log('this is the ' + konamiCode[0])
+			//I AM NOT SURE HOW TO MAKE THIS INTO A LOOP WHILE STILL COMPARING THE OTHER ARRAY...
+			//FOR THE SAKE OF TIME, I DID IT THIS WAY.
+			if (konamiCode[0] == konamiCodeTwo[0] &&
+					konamiCode[1] == konamiCodeTwo[1] &&
+					konamiCode[2] == konamiCodeTwo[2] &&
+					konamiCode[3] == konamiCodeTwo[3] &&
+					konamiCode[4] == konamiCodeTwo[4] &&
+					konamiCode[5] == konamiCodeTwo[5] &&
+					konamiCode[6] == konamiCodeTwo[6] &&
+					konamiCode[7] == konamiCodeTwo[7] &&
+					konamiCode[8] == konamiCodeTwo[8] &&
+					konamiCode[9] == konamiCodeTwo[9] &&
+					konamiCode[10] == konamiCodeTwo[10] &&
+					konamiCode[11] == konamiCodeTwo[11]
+			) {
+				document.body.style.backgroundColor = "purple";
+				$('h1')
+						.css('color', 'white')
+						.css('font-family', 'sans-serif')
+						.css('background', 'rebeccapurple')
+						.css('text-align', 'center');
+				let h1element = document.getElementsByTagName('H1')[0];
+				h1element.innerHTML = "KONAMI CODE!!!!!!!";
+			}
+			if (konamiCode.length <= konamiCodeTwo.length) {
+				konamiCodeTwo = [];
+			} //RESETS LENGTH, PERHAPS IT SHOULD RESET AS SOON AS THE VALUE ISN'T THE SAME.
+		});
+	}
+konamiCodee();
+	
+	
+	
+	/**
 	//CODING TRIAL AND ERROR ;-;
 			// case 38: console.log("");
 			// break;
@@ -378,7 +388,7 @@
 		// 		console.log("testing");
 		// 	}
 		// });
-	
+	**/
 </script>
 </body>
 </html>
