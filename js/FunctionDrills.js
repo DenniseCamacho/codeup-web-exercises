@@ -9,6 +9,7 @@ const isOdd2 = (number) => {return number % 2;}
 // Make a function named isEven(number)
 function isEven(number){
 }
+const isEven2 = (number) => {return number % 2 === 0;}
 // Make a function named identity(input) that returns the input exactly as provided.
 function identity(input){
 	return input;
