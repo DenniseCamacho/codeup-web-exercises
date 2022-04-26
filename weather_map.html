@@ -68,7 +68,6 @@ $(document).ready(function() {
 	"use strict";
 	$('#clickme').click(function(){
 		$('#user_display').html($('#user_input').val());
-		
 	});
 		mapboxgl.accessToken = MAPBOX_API_TOKEN;
 		const map = new mapboxgl.Map({
@@ -77,14 +76,12 @@ $(document).ready(function() {
 			center: [-98.4916, 29.4252], // starting position [lng, lat]
 			zoom: 9 // starting zoom
 		});
-	
-	console.log(map)
 	// Create a default Marker and add it to the map.
 	const marker1 = new mapboxgl.Marker({
 		draggable: true
 	})
 			.setLngLat([-98.4916, 29.4252])
-			.addTo(map)
+			.addTo(map);
 	marker1.on('drag', (e) => {
 		let newMarkerLat = parseFloat((marker1._lngLat.lat).toFixed(3));
 		let newMarkerLng = parseFloat((marker1._lngLat.lng).toFixed(3));
