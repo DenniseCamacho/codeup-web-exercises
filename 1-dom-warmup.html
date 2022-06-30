@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-<!--	mobile view-->
+	<!--	mobile view-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--	bootstrap-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!--	bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+	      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<title>Title</title>
 	<style>
 		body {
@@ -14,6 +15,7 @@
 			align-items: center;
 			margin: 0 auto;
 		}
+		
 		section {
 			display: flex;
 			flex-wrap: wrap;
@@ -22,27 +24,33 @@
 			margin-bottom: 1em;
 			margin-top: 1em;
 		}
+		
 		#square {
 			width: 200px;
 			height: 200px;
 			background-color: gray;
 		}
+		
 		.square {
 			width: 200px;
 			height: 200px;
 			border: 1px solid black;
 			margin: .5em;
 		}
+		
 		button {
 			margin: .2em;
 		}
-		section>.square:nth-child(1):hover {
+		
+		section > .square:nth-child(1):hover {
 			background-color: blue;
 		}
-		section>.square:nth-child(2):hover {
+		
+		section > .square:nth-child(2):hover {
 			background-color: red;
 		}
-		section>.square:nth-child(3):hover {
+		
+		section > .square:nth-child(3):hover {
 			background-color: green;
 		}
 		
@@ -67,106 +75,151 @@
 	</section>
 	<hr>
 	<section class="section2">
-	<div id="changingColors" class="d-flex flex-wrap justify-content-center">
-		<h2 class="col-12 text-center">The squares that change colors</h2>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-	</div>
+		<div id="changingColors" class="d-flex flex-wrap justify-content-center">
+			<h2 class="col-12 text-center">The squares that change colors</h2>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+		</div>
+	</section>
+
+	<section class="section3" id="moveMyText">
+
+		<div id="removeMe">
+			<div id="chi">
+				<p>Will I disappear?</p>
+				<p>everything?</p>
+				<h2>Everything disapears?!</h2>
+			</div>
+		</div>
+		<button id="replacediv">test</button>
+		<button id="removetheChi">test 2 remove child</button>
+
 	</section>
 </main>
 
 
-
 <!--JS-->
 <section>
-<script>
-	"use strict";
-	
-	function yellowSquares() {
-		let toBeYellow = document.getElementsByClassName("square");
-		for (let i = 3; i < toBeYellow.length; i++) {
-			toBeYellow[i].addEventListener("click", (event) => {
-				if(toBeYellow[i].style.cssText === "background-color: yellow;"){
-					toBeYellow[i].style.cssText = "background-color: ";
-				}else{
-					toBeYellow[i].style.cssText = "background-color: yellow";
-				}
+	<script>
+		"use strict";
+
+		//replace elements inside with new elements upon click.
+		//upon every click, add new element and remove old element.
+		let thediv = document.getElementById('removeMe');
+		console.log(thediv.firstElementChild);
+
+		let buttonTest_01 = document.getElementById('removetheChi');
+		buttonTest_01.addEventListener('click', ()=>{
+			let thediv = document.getElementById('removeMe');
+			thediv.remove();
+		})
+		function doReplaceWithNewInfoOnClick(){
+
+			let theButtonDoTheWork = document.getElementById("replacediv");
+			theButtonDoTheWork.addEventListener('click',(e)=>{
+				e.preventDefault();
+				let old_element = document.getElementById("removeMe");
+				let new_element = document.createElement("div");
+				let new_content = document.createTextNode("New Content");
+				new_element.appendChild(new_content);
+				old_element.replaceWith(new_element);
+			})
+		}
+
+
+		
+		function yellowSquares() {
+			let toBeYellow = document.getElementsByClassName("square");
+			for (let i = 3; i < toBeYellow.length; i++) {
+				toBeYellow[i].addEventListener("click", (event) => {
+					if (toBeYellow[i].style.cssText === "background-color: yellow;") {
+						toBeYellow[i].style.cssText = "background-color: ";
+					} else {
+						toBeYellow[i].style.cssText = "background-color: yellow";
+					}
+				});
+			}
+			// const squaresfor2 = document.querySelectorAll('div');
+			// squaresfor2.forEach((element,index)=>{
+			// 	console.log(element, index)
+			// 	if (index >= 4 && index <= 7){
+			// 		element.addEventListener('click', ()=>{
+			// 			element.classList.toggle('yellow');
+			// 		})
+			// 	}
+			// });
+		}
+		
+		yellowSquares();
+		
+		function multiSquareColors() {
+			
+			//SELECTED ALL THE DIVS WITH THE CLASS SQUARE
+			const squares = document.querySelectorAll('div.square');
+			//THIS WENT THROUGH ALL THOSE CLASSES AND ADDED THE CLICK EVENT, CHANGING THE COLORS DEPENDING ON THE INDEX.
+			const squareColors = squares.forEach((element, index, node) => {
+				element.addEventListener('click', () => {
+					if (index === 0) {
+						element.style.backgroundColor = "blue";
+					} else if (index === 1) {
+						element.style.backgroundColor = "red"
+					} else if (index === 2) {
+						document.body.style.backgroundColor = "green"; //PURPOSELY THE BACKGROUND.
+					}
+				})
 			});
 		}
-	// const squaresfor2 = document.querySelectorAll('div');
-	// squaresfor2.forEach((element,index)=>{
-	// 	console.log(element, index)
-	// 	if (index >= 4 && index <= 7){
-	// 		element.addEventListener('click', ()=>{
-	// 			element.classList.toggle('yellow');
-	// 		})
-	// 	}
-	// });
-	}
-	yellowSquares();
-	
-	function multiSquareColors(){
-	
-	//SELECTED ALL THE DIVS WITH THE CLASS SQUARE
-	const squares = document.querySelectorAll('div.square');
-	//THIS WENT THROUGH ALL THOSE CLASSES AND ADDED THE CLICK EVENT, CHANGING THE COLORS DEPENDING ON THE INDEX.
-	const squareColors = squares.forEach((element, index, node) => {
-		element.addEventListener('click', () =>{
-			if (index === 0) {
-				element.style.backgroundColor = "blue";
-			} else if (index === 1) {
-				element.style.backgroundColor = "red"
-			} else if (index === 2) {
-				document.body.style.backgroundColor = "green"; //PURPOSELY THE BACKGROUND.
-			}
-		})
-	});
-	}
-	multiSquareColors();
-	
-	function blueButton(){
-	const blueButton = document.getElementById('blue-button');
-	blueButton.addEventListener('click', () => {
-		if(blueButton.style.backgroundColor === "blue"){
-			blueButton.style.backgroundColor = "";
-		} else blueButton.style.backgroundColor = "blue";
-	});
-	}
-	blueButton();
-	
-	function redButton(){
-		const redButton = document.getElementById('warning-button');
-		redButton.addEventListener('click', () => {
-			if(redButton.style.backgroundColor === "red"){
-				redButton.style.backgroundColor = "";
-			} else redButton.style.backgroundColor = "red";
-		});
-	}
-	redButton();
-	
-	function resetOnClick(){
-		const redButton = document.getElementById('warning-button');
-		const blueButton = document.getElementById('blue-button');
-		const squareClasses = document.getElementsByClassName('square');
-		const bodyTag = document.getElementsByTagName('body');
-		const resetButton = document.getElementById('reset-button');
-		resetButton.addEventListener('click', ()=>{
-			for (let i = 0; i < squareClasses.length; i++) {
-				squareClasses[i].style.cssText = "";
-				bodyTag[0].style.backgroundColor = "";
-				redButton.style.backgroundColor = "";
-				blueButton.style.backgroundColor = "";
-			}
-		});
 		
-	}
-	resetOnClick();
-	
-	setTimeout(()=>{console.log("The page has not refreshed.")},3000);
-	
-	/**
+		multiSquareColors();
+		
+		function blueButton() {
+			const blueButton = document.getElementById('blue-button');
+			blueButton.addEventListener('click', () => {
+				if (blueButton.style.backgroundColor === "blue") {
+					blueButton.style.backgroundColor = "";
+				} else blueButton.style.backgroundColor = "blue";
+			});
+		}
+		
+		blueButton();
+		
+		function redButton() {
+			const redButton = document.getElementById('warning-button');
+			redButton.addEventListener('click', () => {
+				if (redButton.style.backgroundColor === "red") {
+					redButton.style.backgroundColor = "";
+				} else redButton.style.backgroundColor = "red";
+			});
+		}
+		
+		redButton();
+		
+		function resetOnClick() {
+			const redButton = document.getElementById('warning-button');
+			const blueButton = document.getElementById('blue-button');
+			const squareClasses = document.getElementsByClassName('square');
+			const bodyTag = document.getElementsByTagName('body');
+			const resetButton = document.getElementById('reset-button');
+			resetButton.addEventListener('click', () => {
+				for (let i = 0; i < squareClasses.length; i++) {
+					squareClasses[i].style.cssText = "";
+					bodyTag[0].style.backgroundColor = "";
+					redButton.style.backgroundColor = "";
+					blueButton.style.backgroundColor = "";
+				}
+			});
+			
+		}
+		
+		resetOnClick();
+		
+		setTimeout(() => {
+			console.log("The page has not refreshed.")
+		}, 3000);
+		
+		/**
 	function resetAll(){
 	const resetButton = document.getElementById('reset-button');
 	resetButton.addEventListener("click", (e)=>{
@@ -175,8 +228,8 @@
 	});
 	}
 	resetAll();
-	**/
-	/** old code
+		 **/
+		/** old code
 	// if (index == 3) {
 	// 		element.addEventListener('click', ()=>
 	// 				console.log(
@@ -209,13 +262,10 @@
 	// 			});
 	// });
 	//SECTION ABOVE CODE STARTED OUT WITH FOR HOVERING.
-	
-	**/
-
-	
+		 
+		 **/
 	
 	
-
 	</script>
 </section>
 </body>
